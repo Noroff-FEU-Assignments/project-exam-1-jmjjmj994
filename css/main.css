@@ -29,7 +29,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 35rem 1fr auto;
+  grid-template-rows: 55rem 1fr auto;
   background-color: #eae4db; }
 
 
@@ -40,44 +40,6 @@ body {
 
 
 
-
- .navbar {
- 
-  display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;}
-  
-.navbar > .navbar-ul{
-width: 100%;
-  display: flex;
-  gap: 5rem;
-  align-items: center;
-  justify-content:center;
-  list-style: none;
-
-}
-
-
-
-  
-  .navbar-item{
-  font-size: var(--text--size);
-  text-decoration: none;
-  color: var(--header--text-color);
-  }
-
-
-  .header > .header-search-container{
-    flex: 1 1 20rem;
-    outline: 1px dashed red;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1rem;
-
-  }
 
   .header-search-container i {
     color: var(--header--text-color);

@@ -1,20 +1,21 @@
 .hero {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 5rem 5rem;
+    grid-template-rows: 7rem 5rem;
     align-content: space-between;
     
     }
      
     .hero {
-      background-image:
-      linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.73)),
-      url(/conductor-5462237_1920.jpg);
-     background-position: top top;
-     background-size: 100% 100%;
+
+      background-image: url(/heroimageuse.png);
+     background-position: center center;
+     background-size: contain;
      background-repeat: no-repeat;
      position: relative;
-     background-blend-mode: darken;
+     background-color: #c27247;
+     
+
     }
     .hero::after {
       content: "";
