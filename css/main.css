@@ -1,0 +1,85 @@
+@import url(/css/base/base.css);
+@import url(/css/base/typography.css);
+/* Applied to all pages */
+@import url(/css/layouts/hero.css);
+@import url(/css/layouts/header.css);
+@import url(/css/layouts/nav.css);
+@import url(/css/layouts/sidebar.css);
+@import url(/css/layouts/footer.css);
+/* Applied to all pages */
+@import url(/css/components/carousel.css);
+
+:root{
+  --header--text-color:white;
+  --primary--bg-color:#809BCE;
+  --secondary--bg-color:#95B8D1;
+  --header--color:#222831;
+  --primary--color:#efefef;
+  --header--size:clamp(2.5rem, 2.5vw, 3rem);
+  --text--size:clamp(1.5rem, 2.5vw, 2rem);
+  --headline-1: 2.75rem;
+  --headline-2: 2.35rem;
+  --headline-3:1.5rem;
+  --headline-4: 1.15rem;
+  --header-icon:clamp(1.5rem, 2.5vw, 2rem);
+
+
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 35rem 1fr auto;
+  background-color: #eae4db; }
+
+
+ h1 {
+  font-size: var(--header--size);
+ }
+
+
+
+
+
+ .navbar {
+ 
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;}
+  
+.navbar > .navbar-ul{
+width: 100%;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content:center;
+  list-style: none;
+
+}
+
+
+
+  
+  .navbar-item{
+  font-size: var(--text--size);
+  text-decoration: none;
+  color: var(--header--text-color);
+  }
+
+
+  .header > .header-search-container{
+    flex: 1 1 20rem;
+    outline: 1px dashed red;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+
+  }
+
+  .header-search-container i {
+    color: var(--header--text-color);
+    font-size: var(--header-icon);
+  }
