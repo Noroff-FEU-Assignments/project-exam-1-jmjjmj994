@@ -1,18 +1,31 @@
 "use strict";
-export {slidesContainer, slide, prevBtn, nextBtn}
-const slidesContainer = document.querySelector(".slides-container");
-const slide = document.querySelector(".slide");
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
-nextBtn.onclick = (e) => {
-const slideWidth = slide.clientWidth;
-slidesContainer.scrollLeft += slideWidth;
+const hamburgerMenu = document.querySelector(".hamburger");
+const dropdownMenu = document.querySelector(".dropdown-menu")
+const main = document.querySelector("main");
+console.log(main);
+let menuOpen = false;
+hamburgerMenu.onclick = () => {
+if(!menuOpen) {
+    hamburgerMenu.classList.toggle("active");
+    dropdownMenu.classList.toggle("active")
+    menuOpen = true;
+} else {
+    hamburgerMenu.classList.toggle("active");
+    dropdownMenu.classList.toggle("active")
+    menuOpen = false;
+}
+
 };
-prevBtn.onclick = (e) => {
-    const slideWidth = slide.clientWidth;
-    slidesContainer.scrollLeft -= slideWidth;S
-    
-    };
+/* window.onclick = (e) => {
+    if (e.target !== main){
+        dropdownMenu.classList.toggle("active")
+      }
+}
+ */
+
+
+
+
     
   
 /* const posts = [
