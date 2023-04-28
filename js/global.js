@@ -1,5 +1,7 @@
 "use strict";
 /*Hamburger*/
+export const slideOne = document.querySelector(".slide-one");
+export const slideTwo = document.querySelector(".slide-two");
 const hamburgerMenu = document.querySelector(".hamburger");
 const dropdownMenu = document.querySelector(".dropdown-menu")
 
@@ -20,7 +22,7 @@ if(!menuOpen) {
 
 
 const sliderContainer = document.querySelector(".slider-container");
-const slide = document.querySelector(".slide");
+export const slide = document.querySelector(".slide");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const slideWidth = slide.clientWidth;
