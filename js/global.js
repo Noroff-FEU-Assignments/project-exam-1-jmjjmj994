@@ -1,8 +1,8 @@
 "use strict";
+/*Hamburger*/
 const hamburgerMenu = document.querySelector(".hamburger");
 const dropdownMenu = document.querySelector(".dropdown-menu")
-const main = document.querySelector("main");
-console.log(main);
+
 let menuOpen = false;
 hamburgerMenu.onclick = () => {
 if(!menuOpen) {
@@ -16,6 +16,24 @@ if(!menuOpen) {
 }
 
 };
+/*Hamburger*/
+
+
+const sliderContainer = document.querySelector(".slider-container");
+const slide = document.querySelector(".slide");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+const slideWidth = slide.clientWidth;
+console.log(slideWidth);
+
+nextBtn.onclick = (e) => {
+sliderContainer.scrollLeft += slideWidth
+
+};
+prevBtn.onclick = (e) => {
+    sliderContainer.scrollLeft -= slideWidth
+    };
+
 /* window.onclick = (e) => {
     if (e.target !== main){
         dropdownMenu.classList.toggle("active")

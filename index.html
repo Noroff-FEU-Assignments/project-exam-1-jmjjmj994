@@ -26,7 +26,7 @@
 <body>
 
 <header class="header">
-<div class="header-image-one">
+<!-- <div class="header-image-one">
     <img src="/img/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
 </div>
 <div class="header-image-two">
@@ -35,7 +35,7 @@
 
 <div class="header-image-three">
     <img src="/img/frank-sinatra-1949-take-me-out-to-the-ball-game-photo-c39ca2-640.jpg" alt="">
-</div>
+</div> -->
 </header>
 <nav class="navbar">
     <div class="navbar-title">
@@ -46,13 +46,13 @@
         <a href="#" class="navbar-item">Home</a>
     </li>
     <li class="navbar-li">
-        <a href="#" class="navbar-item">Posts</a>
+        <a href="#" class="navbar-item" data-type="nav-item--separator">Posts</a>
     </li>
     <li class="navbar-li">
-        <a href="#" class="navbar-item">About</a>
+        <a href="#" class="navbar-item " data-type="nav-item--separator">About</a>
     </li>
     <li class="navbar-li">
-        <a href="#" class="navbar-item">Contact</a>
+        <a href="#" class="navbar-item" data-type="nav-item--separator">Contact</a>
     </li>
 </ul>
 <div class="hamburger">
@@ -65,7 +65,61 @@
    
 </section>
 </nav>
-<main class="main"></main>
+<main class="main">
+    <header class="main-header">
+        <h1 class="main-header--primary">
+            Latest Posts
+        </h1>
+    </header>
+    <article class="slider-wrapper">
+        <button class="btn" id="prev-btn"></button>
+        <button class="btn" id="next-btn"></button>
+        <article class="slider-container">
+            <article class="slide slide-one">
+          <div class="card">
+          <div class="card-img">
+            <!-- <img src="/img/marvin-gaye-1973-publicity-photo-1bb706-1024.jpg" alt=""> -->
+          </div>
+          <div class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et officiis ipsum ea. Quas adipisci sit incidunt iusto tempore voluptatem excepturi! A provident sapiente natus aperiam omnis amet earum quod velit.
+          </div>
+
+          </div>
+          <div class="card">
+            <div class="card-img">
+                <!-- <img src="/img/marvin-gaye-1973-publicity-photo-1bb706-1024.jpg" alt=""> -->
+              </div>
+              <div class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et officiis ipsum ea. Quas adipisci sit incidunt iusto tempore voluptatem excepturi! A provident sapiente natus aperiam omnis amet earum quod velit.
+              </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+                <!-- <img src="/img/marvin-gaye-1973-publicity-photo-1bb706-1024.jpg" alt=""> -->
+              </div>
+              <div class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et officiis ipsum ea. Quas adipisci sit incidunt iusto tempore voluptatem excepturi! A provident sapiente natus aperiam omnis amet earum quod velit.
+              </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+                <!-- <img src="/img/marvin-gaye-1973-publicity-photo-1bb706-1024.jpg" alt=""> -->
+              </div>
+              <div class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et officiis ipsum ea. Quas adipisci sit incidunt iusto tempore voluptatem excepturi! A provident sapiente natus aperiam omnis amet earum quod velit.
+              </div>
+          </div>
+
+
+
+
+
+            </article>
+            <article class="slide slide-two">Slide2</article>
+           
+        </article>
+    </article>
+</main>
 <footer class="footer"></footer>
  
 
