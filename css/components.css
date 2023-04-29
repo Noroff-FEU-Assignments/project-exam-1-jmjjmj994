@@ -16,3 +16,9 @@
     #next-btn{
         left: 54%;
     }
+
+    @media screen and (max-width:1000px) {
+        #prev-btn, #next-btn {
+            display: none;
+        }
+    }
