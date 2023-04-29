@@ -3,6 +3,7 @@
      position: fixed;
      top: 0;
      width: 100%;
+    
  }
  .navbar {
      display: flex;
@@ -126,12 +127,13 @@
          transition: 500ms;
          position: fixed;
          right: 0;
-         height: 0rem;
+         height: 100%;
          background-color: var(--dropdown--bg--color);
-          width: 100%;
+          width: 0%;
      }
      .dropdown-menu.active {
-         height: 55rem;
+       
+         width: 50%;
          transition: 500ms all ease-in-out;
         
      }

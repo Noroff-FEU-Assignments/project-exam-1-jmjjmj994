@@ -23,92 +23,210 @@ html {
 body {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 55rem 5rem 1fr auto;
+    grid-template-rows: 5rem 1fr auto;
     min-height: 100vh;
     background-color: var(--main--bg--color);
    
 }
 
 .main {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    grid-auto-rows: 10rem 75rem;
-    padding: 10px 0;
+    min-height: 100vh;
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: repeat(2, 70rem);
+  
+
+   /*  padding: 10px 0;
     grid-template-areas:
      "head head"
-     "carousel carousel";
+     "carousel carousel"; */
 }
 
-.main > .main-header {
-    outline: 2px dashed red;
-    grid-area: head;
+
+
+
+
+.main > .top-content {
+    background-color: orange;
+    display: flex;
 }
+.top-content > .top-content-container {
+    background-color: #f8fafb;
+    flex: 1 1 100%;
+  
+display: grid;
+grid-template-columns: repeat(3, minmax(10rem, 35rem));
+grid-template-rows: 22rem 22rem ;
+place-content: center;
+gap: 3rem;
+ grid-template-areas: 
+"topleft centercard topright"
+"bottomleft centercard bottomright"
+; 
+
+}
+.top-content-container > .top-content-card {
+    background-image: url(/Screenshot\ 2023-04-28\ at\ 10-28-45\ marvin\ gaye\ and\ tammi\ terrell-\ the\ happy\ picture\ of\ young\ love.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0 0 2px;
+}
+.span-card {
+    grid-row: 1 / 3;
+    grid-template-areas: centercard;
+}
+
+.t-left{grid-area: topleft;
+
+}
+.b-left{grid-area: bottomleft;}
+.t-right{grid-area: topright;}
+.b-right{grid-area: bottomright;}
 
 .main > .slider-wrapper{
     outline: 2px dashed green;
-    grid-area: carousel;
+    background-color: green;
     position: relative;
+    overflow: hidden;
+   
 
-    
     
 }
 
 .slider-wrapper > .slider-container{
-  display: flex;
+ 
   width: 100%;
   height: 100%;
+  display: flex;
   overflow: scroll;
  scroll-behavior: smooth;
+ background-color: #685757;
+ 
  
 }
-
 .slider-container > .slide{
-    flex: 1 0 200%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 30rem));
-    grid-template-rows: 30rem;
-    justify-content: space-evenly;
-   align-content: center;
-   row-gap: 3rem;
-}
-.slide > .card {
-   
-    display: grid;
-grid-template-columns: 100%;
- grid-template-rows: 20rem 10rem;
- 
-}
-.card-img{
- 
- /*   background-color: #efefef;
-   background-image: url(/Screenshot\ 2023-04-28\ at\ 10-28-45\ marvin\ gaye\ and\ tammi\ terrell-\ the\ happy\ picture\ of\ young\ love.png);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center; */
-   text-align: center;
-   background-color: #efefef;
- 
-}
-.card-img img {
-  padding: 10px;
+  flex: 1 0 100%;
+    width: 100%;
     height: 100%;
-    width: 85%;
-}
-.card-text{ 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:1rem;
-    background-color: #efefef;}
-.card-text > .blog-card-date{
-    color: red;
-}
-.card-text > .blog-card-title {
-    color: green;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-auto-rows: minmax(7rem, 30rem);
+    place-content: center;
+    justify-content: space-around;
+    grid-gap: 5px;
+    padding: 5px;
 }
 
+
+
+/* .slider-container > .slide{
+  flex: 1 0 100%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 40rem));
+    grid-auto-rows: 30rem;
+    place-content: center;
+    justify-content: space-around;
+    gap: 2rem;
+    
+}
+@media screen and (max-width:820px) {
+    .main {
+        min-height: 50vh;
+    }
+    .slider-wrapper > .slider-container {
+       
+    }
+    .slider-container > .slide {
+        grid-template-columns:repeat(auto-fit, minmax(10rem, 35rem)) ;
+        grid-auto-rows: 30rem;
+        gap: 2rem;
+        
+    }
+}
+    @media screen and (max-width:730px) {
+        .main {
+            min-height: 50vh;
+        }
+        .slider-wrapper > .slider-container {
+           
+        }
+        .slider-container > .slide {
+            grid-template-columns:repeat(auto-fit, minmax(10rem, 30rem)) ;
+            grid-auto-rows: 25rem;
+            gap: 2rem;
+           
+            
+        }
+    
+}
+
+@media screen and (max-width:635px) {
+    .main {
+        min-height: 50vh;
+    }
+    .slider-wrapper > .slider-container {
+       
+    }
+    .slider-container > .slide {
+        grid-template-columns:repeat(auto-fit, minmax(10rem, 28rem)) ;
+        grid-auto-rows: 20rem;
+        gap: 1rem;
+       
+        
+    }
+
+}
+
+@media screen and (max-width:590px) {
+    .main {
+        min-height: 50vh;
+    }
+    .slider-wrapper > .slider-container {
+       
+    }
+    .slider-container > .slide {
+        grid-template-columns: 40rem;
+        grid-auto-rows: 15rem;
+        gap: 1rem;
+       
+        
+    }
+
+}
+
+
+@media screen and (max-width:410px) {
+    .main {
+        min-height: 50vh;
+    }
+    .slider-wrapper > .slider-container {
+       
+    }
+    .slider-container > .slide {
+        grid-template-columns: 30rem;
+        grid-auto-rows: 15rem;
+        gap: 1rem;
+       
+        
+    }
+
+} */
+
+.slide > .slide-card {
+   background-color: #efefef;
+   background-image: url(/Screenshot\ 2023-04-28\ at\ 10-28-45\ marvin\ gaye\ and\ tammi\ terrell-\ the\ happy\ picture\ of\ young\ love.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+  
+/* flex: 0 1 40rem;
+height: 40rem; */
+
+ 
+}
 
 
 
