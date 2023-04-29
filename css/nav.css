@@ -41,6 +41,8 @@
      color: black;
      font-size: var(--text--font--size);
      position: relative;
+  
+   
  }
  [data-type="nav-item--separator"]::before {
     content: "";
@@ -51,8 +53,9 @@
     left: -20px;
     width: 0.1rem;
     background-color: black;
- }
-
+ } 
+ 
+ 
  .hamburger {
      z-index: 1;
  width: 4rem;
