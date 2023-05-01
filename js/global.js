@@ -1,6 +1,7 @@
 "use strict";
 /*Hamburger*/
 export const slide = document.querySelector(".slide");
+export const topContainer = document.querySelector(".top-content-container")
 
 const hamburgerMenu = document.querySelector(".hamburger");
 const dropdownMenu = document.querySelector(".dropdown-menu")

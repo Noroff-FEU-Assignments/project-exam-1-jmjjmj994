@@ -57,7 +57,7 @@
  
  
  .hamburger {
-     z-index: 1;
+     z-index: 2;
  width: 4rem;
  height: 4rem;
  
@@ -127,6 +127,7 @@
  
  
      .dropdown-menu {
+        z-index: 1;
          transition: 500ms;
          position: fixed;
          right: 0;
@@ -136,6 +137,7 @@
      }
      .dropdown-menu.active {
        
+   z-index: 1;
          width: 50%;
          transition: 500ms all ease-in-out;
         
