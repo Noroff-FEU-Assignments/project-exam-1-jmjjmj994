@@ -1,9 +1,22 @@
 .header {
-
-   background-color: var(--headerfooter--bg--color);
- 
+    background-color: var(--primary--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/* Remove at 950px */
 
 
-/* Remove at 950px */
+
+.header > .header-logo {
+margin-top: 1rem;
+ height: 20rem;
+ width: 20rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.header-logo > img {height: auto;
+max-width: 100%;
+
+}
