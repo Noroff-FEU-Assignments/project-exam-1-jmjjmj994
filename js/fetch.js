@@ -21,7 +21,7 @@ fetch(url)
 
 })
 
-
+slide.innerHTML = "Loading"
  function sliderOne(data){
 slide.innerHTML = data.map((artist,index) =>{
 
@@ -50,7 +50,7 @@ return `
 </div>
 <div class="slide-card--bottom">
    <h1 class="slide-card-header">
-    <span class="slide-card-primary">Name</span>
+ 
     <span class="slide-card-secondary">${title.rendered}</span>
    
    

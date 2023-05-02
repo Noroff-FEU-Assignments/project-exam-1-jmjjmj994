@@ -13,8 +13,8 @@
 html {
     font-size: 62.5%;
     line-height: 1.5;
-    font-family: 'Raleway', sans-serif;
 
+    font-family: 'Raleway', sans-serif;
 
 
 
@@ -142,7 +142,9 @@ padding: 10px;
 
     }
     @media screen and (max-width:1300px) {
-        .slide-card {transform: scale(0.9);}
+        .slide-card {transform: scale(0.9);
+          
+        }
     }
     @media screen and (max-width:1140px) {
         .slide-card {transform: scale(0.8);}
@@ -161,18 +163,21 @@ padding: 10px;
 
 
 
-   .slide-card--top{}
+   .slide-card--top{
+    box-shadow: 0 0 4px;
+   }
 
    .slide-card--top .card-main--img {
     height:100%;
  width: 100%;
 }
 .slide-card-post--info{
-    background-color: orange;
+    background-color: var(--primary--color);
     display: flex;
     justify-content: start;
     align-items: center;
     padding: 5px;
+    gap: 1rem;
 }
 .slide-card--top .card-avatar--img {
     height:10%;
@@ -180,15 +185,15 @@ padding: 10px;
 border-radius: 50%;
 margin-right: auto;}
 
-.slide-card-header > .slide-card-tertiary{
+ .slide-card-tertiary{
     padding: 5px;
-    font-size: 30px;
+    font-size: 1.7rem;
     
    }
 
-   .slide-card-header > .slide-card-date{
+  .slide-card-date{
 
-    font-size: 1.2rem;
+    font-size: 1rem;
 
    }
 
@@ -198,29 +203,23 @@ margin-right: auto;}
 background-color: #efefef;
 display: flex;
 
-align-items: space-evenly;
-text-align: center;
+justify-content: center;
+align-items: start;
+box-shadow: 0 0 4px;
+
 
  }
    .slide-card-header{ 
-    
-   
+    margin-top: 1rem;
+   font-size: 2.5rem;
+   font-weight: 200;
+   padding: 0 5px;
+   font-family: 'Roboto Condensed', sans-serif;
 text-align: center;
-padding: 5px;
+
 }
 
-   .slide-card-header > .slide-card-primary{
-    display: block;
-    padding: 5px;
-    font-size: 1.5rem;
-   
-   }
-   .slide-card-header > .slide-card-secondary{
-    display: block;
-    padding: 10px;
-    font-size: 1.5rem;
-   }
- 
+
 
   
    @media screen and (max-width:1300px) {
