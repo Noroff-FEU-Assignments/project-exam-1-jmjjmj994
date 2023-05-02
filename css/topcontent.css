@@ -1,0 +1,100 @@
+.main-top--container{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: blue;
+display: grid;
+grid-template-columns: repeat(2, minmax(10rem, 15rem));
+grid-template-rows: 12rem 12rem 12rem;
+gap: 2rem;
+justify-content: center;
+align-content: center;
+}
+@media screen and (min-width: 390px) {
+    .main-top--container {
+grid-template-columns: repeat(2, minmax(10rem, 45rem));
+grid-template-rows: repeat(2, 22rem);
+align-content: center;
+
+    }
+}
+
+
+.top-content {
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+filter: brightness(80%);
+}
+.top-content-blog--title{
+position: absolute;
+bottom: 0;
+padding: 7px;
+background-color: rgba(0, 0, 0, 0.363);
+width: 100%;
+text-align: center;
+
+}
+.blog-title--primary{
+    display: block;
+    color: white;
+    font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+}
+
+    .horizontal-card-left--top{
+        background-color: orange;
+        grid-row: 1;
+        grid-column: 1 / span 2;
+        background-image: url(/img/world-of-warcraft-battle-for-azeroth-1280x720-screenshot-4k-17832.jpg);
+       
+    }
+
+    .horizontal-card-left--bottom{
+        background-image: url(/img/Paris_Tuileries_Garden_Facepalm_statue.jpg);
+        background-color: orange;
+        /* grid-column: 1; */
+        grid-row: 2 ;
+        grid-column: 1 / span 2;
+    }
+
+    .vertical-card-right{
+        background-image: url(/img/Music-Can-Heal-Feature-Image-1-1536x864.png);
+        background-color: orange;
+
+       /*  grid-column: 2;
+        grid-row: 1 / span 2; */
+        grid-row: 3;
+        grid-column: 1 / span 2;
+    }
+
+    @media screen and (min-width: 390px) {
+        .main-top--container {
+           justify-content: center;
+           align-content: center;
+        }
+        .horizontal-card-left--top{
+            background-color: orange;
+            grid-row: 1;
+            grid-column: 1 ;
+          
+            background-color: white;
+           
+        }
+    
+        .horizontal-card-left--bottom{
+            background-image: url(/img/Paris_Tuileries_Garden_Facepalm_statue.jpg);
+            background-color: orange;
+             grid-column: 1; 
+           
+        }
+    
+        .vertical-card-right{
+            background-image: url(/img/music_heals_wallpaper_by_navaneethn6_dams1uu-fullview.jpg);
+            background-color: orange;
+    
+            grid-column: 2;
+            grid-row: 1 / span 2; 
+           
+        }
+    
+    }
