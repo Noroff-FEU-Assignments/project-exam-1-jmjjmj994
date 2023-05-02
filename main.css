@@ -58,7 +58,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: max-content 70rem;
+    grid-template-rows: max-content 65rem;
 }
 
 
@@ -70,13 +70,37 @@ body {
   
 }
 
-#prev-btn {left:0;top: 50%;}
-#next-btn {right: 0;top: 50%;}
 
-.slider-wrapper{background-color: green;
+
+@media screen  and  (min-width:1200px){
+
+    #prev-btn, #next-btn  {
+        display: block;
+    }
+    
+    }
+
+@media screen  and  (max-width:1200px){
+
+    #prev-btn, #next-btn  {
+        display: none;
+    }
+    
+    } 
+
+
+
+#prev-btn {left:0;top: 50%;
+}
+#next-btn {right: 0;top: 50%;
+}
+
+
+.slider-wrapper{
 position: relative;
 overflow: hidden;
 margin: 1rem;
+margin-top: 3rem;
 
 
     }
@@ -84,7 +108,7 @@ margin: 1rem;
     .slide-container {
         height: 100%;
         width: 100%;
-        background-color: orange;
+        
         display: flex;
        overflow: scroll;
         scroll-behavior: smooth;
@@ -95,13 +119,15 @@ margin: 1rem;
       display: grid;
       grid-template-columns: repeat(8, minmax(15rem,35rem));
       grid-template-rows: minmax(15rem,52rem);
-      justify-content: start;
+      justify-content: center;
       align-content: center;
       column-gap: 10rem;
     }
 @media screen and (max-width:1050px) { 
+
     .slide {
 flex: 1 0 300%;
+
     }
     
 }
@@ -130,11 +156,23 @@ padding: 10px;
     }
 
     @media screen  and  (max-width:1200px){
+        .main {
+            grid-template-rows: max-content 60rem;
+        }
         .slide-card {
             display: grid;
 grid-template-columns: minmax(26rem, 35rem);
 grid-template-rows: 23rem 21rem;
 padding: 10px;
+        }
+    }
+ 
+    @media screen  and  (max-width:1050px){
+        .slide-card {
+            display: grid;
+grid-template-columns: minmax(26rem, 30rem);
+grid-template-rows: 20rem 17rem;
+padding: 15px;
         }
     }
 
@@ -185,11 +223,12 @@ padding: 5px;
     position: absolute;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
    align-items: center;
     bottom: 0%;
     padding: 10px;
-
+    
+    background-color: black;
  width: 100%;
    }
   
@@ -198,9 +237,9 @@ padding: 5px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: black;
+    margin: auto auto;
     padding: 5px 5px ;
-    font-size: var(--nav--font--size);
+    font-size: clamp(1rem, 1.3rem);
    }
    .card-spotify {
     display: block;

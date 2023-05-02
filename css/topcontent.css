@@ -1,7 +1,7 @@
 .main-top--container{
     margin: 0.5rem 0;
-    padding: 0.5rem;
-    background-color: blue;
+    padding: 0.8rem;
+    background-color:var(--primary--color);
 display: grid;
 grid-template-columns: repeat(2, minmax(10rem, 15rem));
 grid-template-rows: 12rem 12rem 12rem;
@@ -98,3 +98,21 @@ text-align: center;
         }
     
     }
+    .slide-container {
+
+        scrollbar-width: none;
+    
+        -ms-overflow-style: none; 
+    
+    }
+    
+
+    
+    .slides-container::-webkit-scrollbar { 
+    
+        width: 0;
+    
+        height: 0;
+    
+    }
+    
