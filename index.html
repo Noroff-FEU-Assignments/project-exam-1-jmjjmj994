@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/868d223859.js" crossorigin="anonymous"></script>
     <script src="/js/global.js" defer type="module"></script>
+    <script src="/js/fetch.js" defer type="module"></script>
     <link rel="stylesheet" href="/main.css">
     <title>Home</title>
 </head>
@@ -77,154 +78,33 @@
 <button class="btn" id="next-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24" fill="currentColor"><path d="M10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1.586-7H6a1 1 0 0 1 0-2h5.586L9.05 6.464a1 1 0 1 1 1.414-1.414l4.243 4.243a.997.997 0 0 1 0 1.414l-4.243 4.243a1 1 0 1 1-1.414-1.414L11.586 11z"></path></svg></button>
 <div class="slide-container">
    
+   
     <div class="slide">
-   <div class="slide-card">
+
+
+<!--    <div class="slide-card">
     <div class="slide-card--top">
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
+    <div class="slide-card-post--info">
+        <span class="slide-card-tertiary">By </span>
+        <img src="/avatar.jpg"  class="card-avatar--img"alt="avatar">
+        <span class="slide-card-date">14.11.1994</span>
+    
+    </div>
+        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="" class="card-main--img">
     </div>
     <div class="slide-card--bottom">
        <h1 class="slide-card-header">
         <span class="slide-card-primary">Nat King Cole</span>
         <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-        <span class="slide-card-tertiary">By avatar - Jonathan Braaten Mjøs</span>
-        <span class="slide-card-date">14.11.1994</span>
+       
+       
        </h1>
        <div class="slide-card--btn">
         <a href="#" class="read-more">read more</a> 
         <i class="fa-brands fa-spotify spotify card-spotify"></i>
        </div>
     </div>
-   </div>
-
-
-
-   <div class="slide-card">
-    <div class="slide-card--top">
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
-    </div>
-    <div class="slide-card--bottom">
-       <h1 class="slide-card-header">
-        <span class="slide-card-primary">Nat King Cole</span>
-        <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-        <span class="slide-card-tertiary">By avatar - Jonathan Braaten Mjøs</span>
-        <span class="slide-card-date">14.11.1994</span>
-       </h1>
-       <div class="slide-card--btn">
-        <a href="#" class="read-more">read more</a> 
-        <i class="fa-brands fa-spotify spotify card-spotify"></i>
-       </div>
-    </div>
-   </div>
-
-   <div class="slide-card">
-    <div class="slide-card--top">
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
-    </div>
-    <div class="slide-card--bottom">
-       <h1 class="slide-card-header">
-        <span class="slide-card-primary">Nat King Cole</span>
-        <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-        <span class="slide-card-tertiary">By avatar - Jonathan Braaten Mjøs</span>
-        <span class="slide-card-date">14.11.1994</span>
-       </h1>
-       <div class="slide-card--btn">
-        <a href="#" class="read-more">read more</a> 
-        <i class="fa-brands fa-spotify spotify card-spotify"></i>
-       </div>
-    </div>
-   </div>
-
-   <div class="slide-card">
-    <div class="slide-card--top">
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
-    </div>
-    <div class="slide-card--bottom">
-       <h1 class="slide-card-header">
-        <span class="slide-card-primary">Nat King Cole</span>
-        <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-        <span class="slide-card-tertiary">By avatar - Jonathan Braaten Mjøs</span>
-        <span class="slide-card-date">14.11.1994</span>
-       </h1>
-       <div class="slide-card--btn">
-        <a href="#" class="read-more">read more</a> 
-        <i class="fa-brands fa-spotify spotify card-spotify"></i>
-       </div>
-    </div>
-   </div>
-
-   <div class="slide-card">
-    <div class="slide-card--top">
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
-    </div>
-    <div class="slide-card--bottom">
-       <h1 class="slide-card-header">
-        <span class="slide-card-primary">Nat King Cole</span>
-        <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-        <span class="slide-card-tertiary">By avatar - Jonathan Braaten Mjøs</span>
-        <span class="slide-card-date">14.11.1994</span>
-       </h1>
-       <div class="slide-card--btn">
-        <a href="#" class="read-more">read more</a> 
-        <i class="fa-brands fa-spotify spotify card-spotify"></i>
-       </div>
-    </div>
-   </div>
-
-   <div class="slide-card">
-    <div class="slide-card--top">
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
-    </div>
-    <div class="slide-card--bottom">
-       <h1 class="slide-card-header">
-        <span class="slide-card-primary">Nat King Cole</span>
-        <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-        <span class="slide-card-tertiary">By avatar - Jonathan Braaten Mjøs</span>
-        <span class="slide-card-date">14.11.1994</span>
-       </h1>
-       <div class="slide-card--btn">
-        <a href="#" class="read-more">read more</a> 
-        <i class="fa-brands fa-spotify spotify card-spotify"></i>
-       </div>
-    </div>
-   </div>
-
-   <div class="slide-card">
-    <div class="slide-card--top">
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
-    </div>
-    <div class="slide-card--bottom">
-       <h1 class="slide-card-header">
-        <span class="slide-card-primary">Nat King Cole</span>
-        <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-        <span class="slide-card-tertiary">By avatar - Jonathan Braaten Mjøs</span>
-        <span class="slide-card-date">14.11.1994</span>
-       </h1>
-       <div class="slide-card--btn">
-        <a href="#" class="read-more">read more</a> 
-        <i class="fa-brands fa-spotify spotify card-spotify"></i>
-       </div>
-    </div>
-   </div>
-
-   <div class="slide-card">
-    <div class="slide-card--top">
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="">
-    </div>
-    <div class="slide-card--bottom">
-       <h1 class="slide-card-header">
-        <span class="slide-card-primary">Nat King Cole</span>
-        <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-        <span class="slide-card-tertiary">By avatar - Jonathan Braaten Mjøs</span>
-        <span class="slide-card-date">14.11.1994</span>
-       </h1>
-       <div class="slide-card--btn">
-        <a href="#" class="read-more">read more</a> 
-        <i class="fa-brands fa-spotify spotify card-spotify"></i>
-       </div>
-    </div>
-   </div>
-
-
+   </div> -->
 
 
 

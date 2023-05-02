@@ -1,5 +1,6 @@
 const slideContainer = document.querySelector(".slide-container");
-const slide = document.querySelector(".slide");
+export const slide = document.querySelector(".slide");
+
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 
