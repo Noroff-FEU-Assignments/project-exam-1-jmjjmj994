@@ -40,12 +40,7 @@ slide.innerHTML = data.map((artist,index) =>{
 return `
 <div class="slide-card">
 <div class="slide-card--top">
-<div class="slide-card-post--info">
-    <span class="slide-card-tertiary">By </span>
-    <img src="/avatar.jpg"  class="card-avatar--img"alt="avatar">
-    <span class="slide-card-date">${date}</span>
 
-</div>
     <img src="${media}" alt="" class="card-main--img">
 </div>
 <div class="slide-card--bottom">
@@ -56,7 +51,7 @@ return `
    
    </h1>
    <div class="slide-card--btn">
-    <a href="#" class="read-more">read more</a> 
+    <a href="html/specific.html?id=${id}" class="read-more">read more</a> 
     <i class="fa-brands fa-spotify spotify card-spotify"></i>
    </div>
 </div>

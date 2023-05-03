@@ -6,6 +6,7 @@ const nextBtn = document.getElementById("next-btn");
 
 const slideWidth = 880;
 
+
 nextBtn.onclick = (e) => {
 slideContainer.scrollLeft +=slideWidth
 };

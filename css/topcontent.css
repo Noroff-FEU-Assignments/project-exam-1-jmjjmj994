@@ -11,7 +11,7 @@ align-content: center;
 }
 @media screen and (min-width: 390px) {
     .main-top--container {
-grid-template-columns: repeat(2, minmax(10rem, 45rem));
+grid-template-columns: repeat(2, minmax(10rem, 60rem));
 grid-template-rows: repeat(2, 22rem);
 align-content: center;
 
