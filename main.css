@@ -147,7 +147,7 @@ justify-content: center;}
       grid-template-rows: 35rem;
       justify-content: center;
       align-content: center;
-      column-gap: 2rem;
+  
    
     }
 
@@ -155,7 +155,7 @@ justify-content: center;}
  
 
     .slide-card{
-       margin: 1rem 1rem;
+       margin: 1rem 0.5rem;
 border: 5px;
 
 filter: brightness(90%);

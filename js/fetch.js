@@ -4,11 +4,6 @@ const url = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts?_embed=wp:featured
 const category = "https://exam1.braatenmjos.no/wp-json/wp/v2/categories/47";
 
 
-window.onclick = (e) => {
-  e.preventDefault()
-}
-
-
 
 
 
