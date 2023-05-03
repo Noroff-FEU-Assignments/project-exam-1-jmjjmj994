@@ -4,8 +4,9 @@ const url = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts?_embed=wp:featured
 const category = "https://exam1.braatenmjos.no/wp-json/wp/v2/categories/47";
 
 
-
-
+window.onclick = (e) => {
+  e.preventDefault()
+}
 
 
 
@@ -38,23 +39,13 @@ slide.innerHTML = data.map((artist,index) =>{
   
 
 return `
-<div class="slide-card">
-<div class="slide-card--top">
+<div class="slide-card" ">
+<div class="slide-card--img">
+<img src="${media}">
+</div>
 
-    <img src="${media}" alt="" class="card-main--img">
-</div>
-<div class="slide-card--bottom">
-   <h1 class="slide-card-header">
- 
-    <span class="slide-card-secondary">${title.rendered}</span>
-   
-   
-   </h1>
-   <div class="slide-card--btn">
-    <a href="html/specific.html?id=${id}" class="read-more">read more</a> 
-    <i class="fa-brands fa-spotify spotify card-spotify"></i>
-   </div>
-</div>
+    <span class="slide-card--header">${title.rendered}</span>
+
 </div>
 
 `

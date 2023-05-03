@@ -59,7 +59,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: max-content 60rem;
+    grid-template-rows: max-content 45rem;
 }
 @media screen and (max-width:1050px) {
 .main {
@@ -103,7 +103,23 @@ body {
 
 .slider-wrapper{
 position: relative;
-overflow: hidden;}
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+.slider-wrapper::before {
+    content: "Latest Posts";
+    position: absolute;
+    top: -5px;
+    font-size:3rem;
+    letter-spacing: 5px;
+  font-weight: 100;
+  font-family: 'Courgette', cursive;
+}
+
 .slider-wrapper--title {
 display: flex;
 justify-content: center;}
@@ -114,155 +130,95 @@ justify-content: center;}
 }
 
     .slide-container {
-        height: 100%;
+        height: auto;
+        background-color: orange;
         width: 100%;
         
   display: flex;
        overflow: scroll;
         scroll-behavior: smooth;
     }
+  
     .slide {
         height: 100%;
-        flex: 1 0 200%;
+        flex: 1 0 100%;
       display: grid;
-     
-      grid-template-columns: repeat(8, minmax(15rem,35rem));
-      grid-template-rows: minmax(15rem,52rem);
+      grid-template-columns: repeat(8, 35rem);
+      grid-template-rows: 35rem;
       justify-content: center;
       align-content: center;
-      column-gap: 10rem;
+      column-gap: 2rem;
+   
     }
 
 
+ 
 
     .slide-card{
-       
-display: grid;
-grid-template-columns: minmax(34rem, 35rem);
-grid-template-rows: 28rem 22rem;
+       margin: 1rem 1rem;
+border: 5px;
 
-
-
-
+filter: brightness(90%);
     }
-    @media screen and (max-width:1300px) {
-        .slide-card {transform: scale(0.9);
-          
+  
+    @media screen and (max-width:750px) {
+        .slide-card {
+            transform: scale(0.95);
         }
-    }
-    @media screen and (max-width:1140px) {
-        .slide-card {transform: scale(0.8);}
+        
     }
 
-    @media screen and (max-width:1050px) {
-      
-        .slide-card {transform: scale(0.7);}
+    @media screen and (max-width:500px) {
+        .slide-card {
+            transform: scale(0.90);
+        }
+        
     }
-    @media screen and (max-width:700px) {
-        .slide-card {transform: scale(0.6);}
+    .slide-card {
+ 
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+     
     }
 
-    
-    
+    .slide-card--img img {
+        height: 100%;
+        width: 100%;
+        filter: brightness(70%);
+        box-shadow: 0 0 5px;
+
+    }
+
+    .slide-card--header {
+       position: absolute;
+        text-align: center;
+       filter: brightness(100%);
+      bottom:0;
+        color: white;
+       padding: 5px;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
 
 
 
-   .slide-card--top{
-    box-shadow: 0 0 4px;
-   }
-
-   .slide-card--top .card-main--img {
-    height:100%;
- width: 100%;
-}
-.slide-card-post--info{
-   
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 5px 10px;
-    gap: 1rem;
-   
-}
-.slide-card--top .card-avatar--img {
-    height:10%;
- width: 10%;
-border-radius: 50%;
-margin-right: auto;}
-
- .slide-card-tertiary{
-    padding: 5px;
-    font-size: 1.7rem;
-    
-   }
-
-  .slide-card-date{
-
-    font-size: 1rem;
-
-   }
 
 
- .slide-card--bottom {
-    position: relative;
-background-color: #efefef;
-display: flex;
 
-justify-content: center;
-align-items: start;
-box-shadow: 0 0 4px;
-
-
- }
-   .slide-card-header{ 
-    margin-top: 1rem;
-   font-size: 2rem;
-   font-weight: 200;
-   padding: 0 5px;
-   font-family: 'Roboto Condensed', sans-serif;
-text-align: center;
-
-}
 
 
 
   
-   @media screen and (max-width:1300px) {
-.slide-card-primary, .slide-card-secondary, .slide-card-tertiary, 
-.slide-card-date {
-    letter-spacing: 1px;
-}
-}
 
 
 
-   .slide-card--btn {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   align-items: center;
-    bottom: 0%;
-    padding: 10px;
-    
-    background-color: black;
- width: 100%;
-   }
-  
-   .read-more {
-    display: block;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: auto auto;
-    padding: 5px 5px ;
-    font-size: 1.5rem;
-   }
-   .card-spotify {
-    display: block;
-    order: 2;
-    font-size: 1.8rem;
-   }
+
 
 
 
