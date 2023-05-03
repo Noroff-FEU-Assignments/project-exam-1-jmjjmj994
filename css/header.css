@@ -3,6 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(/img/headerbanner.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

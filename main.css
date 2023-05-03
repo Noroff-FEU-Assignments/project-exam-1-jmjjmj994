@@ -103,10 +103,15 @@ body {
 
 .slider-wrapper{
 position: relative;
-overflow: hidden;
-
-
-    }
+overflow: hidden;}
+.slider-wrapper--title {
+display: flex;
+justify-content: center;}
+.slider-wrapper--title > h1{
+    letter-spacing: 3px;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-weight: 200;
+}
 
     .slide-container {
         height: 100%;
