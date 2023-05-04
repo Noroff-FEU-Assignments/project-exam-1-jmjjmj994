@@ -36,7 +36,7 @@ return `
 <div class="posts-card--title"><h1>${title.rendered}</h1></div>
 <div class="posts-card--content"><p>${excerpt.rendered}</p></div>
 <div class="posts-card--footer">
-    <a href="#">Read more</a>
+    
 </div>
 </div>
 `
@@ -59,7 +59,7 @@ function pageTwo(data){
     <div class="posts-card--title"><h1>${title.rendered}</h1></div>
     <div class="posts-card--content"><p>${excerpt.rendered}</p></div>
     <div class="posts-card--footer">
-    <a href="#">Read more</a>
+    
     </div>
     </div>
     `

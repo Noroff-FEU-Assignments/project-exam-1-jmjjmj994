@@ -8,10 +8,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/868d223859.js" crossorigin="anonymous"></script>
-    <script src="/js/global.js" defer type="module"></script>
-    <script src="/js/fetch.js" defer type="module"></script>
+ 
+    <script src="/js/validation.js" type="module" defer></script>
+   
     <link rel="stylesheet" href="/main.css">
-    <title>Home</title>
+    <title>Contact</title>
 </head>
 <body>
 
@@ -46,77 +47,26 @@
 
     </nav>
     <main>
-<section class="index-main">
-<article class="main-top--container">
-
-<div class="horizontal-card-left--top top-content">
-  <div class="top-content-blog--title">
-    <span class="blog-title--primary">WoW might be bad, but the music rocks.</>
-  </div>
-</div>
-<div class="horizontal-card-left--bottom top-content">
-    <div class="top-content-blog--title">
-        <span class="blog-title--primary">Who the **** is Frank Sinatra? - Kids in 2023</span>
-      </div>
-
-</div>
-
-<div class="vertical-card-right top-content">
-    <div class="top-content-blog--title">
-        <span class="blog-title--primary">When life gives you lemons, listen to Nat King Cole</span>
-      </div>
-</div>
-
-
-</article> 
-
-
-
-
-<article class="slider-wrapper">
-   
-<button class="btn" id="prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
-<button class="btn" id="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
-<div class="slide-container">
-   
-   
-    <div class="slide">
-
-
-<!--    <div class="slide-card">
-    <div class="slide-card--top">
-    <div class="slide-card-post--info">
-        <span class="slide-card-tertiary">By </span>
-        <img src="/avatar.jpg"  class="card-avatar--img"alt="avatar">
-        <span class="slide-card-date">14.11.1994</span>
-    
+<article class="contact-main">
+    <div class="form-container">
+    <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Full name"><br>
+        
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email"><br>
+      
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" ><br>
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Message"></textarea><br>
+      
+      <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </div>
-        <img src="/6c02b1b1-53db-4430-9be7-e3ffcc6c7006.png" alt="" class="card-main--img">
-    </div>
-    <div class="slide-card--bottom">
-       <h1 class="slide-card-header">
-        <span class="slide-card-primary">Nat King Cole</span>
-        <span class="slide-card-secondary">A PRETIUM ENIM DOLOR DONEC EU VENENATIS CURABITUR</span>
-       
-       
-       </h1>
-       <div class="slide-card--btn">
-        <a href="#" class="read-more">read more</a> 
-        <i class="fa-brands fa-spotify spotify card-spotify"></i>
-       </div>
-    </div>
-   </div> -->
-
-
-
-
-    </div>
-</div>
 </article>
-
-
-</section>
-
 
 
 

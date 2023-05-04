@@ -34,12 +34,13 @@ slide.innerHTML = data.map((artist,index) =>{
   
 
 return `
-<div class="slide-card" ">
+<div class="slide-card">
 <div class="slide-card--img">
 <img src="${media}">
 </div>
 
     <span class="slide-card--header">${title.rendered}</span>
+  
 
 </div>
 

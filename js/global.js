@@ -13,3 +13,4 @@ slideContainer.scrollLeft +=slideWidth
 prevBtn.onclick = (e) => {
     slideContainer.scrollLeft -=slideWidth
     };
+
