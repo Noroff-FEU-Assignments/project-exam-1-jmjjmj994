@@ -403,6 +403,10 @@ max-width: 100%;
 .profile-content > span {
     font-size: clamp(2rem, 2.5ch, 2.2rem);
 }
+.contact-btn {
+   
+    color: orange;
+}
 .about-spotify {
     color: #1ccc5b;
     padding: 0 7px;
@@ -422,8 +426,8 @@ max-width: 100%;
     display: flex;
     flex-direction: column;
     margin: 5rem;
- 
-  
+ justify-content: flex-start;
+  align-items: center;
 }
 
    /* Style the form container */
