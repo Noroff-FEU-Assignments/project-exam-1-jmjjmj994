@@ -1,7 +1,4 @@
-/* API */
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
+
 const urlPageOne = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts/?page=1";
 const urlPageTwo = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts/?page=2";
 const pageOneSection = document.querySelector(".posts-page--one");
@@ -27,7 +24,7 @@ console.log(data)
 function pageOne(data){
 pageOneSection.innerHTML = data.map((rowOne, index) => {
    
-const {title,excerpt } = rowOne;
+const {title,excerpt,id } = rowOne;
 
 return `
 
@@ -36,7 +33,7 @@ return `
 <div class="posts-card--title"><h1>${title.rendered}</h1></div>
 <div class="posts-card--content"><p>${excerpt.rendered}</p></div>
 <div class="posts-card--footer">
-    
+    <a href="/specific.html?id=${id}"></a>
 </div>
 </div>
 `
@@ -50,7 +47,7 @@ return `
 function pageTwo(data){
     pageTwoSection.innerHTML = data.map((rowOne, index) => {
       
-    const {title,excerpt } = rowOne;
+    const {title,excerpt, id } = rowOne;
     
     return `
     
@@ -59,7 +56,7 @@ function pageTwo(data){
     <div class="posts-card--title"><h1>${title.rendered}</h1></div>
     <div class="posts-card--content"><p>${excerpt.rendered}</p></div>
     <div class="posts-card--footer">
-    
+    <a href="/specific.html?id=${id}"></a>
     </div>
     </div>
     `
