@@ -17,11 +17,13 @@ fetch(urlPageTwo)
 .then((data)=>{
 console.log(data)
  pageTwo(data)
-
 }) 
 
 
 function pageOne(data){
+
+
+console.log(data._embedded)
 pageOneSection.innerHTML = data.map((rowOne, index) => {
    
 const {title,excerpt,id } = rowOne;
@@ -31,6 +33,7 @@ return `
 <div class="posts-card">
 
 <div class="posts-card--title"><h1>${title.rendered}</h1></div>
+<div class="posts-card--img"> </div>
 <div class="posts-card--content"><p>${excerpt.rendered}</p></div>
 <div class="posts-card--footer">
     <a href="/specific.html?id=${id}"></a>
