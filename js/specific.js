@@ -30,9 +30,12 @@ const title = data.title.rendered
 document.title = `My blog | ${title}`
 const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
 const excerpt = data.content.rendered
+const altText = data._embedded["wp:featuredmedia"][0].alt_text
+
+
 specificImage.innerHTML += `
 <div class="specific-content--img">
-<img src="${media}" class="open-modal">
+<img src="${media}" alt="${altText}"class="open-modal">
 </div>
 `
 specificText.innerHTML += `
@@ -53,16 +56,19 @@ specificImage.innerHTML += `
 
 function renderModal(data){
    const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
+   const altText = data._embedded["wp:featuredmedia"][0].alt_text
    modalContent.innerHTML =`
-<img src="${media}" class="modal-image">
+<img src="${media}" alt="${altText}" class="modal-image">
 <i class="fa-solid fa-x close-modal"></i>
-
 `
 const closeModal = document.querySelector(".close-modal");
 closeModal.onclick = (e) =>{
    if(modalOpen){
-   modal.style.cssText ="visibility:hidden"
-   document.body.style.cssText = "overflow:scroll"
+ /*   modal.style.cssText ="visibility:hidden"  */
+ modal.classList.toggle("active") 
+  
+   } else {
+      modal.classList.toggle("active")
    }
    };
 }
@@ -74,12 +80,14 @@ closeModal.onclick = (e) =>{
 let modalOpen = false;
 specificImage.onclick = (e) => {
    if(!modalOpen) {
-      document.body.style.cssText = "overflow:hidden"
-modal.style.cssText = "visibility:visible"
+      modal.classList.toggle("active")
+      
+/* modal.style.cssText = "visibility:visible" */
 modalOpen = true;
    }
    else {
-      modal.style.cssText = "visibility:hidden"
+      /* modal.style.cssText = "visibility:hidden" */
+      modal.classList.toggle("active")
     
       modalOpen = false;
    }
@@ -88,8 +96,9 @@ modalOpen = true;
 
 window.onclick = (e) => {
    if(e.target === modal){
-      modal.style.cssText ="visibility:hidden"
-      document.body.style.cssText = "overflow:scroll"
+     /*   modal.style.cssText ="visibility:hidden"  */
+       modal.classList.toggle("active") 
+      
    }
 }
 
