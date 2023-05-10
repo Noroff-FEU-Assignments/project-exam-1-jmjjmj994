@@ -30,10 +30,8 @@ return `
 <div class="slide-card--img" >
 <img src="${media}" alt="${altText}">
 </div>
-
-    <span class="slide-card--header">${title.rendered}</span>
-  
-
+<span class="slide-card--header">${title.rendered}</span>
+<a href="/specific.html?id=${id}" class="slider-href"> </a>
 </div>
 
 `

@@ -1,9 +1,11 @@
 .nav {
-    background-color: var(--primary--color);
+    /* background-color: var(--primary--color); */
+    background-color: #444446;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 3px solid #efefef;
+   
   
     
 }
@@ -21,6 +23,6 @@
 
 .nav-li > .nav-item {
     text-decoration: none;
-    color: var(--text--color);
+    color: white;
     font-size: clamp(1.3rem, 2.5vw, 1.5rem);
 }

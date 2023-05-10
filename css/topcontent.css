@@ -1,21 +1,20 @@
 
 
 
-    .slide-container {
+.slide-container {
 
-        scrollbar-width: none;
-    
-        -ms-overflow-style: none; 
-    
-    }
-    
+    scrollbar-width: none;
 
-    
-    .slides-container::-webkit-scrollbar { 
-    
-        width: 0;
-    
-        height: 0;
-    
-    }
-    
+    -ms-overflow-style: none; 
+
+}
+
+
+
+.slides-container::-webkit-scrollbar { 
+
+    width: 0;
+
+    height: 0;
+
+}
