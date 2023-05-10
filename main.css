@@ -721,7 +721,7 @@ grid-row: 1 / span 2;
 }
 
 .modal.active {
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.92);
     transition: background-color 250ms;
     visibility: visible;
 }
