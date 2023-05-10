@@ -5,14 +5,16 @@
 
 .footer {
     display: flex;
-    justify-content: space-evenly;
-   
+    justify-content: center;
+    align-items: center;
+
     
     }
     
-    .footer-left--container{
+    .footer-container{
        
-        flex: 1 1 50%;
+        flex: 1 1 100%;
+        gap: 1rem;
         font-size: var(--nav--font--size);
         display: flex;
         flex-direction: column;
@@ -48,52 +50,4 @@
         padding: 5px;
     }
     
-    
-    .footer-right--container {
-       
-        flex: 1 1 50%;
-        font-size: var(--nav--font--size);
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-    }
-    
-    
-    .footer-right--container > .footer-right--primary {
-        margin-top: 10px;
-        font-size: clamp(1.3rem, 2.5vw, 1.5rem);
-    padding: 5px;
-    text-transform: uppercase;
-    
-    }
-    .footer-right--container > .footer-right--ul{
-        display: flex;
-        list-style: none;
-        gap: 1rem;
-    }
-   .footer-item {
-    text-decoration: none;
-    color: inherit;
-   }
-    .footer-right--li > .footer-social--icon{
-        font-size: clamp(1rem, 2.5vw, 1.3rem);
-    
-        
-    }
-    
-    .footer-right--li:nth-child(1) {
-        color: #0c89ef;
-    }
-    
-    .footer-right--li:nth-child(2) {
-        color: #0a66c2;
-    }
-    
-    .footer-right--li:nth-child(3) {
-        color: #f305cf;
-    }
-    .spotify {
-        color: #1ccc5b;
-    }
     
