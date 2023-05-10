@@ -17,9 +17,11 @@
 .logo-link {
     height: 10rem;
     max-width: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+    text-align: center;
   
 }
 .logo-link img {
@@ -39,8 +41,9 @@ width: 10rem;
   list-style: none;
 }
 
+
 .nav-social{
-    font-size: var(--nav--font--size);
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
     text-decoration: none;
    color: inherit;
 }

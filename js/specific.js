@@ -1,66 +1,96 @@
 const specificContainer = document.querySelector(".specific-content");
+const specificContentContainer = document.querySelector(".specific-content")
+const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".modal--content")
+const specificImage = document.querySelector(".specific-content--img");
+const specificText = document.querySelector(".specific-content--text")
+/* QuerySelector */
+
+/* Url */
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
+/* Url*/
 
 const url = `https://exam1.braatenmjos.no/wp-json/wp/v2/posts/${id}?_embed=wp:featuredmedia` 
 fetch(url)
 .then(res => res.json())
 .then((data) => {
    renderSpecific(data)
-  /*  modal(data)  */
+  renderModal(data)  
 })
 
 
-function renderSpecific(data){
 
+
+
+/* Specific Data */
+function renderSpecific(data){
 const title = data.title.rendered
 document.title = `My blog | ${title}`
 const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
-
 const excerpt = data.content.rendered
-console.log(media)
-specificContainer.innerHTML += `
-
+specificImage.innerHTML += `
 <div class="specific-content--img">
 <img src="${media}" class="open-modal">
 </div>
+`
+specificText.innerHTML += `
 <div class="specific-content--text">
 <p>${excerpt}</p>
 </div>
-`
-const openModal = document.querySelector(".open-modal")
-console.log(openModal);
-openModal.onclick = ((e, cb) => {
-clicked()
 
-})
+`
+specificImage.innerHTML += `
+<img src="${media}">
+`
 };
 
+/*Specific Data */
 
-function clicked(){
-const modal = document.querySelector(".modal");
-modalOpen = false;
-if(!modalOpen) {
-   modal.classList.toggle("active")
-   modalOpen = true;
-} else {
-   modal.classList.toggle("active");
-   modalOpen = false;
 
-}
-}
-/* 
-function modal(data){
+/* Modal */
+
+function renderModal(data){
    const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
-  
-   const specificModal = document.querySelector(".specific-modal");
-   specificModal.innerHTML = `
-   <div class="specific-img-container">
-   
-   <img src="${media}">
-   
-   </div>
-   `
-  
-   }; */
+   modalContent.innerHTML =`
+<img src="${media}" class="modal-image">
+<i class="fa-solid fa-x close-modal"></i>
+
+`
+const closeModal = document.querySelector(".close-modal");
+closeModal.onclick = (e) =>{
+   if(modalOpen){
+   modal.style.cssText ="visibility:hidden"
+   document.body.style.cssText = "overflow:scroll"
+   }
+   };
+}
+
+/* Modal */
+
+/* Onclick */
+
+let modalOpen = false;
+specificImage.onclick = (e) => {
+   if(!modalOpen) {
+      document.body.style.cssText = "overflow:hidden"
+modal.style.cssText = "visibility:visible"
+modalOpen = true;
+   }
+   else {
+      modal.style.cssText = "visibility:hidden"
+    
+      modalOpen = false;
+   }
+}
+
+
+window.onclick = (e) => {
+   if(e.target === modal){
+      modal.style.cssText ="visibility:hidden"
+      document.body.style.cssText = "overflow:scroll"
+   }
+}
+
+/* Onclick */
