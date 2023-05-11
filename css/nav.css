@@ -1,5 +1,5 @@
 .nav {
-    background-color: #37373c;
+   background-color: var(--primary--color);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -46,6 +46,7 @@ width: 10rem;
     font-size: clamp(1.3rem, 2.5vw, 1.8rem);
     text-decoration: none;
    color: inherit;
+  
 }
 
 .fa-facebook {

@@ -17,15 +17,21 @@ fetch(url)
 .then(res => res.json())
 .then((data) => {
    renderSpecific(data)
-  renderModal(data)  
+    renderModal(data)  
+
 })
 
 
-
+window.onclick = (e) => {
+   e.preventDefault()
+}
 
 
 /* Specific Data */
+
 function renderSpecific(data){
+
+
 const title = data.title.rendered
 document.title = `My blog | ${title}`
 const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url

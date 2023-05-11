@@ -1,0 +1,43 @@
+.about-main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30rem 100%;
+
+}
+
+.profile-img--container{background-color: orange;
+    text-align: center;
+    padding: 10px;
+}
+.profile-img--container > img{border-radius: 50%;
+    box-shadow: 0px 0px 0px 5px #0f0202;
+height: 100%;
+max-width: 100%;
+;
+}
+.profile-content{
+    outline: 1px dashed red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-content > h1 {padding: 5px 5px;}
+.profile-content > p {
+    padding: 10px 10px;
+    max-width: 50ch;
+    font-size: clamp(1.8rem, 2.5ch, 2rem);
+    font-weight: 500;
+}
+.profile-content > span {
+    font-size: clamp(2rem, 2.5ch, 2.2rem);
+}
+.contact-btn {
+   
+    color: orange;
+}
+.about-spotify {
+    color: #1ccc5b;
+    padding: 0 7px;
+}
+
