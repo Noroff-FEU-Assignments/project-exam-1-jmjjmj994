@@ -18,16 +18,13 @@ fetch(url)
 .then((data) => {
    renderSpecific(data)
     renderModal(data)  
+ 
 
 })
 
 
-window.onclick = (e) => {
-   e.preventDefault()
-}
 
 
-/* Specific Data */
 
 function renderSpecific(data){
 
@@ -50,9 +47,7 @@ specificText.innerHTML += `
 </div>
 
 `
-specificImage.innerHTML += `
-<img src="${media}">
-`
+
 };
 
 /*Specific Data */
@@ -65,12 +60,12 @@ function renderModal(data){
    const altText = data._embedded["wp:featuredmedia"][0].alt_text
    modalContent.innerHTML =`
 <img src="${media}" alt="${altText}" class="modal-image">
-<i class="fa-solid fa-x close-modal"></i>
+<i class="fa-solid fa-caret-up close-modal"></i>
 `
 const closeModal = document.querySelector(".close-modal");
 closeModal.onclick = (e) =>{
    if(modalOpen){
- /*   modal.style.cssText ="visibility:hidden"  */
+
  modal.classList.toggle("active") 
   
    } else {
@@ -88,11 +83,11 @@ specificImage.onclick = (e) => {
    if(!modalOpen) {
       modal.classList.toggle("active")
       
-/* modal.style.cssText = "visibility:visible" */
+
 modalOpen = true;
    }
    else {
-      /* modal.style.cssText = "visibility:hidden" */
+    
       modal.classList.toggle("active")
     
       modalOpen = false;
@@ -102,7 +97,7 @@ modalOpen = true;
 
 window.onclick = (e) => {
    if(e.target === modal){
-     /*   modal.style.cssText ="visibility:hidden"  */
+  
        modal.classList.toggle("active") 
       
    }

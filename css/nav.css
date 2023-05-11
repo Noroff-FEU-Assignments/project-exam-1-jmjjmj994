@@ -15,17 +15,17 @@
 
    
 .logo-link {
-    height: 10rem;
-    max-width: 10rem;
+height: 10rem;
+    max-width: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
-   
+ 
     text-align: center;
   
 }
 .logo-link img {
-    height: auto;
+    height: 100%;
     max-width: 100%;
 }
 
