@@ -4,10 +4,12 @@ const urlPageTwo = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts/?_embed=wp:
 
 
 
+
 fetch(urlPageOne)
 .then(res => res.json())
 .then((data)=>{
  pageOne(data)
+
 
 }) 
 fetch(urlPageTwo)
@@ -15,6 +17,8 @@ fetch(urlPageTwo)
 .then((data)=>{
  pageTwo(data)
 }) 
+
+
 
 
 function pageOne(data){
@@ -25,15 +29,12 @@ const {title,excerpt,id } = value;
 const media = value._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
 const date = value.date;
 const d = new Date(date).toLocaleDateString('en-EU', {
-
-    day: 'numeric',
-    
- month: 'long',
-    
+day: 'numeric',
+ month: 'long',    
 year: 'numeric',
     
     });
- 
+
 return `
 
 <div class="posts-card">
@@ -122,34 +123,5 @@ const loadMore = document.querySelector(".reveal-more");
 
 /* Button */
 
-
-const searchInput = document.querySelector("[data-search");
-let artists = []
-searchInput.addEventListener("input", e => {
-const value = e.target.value;
-artists.forEach(artist => {
-   const isVisible = artist.name.includes(value)
-   if(isVisible){
-    document.body.innerHTML = artist
-   }
-})
-
-
-})
-
-const url = "https://exam1.braatenmjos.no/wp-json/wp/v2/categories";
-fetch(url)
-.then(res => res.json())
-.then(data => {
-artists = data.filter(value => {
-if(value.name === "Artist"){
-    const name = value.name;
-    return {name: value.name}
-}
-
-});
-
-
-})
 
 
