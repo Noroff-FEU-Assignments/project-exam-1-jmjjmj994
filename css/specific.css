@@ -55,7 +55,7 @@
         transition: 100ms;
     }
     .posts-card:active {
-        filter: blur(50px);
+        filter: blur(5px);
     }
     
     .posts-card--title{
