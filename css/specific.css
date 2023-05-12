@@ -45,6 +45,7 @@
   height: 40rem;
   max-width: 100%;
   cursor: pointer;
+  box-shadow: 0 0 5px;
   
   }
   
@@ -54,6 +55,7 @@
   .specific-img-container img {
       height: 100%;
       max-width: 100%;
+     
   }
   .specific-content--text {
 
