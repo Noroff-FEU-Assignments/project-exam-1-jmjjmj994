@@ -4,6 +4,7 @@ const urlPageTwo = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts/?_embed=wp:
 const categories = "https://exam1.braatenmjos.no/wp-json/wp/v2/categories?page=1"
 
 /* HTML elements */
+
 const cardContainer = document.querySelector(".posts-page");
 const loadMoreButton = document.querySelector(".load-more");
 const postCardTemplate = document.querySelector("[data-post-template]")
@@ -14,7 +15,81 @@ postTotal.textContent = 20
 /*HTML elements */
 
 
+
+
+/* Page One */
+pageOneData()
+function pageOneData(){
 fetch(urlPageOne)
+.then((response) => {
+return response.json()
+})
+.then((data) => {
+    loader.remove()
+const storeData = data;
+data.map(({title,  id, _embedded, date}) => pageOneContent(title,  id, _embedded, date))
+})
+};
+
+function pageOneContent(title,  id, _embedded, date){
+    const currentPostCount = 10;
+    postCount.textContent = currentPostCount
+    const postCard = postCardTemplate.content.cloneNode(true).children[0]
+    const cardTitle = postCard.querySelector("[data-title]")
+    const image = postCard.querySelector("[data-image]")
+    const content = postCard.querySelector("[data-content]")
+    const link = postCard.querySelector("[data-link]")
+    const media = _embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
+    const altText = _embedded["wp:featuredmedia"][0].alt_text;
+    
+    const convertedDate = new Date(date).toLocaleDateString('en-EU', {day: 'numeric',month: 'long',year: 'numeric',});
+    cardTitle.textContent = title.rendered
+    image.innerHTML = `<img src="${media}" alt="${altText}">`
+    content.textContent = convertedDate
+    link.innerHTML = `<a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>`
+    cardContainer.append(postCard)
+}
+
+/* Page One */
+
+
+
+function pageTwoData(){
+fetch(urlPageTwo)
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    const storeData = data;
+    data.map(({title, id, _embedded, date}) => pageTwoContent(title, id, _embedded, date))
+})
+};
+
+function pageTwoContent(title, id, _embedded, date){
+    const currentPostCount = 20;
+    postCount.textContent = currentPostCount
+    const postCard = postCardTemplate.content.cloneNode(true).children[0]
+    const cardTitle = postCard.querySelector("[data-title]")
+    const image = postCard.querySelector("[data-image]")
+    const content = postCard.querySelector("[data-content]")
+    const link = postCard.querySelector("[data-link]")
+    const media = _embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
+    const altText = _embedded["wp:featuredmedia"][0].alt_text;
+    
+    const convertedDate = new Date(date).toLocaleDateString('en-EU', {day: 'numeric',month: 'long',year: 'numeric',});
+    cardTitle.textContent = title.rendered
+    image.innerHTML = `<img src="${media}" alt="${altText}">`
+    content.textContent = convertedDate
+    link.innerHTML = `<a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>`
+    cardContainer.append(postCard)
+    loadMoreButton.remove()
+};
+
+loadMoreButton.addEventListener("click", pageTwoData)
+
+
+
+/* fetch(urlPageOne)
 .then(res => res.json())
 .then((data) => {
 
@@ -99,7 +174,7 @@ const loadPageTwo = () => {
 
 
 
-loadMoreButton.addEventListener("click", loadPageTwo)
+loadMoreButton.addEventListener("click", loadPageTwo) */
 
 
 
