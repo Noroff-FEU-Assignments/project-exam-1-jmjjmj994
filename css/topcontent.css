@@ -34,8 +34,13 @@ place-content: center;
     }
     .center-m-column--bottom{
         grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
     
     }
+  
     
     .left-l-column img {
         height: 100%;
