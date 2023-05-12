@@ -23,6 +23,10 @@ fetch(urlPageOne)
 })
 
 
+
+
+
+
 function postsPageOne(data){
   data.map((value, index) => {
 
@@ -99,7 +103,15 @@ loadMoreButton.addEventListener("click", loadPageTwo)
 
 
 
+
+
+
+
+
+
+
 /* 
+
 
 const fetchArtists = () => {
     fetch(urlPageOne)
