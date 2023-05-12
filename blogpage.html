@@ -91,183 +91,50 @@
 
 <main >
 <section class="posts-main">
-<article class="filter-buttons-container">
+<!-- <article class="filter-buttons-container">
 <button class="filter-btn" data-id-all>All</button>
-<button class="filter-btn" data-id="Artist">Artists</button>
-<button class="filter-btn">Composers</button>
-<button class="filter-btn">Opinions</button>
-</article>
-<article class="posts-page--one">
-   
-<!-- <div class="posts-card">
-<div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-<div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-<div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-<div class="posts-card--footer">
-    <a href="#">Read more</a>
-</div>
-</div>
+<button class="filter-btn" data-id-artists="Artist">Artists</button>
+<button class="filter-btn"data-id-composers>Composers</button>
+<button class="filter-btn"data-id-opinions>Opinions</button>
+</article> -->
+
+
+<article class="posts-page">
+<template data-post-template>
 <div class="posts-card">
-    <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-    <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-    <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-    <div class="posts-card--footer">
-        <a href="#">Read more</a>
-    </div>
-    </div>
-    <div class="posts-card">
-        <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-        <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-        <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-        <div class="posts-card--footer">
-            <a href="#">Read more</a>
-        </div>
-        </div>
-        <div class="posts-card">
-            <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-            <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-            <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-            <div class="posts-card--footer">
-                <a href="#">Read more</a>
-            </div>
-            </div>
-            <div class="posts-card">
-                <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                <div class="posts-card--footer">
-                    <a href="#">Read more</a>
-                </div>
-                </div>
-                <div class="posts-card">
-                    <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                    <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                    <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                    <div class="posts-card--footer">
-                        <a href="#">Read more</a>
-                    </div>
-                    </div>
-                    <div class="posts-card">
-                        <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                        <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                        <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                        <div class="posts-card--footer">
-                            <a href="#">Read more</a>
-                        </div>
-                        </div>
-                        <div class="posts-card">
-                            <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                            <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                            <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                            <div class="posts-card--footer">
-                                <a href="#">Read more</a>
-                            </div>
-                            </div>
-                            <div class="posts-card">
-                                <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                                <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                                <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                                <div class="posts-card--footer">
-                                    <a href="#">Read more</a>
-                                </div>
-                                </div>
-                                <div class="posts-card">
-                                    <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                                    <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                                    <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                                    <div class="posts-card--footer">
-                                        <a href="#">Read more</a>
-                                    </div>
-                                    </div> -->
-<!-- <a href="#" class="btn reveal-more">Reveal More</a> --> 
+   <div class="posts-card--title" data-title>
+    
+   </div>
+
+   <div class="posts-card--image" data-image>
+   
+   </div>
+
+   <div class="posts-card--content" data-content>
+    
+   </div>
+   <div class="posts-card--link" data-link>
+    
+   </div>
+</div>
+</template>
+
+
+
+
+<span class="loader"></span>
+
+
+
 </article>
 
-<a href="#" class="btn reveal-more">Load more..</a>
-
-
-<article class="posts-page--two">
-
- <!--    <div class="posts-card">
-        <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-        <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-        <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-        <div class="posts-card--footer">
-            <a href="#">Read more</a>
-        </div>
-        </div>
-        <div class="posts-card">
-            <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-            <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-            <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-            <div class="posts-card--footer">
-                <a href="#">Read more</a>
-            </div>
-            </div>
-            <div class="posts-card">
-                <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                <div class="posts-card--footer">
-                    <a href="#">Read more</a>
-                </div>
-                </div>
-                <div class="posts-card">
-                    <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                    <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                    <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                    <div class="posts-card--footer">
-                        <a href="#">Read more</a>
-                    </div>
-                    </div>
-                    <div class="posts-card">
-                        <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                        <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                        <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                        <div class="posts-card--footer">
-                            <a href="#">Read more</a>
-                        </div>
-                        </div>
-                        <div class="posts-card">
-                            <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                            <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                            <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                            <div class="posts-card--footer">
-                                <a href="#">Read more</a>
-                            </div>
-                            </div>
-                            <div class="posts-card">
-                                <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                                <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                                <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                                <div class="posts-card--footer">
-                                    <a href="#">Read more</a>
-                                </div>
-                                </div>
-                                <div class="posts-card">
-                                    <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                                    <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                                    <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                                    <div class="posts-card--footer">
-                                        <a href="#">Read more</a>
-                                    </div>
-                                    </div>
-                                    <div class="posts-card">
-                                        <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                                        <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                                        <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                                        <div class="posts-card--footer">
-                                            <a href="#">Read more</a>
-                                        </div>
-                                        </div>
-                                        <div class="posts-card">
-                                            <div class="posts-card--image"><img src="/jimmydurantecropped.webp" alt=""></div>
-                                            <div class="posts-card--title"><h1>Jimmy Durante</h1></div>
-                                            <div class="posts-card--content"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repellendus error placeat iste perferendis odio adipisci voluptatem dicta qui? Obcaecati quos minima voluptatem iste sint vero nostrum asperiores reiciendis aperiam!</p></div>
-                                            <div class="posts-card--footer">
-                                                <a href="#">Read more</a>
-                                            </div>
-                                            </div> -->
-        
+<article class="load-more-container">
+    <div class="load-more-left"></div>
+    <button class="load-more">Load More </button>
+    <span>
+    <span id="post-count"></span> of
+<span id="post-total"></span> posts
+    </span>
 </article>
 
 

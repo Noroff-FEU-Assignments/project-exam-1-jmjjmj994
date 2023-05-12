@@ -3,43 +3,66 @@ const urlPageOne = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts/?_embed=wp:
 const urlPageTwo = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts/?_embed=wp:featuredmedia&page=2";
 const categories = "https://exam1.braatenmjos.no/wp-json/wp/v2/categories?page=1"
 
+/* HTML elements */
+const cardContainer = document.querySelector(".posts-page");
+const loadMoreButton = document.querySelector(".load-more");
+const postCardTemplate = document.querySelector("[data-post-template]")
+const loader = document.querySelector(".loader")
+const postCount = document.getElementById("post-count")
+const postTotal = document.getElementById("post-total")
+postTotal.textContent = 20
+/*HTML elements */
 
 
-
-
-
-
-
-
-
-
-
-/* const button = document.querySelector("[data-id-all]")
-button.addEventListener("click", waitOn)
-
-function waitOn(){
 fetch(urlPageOne)
 .then(res => res.json())
 .then((data) => {
-valueOfData(data)
-})
 
-fetch(urlPageTwo)
-.then(res => res.json())
-.then((data) => {
-valueOfData(data)
+   postsPageOne(data)
+   loader.remove()
 })
 
 
+function postsPageOne(data){
+  data.map((value, index) => {
+
+    postCount.innerHTML = index + 1
+ 
+    const {title,excerpt,id } = value;
+    const media = value._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
+    const date = value.date;
+    const d = new Date(date).toLocaleDateString('en-EU', {
+    day: 'numeric',
+     month: 'long',    
+    year: 'numeric',
+        
+        });
+    
+    const postCard = postCardTemplate.content.cloneNode(true).children[0]
+   const cardTitle = postCard.querySelector("[data-title]")
+   const image = postCard.querySelector("[data-image]")
+   const content = postCard.querySelector("[data-content]")
+   const link = postCard.querySelector("[data-link]")
+   cardTitle.textContent = title.rendered
+   image.innerHTML = `<img src="${media}">`
+   content.textContent = d
+   link.innerHTML = `<a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>`
+   cardContainer.append(postCard)
+ 
+  
 
 
+  })
 
-function valueOfData(obj){
+}
 
-    pageOneSection.innerHTML = obj.map((value, index) => {
-   if(value.categories == 22){
-     value.artist = "artist"
-     console.log(value)
+
+const loadPageTwo = () => {
+    fetch(urlPageTwo)
+    .then(res => res.json())
+    .then((data) => {
+       data.map((value, index) => {
+        postCount.innerHTML = index + 11
         const {title,excerpt,id } = value;
         const media = value._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
         const date = value.date;
@@ -50,30 +73,110 @@ function valueOfData(obj){
             
             });
         
-        return `
-        
-        <div class="posts-card">
-        
-        <div class="posts-card--title"><h1>${title.rendered}</h1></div>
-        <div class="posts-card--img"><img src="${media}"> </div>
-        <div class="posts-card--content"><p>${d}</p></div>
-        <div class="posts-card--footer">
-            <a href="/specific.html?id=${id}" class="posts-href"></a>
-        </div>
-        </div>
-        `
-        
-        }}).join("");
+        const postCard = postCardTemplate.content.cloneNode(true).children[0]
+       const cardTitle = postCard.querySelector("[data-title]")
+       const image = postCard.querySelector("[data-image]")
+       const content = postCard.querySelector("[data-content]")
+       const link = postCard.querySelector("[data-link]")
+       cardTitle.textContent = title.rendered
+       image.innerHTML = `<img src="${media}">`
+       content.textContent = d
+       link.innerHTML = `<a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>`
+       cardContainer.append(postCard)
         
 
 
+
+
+       })
+ })
+ loadMoreButton.remove()
 }
-} */
 
 
 
+loadMoreButton.addEventListener("click", loadPageTwo)
 
-fetch(urlPageOne)
+
+
+/* 
+
+const fetchArtists = () => {
+    fetch(urlPageOne)
+    .then(res => res.json())
+    .then((data) => {
+       data.map((value, index) => {
+       if(value.categories == 22){
+        const {title,excerpt,id } = value;
+        const media = value._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
+        const date = value.date;
+        const d = new Date(date).toLocaleDateString('en-EU', {
+        day: 'numeric',
+         month: 'long',    
+        year: 'numeric',
+            
+            });
+    
+    const artistContainer = document.createElement("div");
+cardContainer.appendChild(artistContainer)
+template.remove()
+
+artistContainer.innerHTML += `
+
+
+<div> <h1> ${title.rendered}</h1></div>
+
+
+`
+
+    
+       }
+       })
+      
+    })
+    
+    fetch(urlPageTwo)
+    .then(res => res.json())
+    .then((data) => {
+        data.map((value) => {
+          
+            if(value.categories == 22){
+                const {title,excerpt,id } = value;
+                const media = value._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
+                const date = value.date;
+                const d = new Date(date).toLocaleDateString('en-EU', {
+                day: 'numeric',
+                 month: 'long',    
+                year: 'numeric',
+                    
+                    });
+            
+
+                   
+               }
+    
+    
+    
+    
+    
+    
+    
+            })
+    })
+    
+    
+    
+    
+    };
+    
+    
+    
+    const artistBtn = document.querySelector("[data-id-artists]");
+    console.log(artistBtn)
+    artistBtn.addEventListener("click", fetchArtists)
+
+fetchArtists() */
+/* fetch(urlPageOne)
 .then(res => res.json())
 .then((data)=>{
  pageOne(data)
@@ -181,7 +284,7 @@ const loadMore = document.querySelector(".reveal-more");
     }
     
     }; 
-
+ */
 
 
 

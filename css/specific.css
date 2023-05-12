@@ -4,153 +4,94 @@
 
 
 
-.posts-main {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows:  10rem auto auto;
-    gap: 2rem;
-    position: relative;
-    
-    }
-    
-    
-    
-    
-    .posts-page--one {
-       display: grid;
-       grid-template-columns:repeat(auto-fit, minmax(30rem,1fr));
-       justify-content: space-evenly;
-       margin-bottom: 6rem;
-    
-    
-    }
-    
-    /* page one */
-    .posts-card {
-       padding: 10px;
-       box-shadow: 5px 0 0;
-    border: 0.5px solid rgb(23, 18, 18);
-    color: black;
-       background-color: var(--secondary--color);
-      /*   display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
-      
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 20rem 20rem max-content;
+   
+   
+   
+   
+
+
+
+.specific-main {
+    background-color: #efefef;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 100%;
       position: relative;
-       
-    
-    }
-    .posts-card:hover {
-        background-color: var(--tertiary--color);
-        color: white;
-        transition: 250ms;
-    }
-    .posts-card:hover img {
-       border: 3px solid black;
-        transition: 100ms;
-    }
-    .posts-card:active {
-        filter: blur(5px);
-    }
-    
-    .posts-card--title{
-     
-       
-    }
- 
-    .posts-card--img img{height: 100%;
-    width: 100%;}
-    .posts-card--title > h1{
-        text-align: center;
-        padding: 5px;
-    }
-
-
-    .posts-card--content{
-        flex: 1 1 auto;
-        font-size: clamp(1.4rem, 2.5vw, 1.5rem);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      
-        
-    }
-    .posts-card--content > p{
-    font-size: clamp(1.5rem, 2.5ch, 1.8rem);
-    letter-spacing: 0.5px;
-    padding: 5px;
-    }
-    .posts-card--footer{
-        flex: 1 1 auto;
-       
-        
-    }
-    .posts-card--footer > a {
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-    }
-    
-    
-    .posts-page--one {
-        background-color: var(--secondary--color);
-    }
-    
-    .reveal-more {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        width: 12rem;
-        height: 3rem;
-        bottom: 0;
-        left: 50%;
-        right: 50%;
-        font-size: 1.5rem;
-        transform: translateX(-50%);
-        background-color: #f2f2f2;
-      color: black;
-        text-decoration: none;
-        padding: 10px;
-        margin-bottom: 1rem;
-      
-        border-radius: 5px;
-    }
+  }
   
-    .reveal-more:active {
-        border-radius: 10px;
-        transition: 100ms;
-        
-    }
+  
+  
+  
+  
+  .specific-content {
+  display: grid;
+  grid-template-columns: minmax(20rem, 100rem);
+  grid-template-rows: min-content min-content;
+  place-content: center;
+  padding: 10px;
 
+  
+  }
+  .specific-content--img  {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  
+  
+  }
+  
+  .specific-content--img img {
+  height: 40rem;
+  max-width: 100%;
+  cursor: pointer;
+  
+  }
+  
+  .specific-img-container {
+  
+  }
+  .specific-img-container img {
+      height: 100%;
+      max-width: 100%;
+  }
+  .specific-content--text {
 
-    /* page one */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+   
+      gap: 1rem;
+      letter-spacing: 1px;
+     
+      
+  
+  }
+  
+  .specific-content--text ul {
+      list-style: none;
+   
+      padding: 0px 20px;
+  }
+  .specific-content li {
+     
+  }
+  .specific-content--text h1 {
+  
+  }
+  
+  .specific-content--text h3 {
+      padding: 0px 20px;
     
-    
-    .posts-page--two {
-       
-      display: none;
-    
-    
-    }
-    .posts-page--two.active {
-        display: grid;
-        grid-template-columns:repeat(auto-fit, minmax(30rem,1fr));
-        
-        justify-content: space-evenly;
-        margin-bottom: 6rem;
-        
-        position: relative;
-        
-      }
+   }
+  
+   .specific-content--text p {
+   
+      max-width: 90ch;
+      font-weight: 200;
+   }
 
 
 
