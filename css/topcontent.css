@@ -1,23 +1,26 @@
 
 .main-top--container{
     display: grid;
-    grid-template-columns: repeat(3, minmax(15rem, 38rem));
+    grid-template-columns: repeat(3, minmax(15rem, 1fr));
     grid-template-rows: 25rem 25rem;
 place-content: center;
-    gap: 2rem;
-    padding: 5px;
+   gap: 1rem;
+    padding: 10px;
     margin: 1rem;
+    outline: 0.5px solid var(--primary--color);
+    border-radius: 10px;
 
     }
-    
+  
     .left-l-column, .right-l-column, .center-m-column--bottom, .center-m-column--top {
         box-shadow: 0 0 5px;
         position: relative;
+      
     }
     .left-l-column{
     
     grid-row: 1 / span 2;
-    
+    border-radius: 10px;
     
     }
     .right-l-column{
@@ -29,16 +32,17 @@ place-content: center;
     .center-m-column--top{
         grid-row: 1;
         position: relative;
-
-        background-color: white;
+filter: brightness(75%);
+        background-color: #313135;
     }
 
     .center-m-column--top:hover {
       animation:shake 100ms infinite alternate-reverse;
+filter: brightness(90%);
     }
     @keyframes shake {
-        from {transform:rotate(1deg)}
-        to {transform: rotate(-1deg)}
+        from {transform:rotate(0.2deg)}
+        to {transform: rotate(-0.2deg)}
     }
     .center-m-column-top--link{
         content: "";
@@ -51,7 +55,7 @@ place-content: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(21, 10, 10);
+       background-color: black;
     
     }
   
@@ -59,14 +63,17 @@ place-content: center;
     .left-l-column img {
         height: 100%;
         width: 100%;
+        border-radius: 10px;
     }
     .right-l-column img {
         height: 100%;
        width: 100%;
+       border-radius: 10px;
     }
     .center-m-column--bottom img {
         height: 100%;
         width: 100%;
+        border-radius: 10px;
         
     }
     
@@ -74,23 +81,11 @@ place-content: center;
     .center-m-column--top img {
         height: 100%;
         width: 100%;
+     
       
     }
-    .column-overlay {
-        position: absolute;
-        background-color: var(--tertiary--color);
-        bottom: 0;
-        width: 100%;
-        height: 5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
-    .column-primary {
-        color: white;
-        font-size: clamp(1.5rem, 2.5vw, 2rem);
-    }
+ 
+   
     
     @media screen and (max-width:1000px) {
         .main-top--container{
