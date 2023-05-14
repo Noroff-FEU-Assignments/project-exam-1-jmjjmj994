@@ -1,7 +1,9 @@
-const nameRegex = /^[a-zA-Z]{6,}$/;
+const nameRegex = /^[a-zA-ZæøåÆØÅ]{5,}(\s[a-zA-ZæøåÆØÅ]+)?$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const subjectRegex = /^.{16,}$/;
 const messageRegex = /^.{26,}$/;
+const formContainer = document.querySelector(".form-container");
+const appreciationContainer = document.querySelector(".thank-you-container");
 const form = document.getElementById("form");
 const emailInput = document.getElementById("email");
 const nameInput = document.getElementById("name")
@@ -12,46 +14,146 @@ const messageInput = document.getElementById("message")
 
 
 
+let passed = false;
+const validateName = () => {
+
+  const name = nameInput.value.trim()
+  if(!nameRegex.test(name)){
+    nameInput.placeholder="Please enter a name with 5 or more characters"
+    nameInput.style.cssText ="outline:3px solid red"
+    passed = false;
+    return
+  }else {
+    nameInput.placeholder="";
+    nameInput.style.cssText="outline:3px solid green;"
+    passed = true;
+  }
+};
+
+const validateEmail = () => {
+  const email = emailInput.value.trim()
+  if(!emailRegex.test(email)) {
+    emailInput.placeholder="Please enter a valid email"
+    emailInput.style.cssText ="outline:3px solid red"
+    passed = false
+    return;
+  }else {
+      emailInput.style.cssText="outline:3px solid green;"
+      emailInput.placeholder =""
+      passed = true;
+    }
+  };
 
 
+  const validateSubject = () => {
+    const subject = subjectInput.value.trim()
+    if (!subjectRegex.test(subject)) {
+      subjectInput.placeholder="Subject should be at least 16 characters long"
+      subjectInput.style.cssText ="outline:3px solid red"
+      passed = false
+      return;
+    }else{
+      subjectInput.placeholder=""
+      subjectInput.style.cssText ="outline:3px solid green"
+      passed = true
+    } 
+    };
 
 
+    const validateMessage = () => {
+      const message= messageInput.value.trim()
+      if (!messageRegex.test(message)) {
+        messageInput.placeholder="Subject should be at least 16 characters long"
+        messageInput.style.cssText ="outline:3px solid red"
+        passed = false;
+        return;
+      } else {
+        messageInput.placeholder=""
+        messageInput.style.cssText ="outline:3px solid green"
+        passed = true
+      }   
+
+
+    };
 
 
 
 
 
 form.onsubmit = (e) => {
-  e.preventDefault()
+e.preventDefault()
+
+
 
   const name = nameInput.value.trim()
+  if(!nameRegex.test(name)){
+    nameInput.placeholder="Please enter a name with 5 or more characters"
+    nameInput.style.cssText ="outline:3px solid red"
+ 
+    return
+  }else {
+    nameInput.placeholder="";
+    nameInput.style.cssText="outline:3px solid green;"
+  
+  }
+
+
+
   const email = emailInput.value.trim()
-  const subject = subjectInput.value.trim()
-  const message= messageInput.value.trim()
+  if(!emailRegex.test(email)) {
+    emailInput.placeholder="Please enter a valid email"
+    emailInput.style.cssText ="outline:3px solid red"
 
-  if (!nameRegex.test(name)) {
-    nameInput.placeholder = "NAME SHOULD CONTAIN AT LEAST 6 CHARACTERS"
-    nameInput.style.cssText ="border:1px solid red"
-      console.error('Name should contain at least 6 letters.');
-      return;
+    return;
+  }else {
+      emailInput.style.cssText="outline:3px solid green;"
+      emailInput.placeholder =""
+     
     }
 
-    if(!emailRegex.test(email)) {
-      console.error("Please provide a valid email")
-      return;
-    }
+
+
+
+    const subject = subjectInput.value.trim()
     if (!subjectRegex.test(subject)) {
-      console.error('Subject should be at least 16 characters long.');
+      subjectInput.placeholder="Subject should be at least 16 characters long"
+      subjectInput.style.cssText ="outline:3px solid red"
+    
       return;
-    }
-    if (!messageRegex.test(message)) {
-      console.error('Message should be at least 26 characters long.');
-      return;
-    }
-
-    form.submit();
-
-
-};
+    }else{
+      subjectInput.placeholder=""
+      subjectInput.style.cssText ="outline:3px solid green"
+   
+    } 
+ 
 
 
+   
+      const message= messageInput.value.trim()
+      if (!messageRegex.test(message)) {
+        messageInput.placeholder="Subject should be at least 16 characters long"
+        messageInput.style.cssText ="outline:3px solid red"
+      
+        return;
+      } else {
+        messageInput.placeholder=""
+        messageInput.style.cssText ="outline:3px solid green"
+       
+      }   
+
+
+      form.submit()
+      confetti()
+      appreciationContainer.style.cssText ="visibility:visible";
+      formContainer.remove()
+
+    };
+
+
+
+
+  
+
+
+
+ 

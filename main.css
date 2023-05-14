@@ -271,10 +271,29 @@ justify-content: center;
     margin: 5rem;
  justify-content: flex-start;
   align-items: center;
+ 
 }
+.thank-you-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 30rem;
+visibility: hidden;
 
+}
+.thank-you {
+  color: white;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  letter-spacing: 1px;
+  animation: fadeInThankYouNext 1s;
+}
+@keyframes fadeInThankYouNext {
+  from {opacity: 0; transform: translateX(-500px);}
+  to {transform: translateX(0); opacity: 1;}
+}
    /* Style the form container */
    .form-container {
+   
     width: 100%;
     max-width: 80rem;
     padding: 20px;
