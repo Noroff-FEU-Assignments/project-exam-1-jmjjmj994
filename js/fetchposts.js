@@ -35,16 +35,19 @@ function pageOneContent(title,  id, _embedded, date){
     const currentPostCount = 10;
     postCount.textContent = currentPostCount
     const postCard = postCardTemplate.content.cloneNode(true).children[0]
+
     const cardTitle = postCard.querySelector("[data-title]")
     const image = postCard.querySelector("[data-image]")
     const content = postCard.querySelector("[data-content]")
     const link = postCard.querySelector("[data-link]")
+    
     const media = _embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
     const altText = _embedded["wp:featuredmedia"][0].alt_text;
+  
     
     const convertedDate = new Date(date).toLocaleDateString('en-EU', {day: 'numeric',month: 'long',year: 'numeric',});
     cardTitle.textContent = title.rendered
-    image.innerHTML = `<img src="${media}" alt="${altText}">`
+    image.innerHTML = `<img src="${media}" alt="${altText}">` 
     content.textContent = convertedDate
     link.innerHTML = `<a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>`
     cardContainer.append(postCard)

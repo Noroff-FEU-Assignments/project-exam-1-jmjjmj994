@@ -62,14 +62,18 @@ function renderModal(data){
 <img src="${media}" alt="${altText}" class="modal-image">
 <i class="fa-solid fa-caret-up close-modal"></i>
 `
+
+
+
 const closeModal = document.querySelector(".close-modal");
 closeModal.onclick = (e) =>{
+   let modalOpen = false;
    if(modalOpen){
-
  modal.classList.toggle("active") 
-  
+
    } else {
       modal.classList.toggle("active")
+      specificContainer.style.cssText =" display:block";
    }
    };
 }
@@ -78,16 +82,18 @@ closeModal.onclick = (e) =>{
 
 /* Onclick */
 
-let modalOpen = false;
+
 specificImage.onclick = (e) => {
+   let modalOpen = false;
    if(!modalOpen) {
+      specificContainer.style.cssText =" display:none";
       modal.classList.toggle("active")
       
 
 modalOpen = true;
    }
    else {
-    
+      specificContainer.style.cssText =" display:block";
       modal.classList.toggle("active")
     
       modalOpen = false;
@@ -97,7 +103,7 @@ modalOpen = true;
 
 window.onclick = (e) => {
    if(e.target === modal){
-  
+      specificContainer.style.cssText =" display:block";
        modal.classList.toggle("active") 
       
    }

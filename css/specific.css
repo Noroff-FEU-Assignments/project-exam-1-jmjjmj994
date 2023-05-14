@@ -12,7 +12,7 @@
 
 
 .specific-main {
-    background-color: #efefef;
+    background-color: rgb(36, 39, 41);
       min-height: 100vh;
       display: grid;
       grid-template-columns: auto;
@@ -37,7 +37,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  
+ 
   
   }
   
@@ -49,16 +49,15 @@
   
   }
   
-  .specific-img-container {
-  
-  }
+
   .specific-img-container img {
       height: 100%;
       max-width: 100%;
+      
      
   }
   .specific-content--text {
-
+color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;

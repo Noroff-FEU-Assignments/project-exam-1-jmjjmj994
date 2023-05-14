@@ -6,15 +6,15 @@
 place-content: center;
    gap: 1rem;
     padding: 10px;
-    margin: 1rem;
-    outline: 0.5px solid var(--primary--color);
-    border-radius: 10px;
+    margin: 5rem 1rem 5rem;
+
 
     }
   
     .left-l-column, .right-l-column, .center-m-column--bottom, .center-m-column--top {
         box-shadow: 0 0 5px;
         position: relative;
+       outline: 10px solid black;
       
     }
     .left-l-column{
@@ -34,6 +34,7 @@ place-content: center;
         position: relative;
 filter: brightness(75%);
         background-color: #313135;
+        text-align: center;
     }
 
     .center-m-column--top:hover {
@@ -59,6 +60,9 @@ filter: brightness(90%);
     
     }
   
+    .large-spotify {
+       color: #1db954;
+    }
     
     .left-l-column img {
         height: 100%;
@@ -80,8 +84,9 @@ filter: brightness(90%);
     
     .center-m-column--top img {
         height: 100%;
-        width: 100%;
-     
+        width: 60%;
+ 
+   
       
     }
  
@@ -91,7 +96,7 @@ filter: brightness(90%);
         .main-top--container{
          
           
-            grid-template-columns: repeat(2, minmax(15rem, 34rem));
+            grid-template-columns: repeat(2, minmax(15rem, 30rem));
          
             grid-template-rows: 25rem 30rem 25rem;
             }

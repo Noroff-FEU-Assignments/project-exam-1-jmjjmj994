@@ -35,7 +35,8 @@ h3 {
 }
 
 :root {
-    --primary--color: #17041a;
+    --navfoot--color:#696969;
+    --primary--color: rgb(199, 198, 198);
     --secondary--color:#090909;
     --tertiary--color: #393e46;
     --text--color:black;
@@ -53,7 +54,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 0rem 13rem  1fr 20rem;
+    grid-template-rows: 0rem 10rem  1fr 20rem;
 
 }
 
@@ -71,29 +72,13 @@ body {
     grid-template-rows: max-content 45rem;
     gap: 5rem;
   
+  
 }
 
   
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-.filter-buttons-container {
-    background-color: orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 
@@ -104,16 +89,17 @@ body {
     grid-template-columns: auto;
     grid-template-rows:  auto auto;
     gap: 1rem;
+    margin: 5rem 0 5rem;
   
    
     }
     
     .posts-page {
-        background-color: var(--tertiary--color);
+        background-color: var(--secondary--color);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 40rem));
         grid-auto-rows: 50rem;
-     gap: 2rem;
+     gap: 5rem;
         justify-content: center;
         align-content: center;
         position: relative;
@@ -121,24 +107,21 @@ body {
     }
 
     .posts-card {
-      background-color: var(--secondary--color);
-outline: 1px solid white;
+background-color: rgb(28, 32, 36);
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 15rem 25rem auto auto ;
-      animation: fadeIn 250ms ease;
+      grid-template-rows: 25rem 10rem auto auto ;
       transition: 150ms;
-      border-radius: 5px;
-    }
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
+   color: white;
 
+position: relative;
+
+    }
+ 
     .posts-card--title {
-  
 display: flex;
 justify-content: center;
+align-items: center;
 text-align: center;
 padding: 10px;
 font-size: 2rem;
@@ -170,23 +153,22 @@ justify-content: center;
         display: flex;
         justify-content: center;
         align-items: center;
-      background-color: var(--tertiary--color);
+        background-color: rgb(36, 39, 41);
     }
     
 .posts-card-link {
     text-decoration: none;
-    color: white;
+  color: white;
     font-size: 1.5rem;
     letter-spacing: 1px;
 }
 
 .posts-card:hover {
-  outline: 5px solid white;
+  outline: 4px solid white;
   transform: scale(1.01);
    transition: 150ms;
+  
 }
-
-
 
    
 
@@ -281,69 +263,120 @@ justify-content: center;
 
 
 
+     
+.contact-main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+ justify-content: flex-start;
+  align-items: center;
+}
 
-
-
-
-
-
-
-     .about-main {
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 30rem 100%;
-    
-    }
-    
-    .profile-img--container{
-        text-align: center;
-        padding: 10px;
-        background-color: #2d2a2a;
-    }
-    .profile-img--container > img{border-radius: 50%;
-       outline: 5px solid white;
-    height: 100%;
-    max-width: 100%;
-    ;
-    }
-    .profile-content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(30, 48, 30, 0.826);
-    }
-    .profile-content > h1 {padding: 5px 5px;
-    font-size: clamp(2rem, 2.5vw, 2.5rem);
-    color: white;
-    }
+   /* Style the form container */
+   .form-container {
+    width: 100%;
+    max-width: 80rem;
+    padding: 20px;
+  background-color: var(--navfoot--color);
    
-    .profile-content > p {
-        color: white;
-        padding: 10px 10px;
-        max-width: 50ch;
-        font-size: clamp(1.8rem, 2.5vw, 2rem);
-        font-weight: 500;
-        letter-spacing: 1px;
-    
-       
-    }
+    box-shadow: 0 0 10px rgba(168, 14, 14, 0.3);
+ border-radius: 5px;
+  }
 
-    .contact-btn {
-        color: rgb(255, 255, 255);
-    }
-    .about-spotify {
-        color: #1ccc5b;
-        padding: 0 7px;
-        animation: blurShadow 5s alternate-reverse infinite;
-        transition: 250ms;
-    }
-    .about-spotify:hover {
-        transform: rotate(360deg);
-        transition: 250ms;
-    }
+  /* Style the form header */
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Style the form fields */
+  #form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     
-    @keyframes blurShadow {
-        from {filter: drop-shadow(0 0 0px ); }
-        to {filter: drop-shadow(0 0 10px); }
+
+  }
+
+#form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  }
+
+
+  #form input[type="text"],
+  #form input[type="email"],
+  #form textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-family: inherit;
+   
+  }
+
+ #form textarea {
+    resize: none;
+  }
+
+.submit-btn {
+ 
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+   background-color: #0e0808;
+    padding: 10px;
+    width: auto;
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+    color: white;
+    font-family: inherit;
+    align-self: center;
+}
+
+ 
+  @media only screen and (max-width: 600px) {
+    .form-container {
+      padding: 10px;
     }
+  }
+
+
+
+.name-error.active {
+display: block;
+animation: fadeIn 1s;
+background-color: #333;
+color: white;
+text-align: center;
+padding: 5px;
+transform: scale(1.3);
+}
+
+@keyframes fadeIn {
+    from {transform: scale(1); opacity: 0;}
+    to {transform: scale(1.3); opacity: 1;}
+}
+   /* contact page */
+
+
+   
+  
+
+
+
+
+
+
+
+
+

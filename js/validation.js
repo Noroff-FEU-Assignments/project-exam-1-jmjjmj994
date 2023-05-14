@@ -11,15 +11,27 @@ const messageInput = document.getElementById("message")
 
 
 
+
+
+
+
+
+
+
+
+
+
 form.onsubmit = (e) => {
   e.preventDefault()
-let error = []
+
   const name = nameInput.value.trim()
   const email = emailInput.value.trim()
   const subject = subjectInput.value.trim()
   const message= messageInput.value.trim()
 
   if (!nameRegex.test(name)) {
+    nameInput.placeholder = "NAME SHOULD CONTAIN AT LEAST 6 CHARACTERS"
+    nameInput.style.cssText ="border:1px solid red"
       console.error('Name should contain at least 6 letters.');
       return;
     }
