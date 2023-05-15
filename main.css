@@ -96,6 +96,7 @@ body {
     
     .posts-page {
         background-color: var(--secondary--color);
+       
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 40rem));
         grid-auto-rows: 50rem;
@@ -110,7 +111,7 @@ body {
 background-color: rgb(28, 32, 36);
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 25rem 10rem auto auto ;
+      grid-template-rows: 25rem 12rem auto auto ;
       transition: 150ms;
    color: white;
 
@@ -124,17 +125,14 @@ justify-content: center;
 align-items: center;
 text-align: center;
 padding: 10px;
-font-size: 2rem;
-font-weight: 600;
-letter-spacing: 1px;
-    }
-    .posts-card--image{
-       
 
 
-     
-        
     }
+ .posts-card--title > h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+ }
     .posts-card--image img {height: 100%;
     width: 100%;
 
@@ -173,7 +171,7 @@ justify-content: center;
    
 
     .load-more-container {
-     
+      background-color: white;
         display: flex;
         justify-content: space-between;
         align-items: center;
