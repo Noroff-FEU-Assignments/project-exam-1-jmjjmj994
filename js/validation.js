@@ -14,19 +14,19 @@ const messageInput = document.getElementById("message")
 
 
 
-let passed = false;
+
 const validateName = () => {
 
   const name = nameInput.value.trim()
   if(!nameRegex.test(name)){
     nameInput.placeholder="Please enter a name with 5 or more characters"
     nameInput.style.cssText ="outline:3px solid red"
-    passed = false;
+  
     return
   }else {
-    nameInput.placeholder="";
+    nameInput.placeholder = "";
     nameInput.style.cssText="outline:3px solid green;"
-    passed = true;
+   
   }
 };
 
@@ -35,12 +35,12 @@ const validateEmail = () => {
   if(!emailRegex.test(email)) {
     emailInput.placeholder="Please enter a valid email"
     emailInput.style.cssText ="outline:3px solid red"
-    passed = false
+    
     return;
   }else {
       emailInput.style.cssText="outline:3px solid green;"
       emailInput.placeholder =""
-      passed = true;
+      
     }
   };
 
@@ -50,12 +50,12 @@ const validateEmail = () => {
     if (!subjectRegex.test(subject)) {
       subjectInput.placeholder="Subject should be at least 16 characters long"
       subjectInput.style.cssText ="outline:3px solid red"
-      passed = false
+     
       return;
     }else{
       subjectInput.placeholder=""
       subjectInput.style.cssText ="outline:3px solid green"
-      passed = true
+     
     } 
     };
 
@@ -65,12 +65,12 @@ const validateEmail = () => {
       if (!messageRegex.test(message)) {
         messageInput.placeholder="Subject should be at least 16 characters long"
         messageInput.style.cssText ="outline:3px solid red"
-        passed = false;
+       
         return;
       } else {
         messageInput.placeholder=""
         messageInput.style.cssText ="outline:3px solid green"
-        passed = true
+       
       }   
 
 
