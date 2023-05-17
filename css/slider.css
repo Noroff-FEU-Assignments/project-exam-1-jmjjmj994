@@ -13,54 +13,7 @@
 }
 }
 
-.btn {
-    position: absolute;
-    cursor: pointer;
-   background: none;
-   border: none;
-   z-index: 1;
-  background-color: rgba(185, 185, 185, 0.543);
 
-}
-
-
-
-@media screen  and  (min-width:1200px){
-
-    #prev-btn, #next-btn  {
-        display: block;
-    }
-    
-    }
-
-@media screen  and  (max-width:1200px){
-
-    #prev-btn, #next-btn  {
-        display: none;
-    }
-    
-    } 
-
-
-
-#prev-btn {left:0;top: 50%;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    color: white;
-    
-   
-
-}
-#next-btn {right: 0;top: 50%;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    color: white;
-    
-}
 
 
 
@@ -77,26 +30,71 @@ border-top: 1px solid white;
 margin: 1rem;
 
 }
-.slider-wrapper::before {
-    content: "Latest Posts";
-    position: absolute;
-    top: -5px;
-    font-size:3rem;
-    letter-spacing: 5px;
-  font-weight: 100;
-  color: white;
-padding: 10px;
+
+.slider-components {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider-header {
+  margin-right:auto ;
+}
+
+.slider-btn {
+
+    cursor: pointer;
+   background: none;
+   border: none;
+   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.543);
+transition: 150ms;
+color: white;
 
 }
 
-.slider-wrapper--title {
-display: flex;
-justify-content: center;}
-.slider-wrapper--title > h1{
-    letter-spacing: 3px;
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-    font-weight: 200;
+.slider-btn:hover {
+    background-color: #efefef;
+    color: black;
+    transition: 150ms;
 }
+
+
+#prev-btn {left:0;top: 50%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    }
+    #prev-btn:active {
+        transform: translateX(-2px);
+    }
+    #next-btn:active {
+        transform: translateX(2px);
+    }
+#next-btn {right: 0;top: 50%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+   }
+@media screen and (max-width:1000px) {
+    .slider-components {
+        justify-content: center;
+    }
+    .slider-btn {
+        display: none;
+    }
+    .slider-header {
+        margin-right: 0;
+    }
+}
+
+
+
 
     .slide-container {
         height: auto;

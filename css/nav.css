@@ -1,5 +1,5 @@
 .nav {
-   background-color: var(--navfoot--color);
+  
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -8,6 +8,9 @@
     z-index: 3;
     transition: 250ms;
     width: 100%;
+    
+    box-shadow: 0 0 2px rgba(0, 0, 2, 3);
+    
 }
 
 
@@ -22,30 +25,25 @@
 .fa-house {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     cursor: pointer;
-    color:var(--primary--color);
+    color: black;
 }
 
 .nav-logo {
  
 height: 10rem;
-width: 20rem;
-max-width: 21rem;
+width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
     text-align: center;
 
+
   
 }
-.nav-logo img {
- 
-    height: 100%;
-    width: 100%;
-
-}
-
-
-
+.nav-header {font-size: 8rem;
+    
+cursor: pointer;
+color: black}
 
 
 
@@ -71,10 +69,10 @@ max-width: 21rem;
         display: block;
         width: 2.5rem;
         height: 0.2rem;
-       background-color:var(--primary--color);
+       background: black;
         position: absolute;
         transition: 250ms;
-        
+      
       
     }
     
@@ -84,7 +82,8 @@ max-width: 21rem;
     }
  
     .hamburger.active .bar-top {
-        transform: rotate(45deg) translateY(-0.4px);
+        transform: rotate(45deg) translateY(-0.4px) ;
+        
     }
     
     .hamburger.active .bar-mid {
@@ -99,7 +98,7 @@ max-width: 21rem;
     .bar-top{
         transform: translateY(-6px);
     }
-    .bar-mid{}
+ 
     .bar-bottom{
       transform: translateY(6px);
     }
@@ -123,15 +122,19 @@ max-width: 21rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
+   
  
 }
 
+.nav-item {
+    color: black;
+}
 
 
 .nav-sidebar.active{
     width: 35%;
     height: 100%;
-    background-color: orange;
+    background-color: var(--component--color);
     transition: width 250ms;
  
 }
@@ -149,7 +152,7 @@ max-width: 21rem;
     .nav-sidebar.active {
         width: 100%;
         height: 60%;
-        background-color: black;
+        background-color: var(--component--color);
         transition: height 250ms;
     }
 }
@@ -167,7 +170,7 @@ max-width: 21rem;
 
 .nav-li > .nav-item {
     text-decoration: none;
-    color: white;
+   
     font-size: clamp(1.3rem, 2.5vw, 1.5rem);
     opacity: 0;
 }

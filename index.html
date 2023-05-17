@@ -19,13 +19,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Belleza&family=Catamaran:wght@100&family=Caveat&family=Dancing+Script&family=Gentium+Plus&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/868d223859.js" crossorigin="anonymous"></script>
-  
     <script src="/js/nav.js" defer></script>
     <script src="/js/fetchslider.js" defer type="module"></script>
     <link rel="stylesheet" href="/main.css">
+
+
     <title>Home</title>
 </head>
 <body>
@@ -37,13 +38,17 @@
 
     <nav class="nav">
  <div class="nav-left">
-    <i class="fa-solid fa-house" onclick="window.location.href='index.html'"></i>
+
  </div>
 
 
 
         <div class="nav-logo">
-         <img src="/img/sitelogo.png"  alt="logo"> 
+         <h1 class="nav-header" onclick="window.location.href='/index.html'" >
+<span class="nav-primary" >Jonathan's</span>
+<span class="nav-sub">Music Blog</span>
+
+         </h1>
         </div> 
         
         <div class="hamburger">
@@ -85,21 +90,17 @@
 
 <div class="center-m-column--top">
     <img src="/img/All(2).png" alt="">
- <!--    <div class="column-overlay">
-        <span class="column-primary">Lorem Ipsum</span>
-    </div> -->
+
     <a href="/blogpage.html" class="center-m-column-top--link"></a>
     </div>
 
 <div class="center-m-column--bottom">
     <a href="https://open.spotify.com/playlist/3dZ0Yv8uU5WFhqN8Hc6Hy9?si=d0df2527d5d744cb" class="nav-item--left"><i class="fa-brands fa-spotify spotify large-spotify" ></i></a>
- <!--    <div class="column-overlay">
-        <span class="column-primary">Classicales 2.0</span>
-    </div> -->
+
 </div>
 
 <div class="right-l-column">
-  <img src="/ehsan-ahmadi-sZ4OBgbBWqs-unsplash(1).jpg" alt="">
+  <img src="/img/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg" alt="">
  
 </div>
 
@@ -110,9 +111,14 @@
 
 
 <article class="slider-wrapper">
+   <div class="slider-components">
+    
+    <h1 class="slider-header">Latest Posts</h1>
+    <button class="slider-btn" id="prev-btn" aria-label="slider-button-left"><i class="fa-solid fa-arrow-left"></i></button>
    
-<button class="btn" id="prev-btn" aria-label="slider-button-left"><i class="fa-solid fa-arrow-left"></i></button>
-<button class="btn" id="next-btn" aria-label="slider-button-right"><i class="fa-solid fa-arrow-right"></i></button>
+    <button class="slider-btn" id="next-btn" aria-label="slider-button-right"><i class="fa-solid fa-arrow-right"></i></button></div>
+<!-- <button class="btn" id="prev-btn" aria-label="slider-button-left"><i class="fa-solid fa-arrow-left"></i></button>
+<button class="btn" id="next-btn" aria-label="slider-button-right"><i class="fa-solid fa-arrow-right"></i></button> -->
 <div class="slide-container">
    
    

@@ -14,13 +14,13 @@ place-content: center;
     .left-l-column, .right-l-column, .center-m-column--bottom, .center-m-column--top {
         box-shadow: 0 0 5px;
         position: relative;
-       outline: 10px solid black;
+       outline: 3px solid #000000;
       
     }
     .left-l-column{
     
     grid-row: 1 / span 2;
-    border-radius: 10px;
+   border-radius: 1px;
     
     }
     .right-l-column{
@@ -32,14 +32,15 @@ place-content: center;
     .center-m-column--top{
         grid-row: 1;
         position: relative;
-filter: brightness(75%);
-        background-color: #313135;
+
+        background-color: #000000;
         text-align: center;
+        border-radius: 1px;
+       
     }
 
     .center-m-column--top:hover {
       animation:shake 100ms infinite alternate-reverse;
-filter: brightness(90%);
     }
     @keyframes shake {
         from {transform:rotate(0.2deg)}
@@ -57,6 +58,8 @@ filter: brightness(90%);
         justify-content: center;
         align-items: center;
        background-color: black;
+       border-radius: 1px;
+
     
     }
   
@@ -67,17 +70,17 @@ filter: brightness(90%);
     .left-l-column img {
         height: 100%;
         width: 100%;
-        border-radius: 10px;
+        border-radius: 1px;
     }
     .right-l-column img {
         height: 100%;
        width: 100%;
-       border-radius: 10px;
+       border-radius: 1px;
     }
     .center-m-column--bottom img {
         height: 100%;
         width: 100%;
-        border-radius: 10px;
+        border-radius: 1px;
         
     }
     

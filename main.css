@@ -19,7 +19,7 @@ html {
     font-size: 62.5%;
    
     line-height: 1.7;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Trirong', serif;
 
 
 
@@ -35,13 +35,12 @@ h3 {
 }
 
 :root {
-    --navfoot--color:#696969;
-    --primary--color: rgb(199, 198, 198);
-    --secondary--color:#090909;
-    --tertiary--color: #393e46;
+    --primary--color: #f0ececd2;
+   --secondary--color:#F6F4F3;
+    --component--color:#a0b0c0; 
     --text--color:black;
     --nav--font--size:1.5rem;
-    --readmore--color:#BFD7FF;
+   
 
 }
 
@@ -50,11 +49,19 @@ body {
     font-size: 1rem;
     font-weight: 400;
    background-color: var(--secondary--color);
-    
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 0rem 10rem  1fr 20rem;
+    grid-template-rows: 0 10rem  1fr 20rem;
+    background-image: url(/wesley-tingey--Irs24DzLxM-unsplash.jpg);
+
+}
+
+.nav, .footer {
+  background-color: var(--primary--color);
+}
+main {
+
 
 }
 
@@ -63,9 +70,7 @@ body {
 
 
 
-
 .index-main {
-   
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
