@@ -2,7 +2,7 @@
 @import url(/css/footer.css);
 @import url(/css/header.css);
 @import url(/css/nav.css);
-@import url(/css/topcontent.css);
+@import url(/css/indexcontent.css);
 @import url(/css/modal.css);
 @import url(/css/slider.css);
 @import url(/css/posts.css);
@@ -52,7 +52,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 0 10rem  1fr 20rem;
+    grid-template-rows: 0 10rem  1fr auto;
     background-image: url(/img/wesley-tingey--Irs24DzLxM-unsplash.jpg);
 
 }
@@ -60,34 +60,84 @@ body {
 .nav, .footer {
   background-color: var(--primary--color);
 }
-main {
 
 
+
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    }
+    
+.footer-left, .footer-center{
+    flex: 1 1 50%;
+    height: 100%;
+    display: flex;
+
+ align-items: center;
+ justify-content: center;
+   
+}
+    .footer-left { 
+     flex-direction: column;
+    
+   }
+     .contact-header{
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        letter-spacing: 1px;
+     }
+
+     .contact-ul{
+        list-style: none;
+        text-align: center;
+     }
+     .contact-ul > li {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+     }
+
+    .footer-center {
+       
+     
+       
+     
+        gap: 1rem;
+    }
+.footer-icon {
+    display: block;
+   padding: 12px;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 100ms;
+  
+}
+
+.footer-icon:after{
+content: "";
+position: absolute;
+inset: 0.5rem;}
+
+.footer-icon:hover:after {
+    transition: all 100ms;
+    box-shadow: 0 0 0 1px #6f6b6f;
+    border-radius: 100%;
 }
 
 
-
-
-
-
-.index-main {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: max-content 45rem;
-    gap: 5rem;
-  
-  
-}
-
-  
-
-
-
-
-
-
-
+.fa-facebook{}
+.fa-linkedin {}
+.fa-instagram{}
+.fa-spotify{}
 
 
 
