@@ -1,20 +1,21 @@
 
+
 .main-top--container{
     display: grid;
     grid-template-columns: repeat(3, minmax(15rem, 1fr));
     grid-template-rows: 25rem 25rem;
-place-content: center;
+  place-content: center;
    gap: 1rem;
     padding: 10px;
     margin: 5rem 1rem 5rem;
-
-
+  
+  
     }
   
     .left-l-column, .right-l-column, .center-m-column--bottom, .center-m-column--top {
-        box-shadow: 0 0 5px;
+        box-shadow: 0 0 5px rgba(3, 2, 4, 5);
         position: relative;
-       outline: 3px solid #000000;
+      background-color: #efefef6a;
       
     }
     .left-l-column{
@@ -32,20 +33,17 @@ place-content: center;
     .center-m-column--top{
         grid-row: 1;
         position: relative;
-
-        background-color: #000000;
+  
+        
         text-align: center;
         border-radius: 1px;
        
     }
-
+  
     .center-m-column--top:hover {
       animation:shake 100ms infinite alternate-reverse;
     }
-    @keyframes shake {
-        from {transform:rotate(0.2deg)}
-        to {transform: rotate(-0.2deg)}
-    }
+  
     .center-m-column-top--link{
         content: "";
         position: absolute;
@@ -57,15 +55,24 @@ place-content: center;
         display: flex;
         justify-content: center;
         align-items: center;
-       background-color: black;
+      
        border-radius: 1px;
-
+  
     
     }
   
     .large-spotify {
-       color: #1db954;
-    }
+        font-size: 10rem;
+  color: #0cb114;
+    transition: 250ms;
+  
+      }
+     .large-spotify:hover {
+        filter: drop-shadow(5px 5px 40px #0cb114);
+        transform: scale(1.2) rotate(360deg);
+        transition: 250ms;
+     }
+
     
     .left-l-column img {
         height: 100%;
@@ -88,11 +95,16 @@ place-content: center;
     .center-m-column--top img {
         height: 100%;
         width: 60%;
- 
+  
    
       
     }
- 
+  
+    @keyframes shake {
+      from {transform:rotate(0.2deg)}
+      to {transform: rotate(-0.2deg)}
+  }
+  
    
     
     @media screen and (max-width:1000px) {
@@ -137,4 +149,4 @@ place-content: center;
           
         }
     }
-
+  

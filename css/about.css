@@ -11,7 +11,7 @@
 .profile-img--container{
     text-align: center;
     padding: 10px;
-    background-color: rgb(36, 39, 41);
+    background-color: #efefef;
 }
 .profile-img--container > img{border-radius: 50%;
    outline: 5px solid white;
@@ -23,15 +23,16 @@ max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(36, 39, 41);
+    background-color: #efefef;
+    color: black;
 }
 .profile-content > h1 {padding: 5px 5px;
 font-size: clamp(2rem, 2.5vw, 2.5rem);
-color: white;
+
 }
 
 .profile-content > p {
-    color: white;
+   
     padding: 10px 10px;
     max-width: 50ch;
     font-size: clamp(1.8rem, 2.5vw, 2rem);
@@ -42,7 +43,7 @@ color: white;
 }
 
 .contact-btn {
-    color: rgb(255, 255, 255);
+  color: inherit;
 }
 .about-spotify {
     color: #1ccc5b;

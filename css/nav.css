@@ -8,28 +8,18 @@
     z-index: 3;
     transition: 250ms;
     width: 100%;
-    
     box-shadow: 0 0 2px rgba(0, 0, 2, 3);
     
 }
 
 
+
+
 .nav-left {
-    width: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
+   width: auto;
 }
-
-.fa-house {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    cursor: pointer;
-    color: black;
-}
-
 .nav-logo {
- 
+
 height: 10rem;
 width: auto;
   display: flex;
@@ -40,10 +30,10 @@ width: auto;
 
   
 }
-.nav-header {font-size: 8rem;
-    
-cursor: pointer;
-color: black}
+.nav-header {
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    cursor: pointer;
+}
 
 
 
