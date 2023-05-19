@@ -16,7 +16,7 @@ fetch(url)
  destructureData(storeData);
 
    
-  /* getSliderContent(data) */
+largeColumns(storeData)
 
 })
 }
@@ -43,32 +43,29 @@ slide.innerHTML += `
 
 }
 
-
-
-
-
-/* function getSliderContent(value){
-const displayContent = slide.innerHTML = value.map((data, index)=> {
-  const  {id, date, type, title,guid}  = data;  
-  const media = data._embedded["wp:featuredmedia"][0].source_url  
-  const altText = data._embedded["wp:featuredmedia"][0].alt_text
-  if(index > 7){
-    return
-  }
-  return `
-  <div class="slide-card">
-  <div class="slide-card--img" >
-  <img src="${media}" alt="${altText}">
-  </div>
-  <span class="slide-card--header">${title.rendered}</span>
-  <a href="/specific.html?id=${id}" class="slider-href"> </a>
-  </div>
+/* id 86:, id:84 */ 
+function largeColumns(data){
+  const centerTopColumn = document.querySelector(".center-m-column--top");
+  const centerBottomColumn = document.querySelector(".center-m-column--bottom");
+const filteredData = data.filter(({id, title, _embedded})=>{
+  const media = _embedded["wp:featuredmedia"][0].source_url; 
+  const altText = _embedded["wp:featuredmedia"][0].alt_text;
+if(id === 86){
+  centerTopColumn.innerHTML = `
+  <img src="${media}">
   
-  `
-  
+  `;}
+if(id === 84){
+centerBottomColumn.innerHTML = `
 
-}).join("");
+<img src="${media}">
+
+`
+
 }
- */
+});
+
+};
+
 
 

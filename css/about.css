@@ -51,12 +51,9 @@ font-size: clamp(2rem, 2.5vw, 2.5rem);
     animation: blurShadow 5s alternate-reverse infinite;
     transition: 250ms;
 }
-.about-spotify:hover {
-    transform: rotate(360deg);
-    transition: 250ms;
-}
+
 
 @keyframes blurShadow {
     from {filter: drop-shadow(0 0 0px ); }
-    to {filter: drop-shadow(0 0 10px); }
+    to {filter: drop-shadow(0 0 50px); }
 }

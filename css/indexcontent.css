@@ -42,24 +42,23 @@
     .right-l-column{
     
       grid-row:  span 2;
-    
+      display: flex;
+      justify-content: center;
+      align-items: center;
     
     }
     .center-m-column--top{
         grid-row: 1;
         position: relative;
-  
-        
-        text-align: center;
-        border-radius: 1px;
+       
        
     }
   
-    .center-m-column--top:hover {
+    .left-l-column:hover {
       animation:shake 100ms infinite alternate-reverse;
     }
   
-    .center-m-column-top--link{
+    .left-l-column--link{
         content: "";
         position: absolute;
         inset: 0;
@@ -67,12 +66,9 @@
     }
     .center-m-column--bottom{
         grid-row: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      
-       border-radius: 1px;
-  
+       
+    border-radius: 1px;
+
     
     }
   

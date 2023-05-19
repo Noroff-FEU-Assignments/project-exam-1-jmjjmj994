@@ -19,27 +19,21 @@ html {
     font-size: 62.5%;
    
     line-height: 1.7;
-    font-family: 'Trirong', serif;
+    font-family: 'Cormorant Garamond', serif;
 
 
 
 }
-h1 {
-    font-size: 2.5rem;
-}
-h2 {
-    font-size: 2.5rem;
-}
-h3 {
-    font-size: 1.75rem;
-}
+
 
 :root {
     --primary--color: #f0ececd2;
    --secondary--color:#efefef; 
-    --component--color:#a0b0c0; 
+    --component--color:#edd1ae; 
     --text--color:black;
     --nav--font--size:1.5rem;
+    --headers--font--size:clamp(1.5rem, 2.5vw, 2rem);
+    --paragraphs--font--size:clamp(1rem, 2.5vw, 1.5rem);
    
 
 }
@@ -70,91 +64,205 @@ body {
 
 
 
-.footer {
+
+
+.nav {
+  
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-    
-    }
-    
-.footer-left, .footer-center{
-    flex: 1 1 50%;
-    height: 100%;
-    display: flex;
-
- align-items: center;
- justify-content: center;
-   
-}
-    .footer-left { 
-     flex-direction: column;
-    
-   }
-     .contact-header{
-        font-size: clamp(1.5rem, 2.5vw, 2rem);
-        letter-spacing: 1px;
-     }
-
-     .contact-ul{
-        list-style: none;
-        text-align: center;
-     }
-     .contact-ul > li {
-        font-size: clamp(1rem, 2.5vw, 1.5rem);
-     }
-
-    .footer-center {
-       
-     
-       
-     
-        gap: 1rem;
-    }
-.footer-icon {
-    display: block;
-   padding: 12px;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: 100ms;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  transition: 250ms;
+  width: 100%;
+  box-shadow: 0 0 2px rgba(0, 0, 2, 3);
   
 }
 
-.footer-icon:after{
-content: "";
-position: absolute;
-inset: 0.5rem;}
 
-.footer-icon:hover:after {
-    transition: all 100ms;
-    box-shadow: 0 0 0 1px #6f6b6f;
-    border-radius: 100%;
+
+
+.nav-left {
+ width: auto;
+}
+.nav-logo {
+
+height: 10rem;
+width: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+  text-align: center;
+
+
+
+}
+.nav-header {
+font-size: 5rem;
+  cursor: pointer;
+}
+@media screen and (max-width:500px) {
+  .nav-header {
+     font-size: clamp(2rem, 2.5vw, 2.5rem);
+  }
 }
 
 
-.fa-facebook{}
-.fa-linkedin {}
-.fa-instagram{}
-.fa-spotify{}
+
+
+
+ .hamburger {
+
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+      
+  }
+  
+  
+  
+  .ham-bar {
+      display: block;
+      width: 2.5rem;
+      height: 0.2rem;
+     background: black;
+      position: absolute;
+      transition: 250ms;
+    
+    
+  }
+  
+   .hamburger.active {
+      transition: 250ms;
+  }
+
+  .hamburger.active .bar-top {
+      transform: rotate(45deg) translateY(-0.4px) ;
+      
+  }
+  
+  .hamburger.active .bar-mid {
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+  .hamburger.active .bar-bottom {
+      transform: rotate(-45deg) translateY(0.5px) ;
+  }  
+  
+  
+  .bar-top{
+      transform: translateY(-6px);
+  }
+
+  .bar-bottom{
+    transform: translateY(6px);
+  }
+  
 
 
 
 
 
+.nav-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  height: 0;}
+
+
+.nav-sidebar {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+ 
+
+}
 
 
 
 
+.nav-sidebar.active{
+  width: 15%;
+  height: 100%;
+
+  transition: width 250ms;
+  background-color: var(--component--color);
+
+}
+
+.nav-sidebar.active .nav-item {
+  opacity: 1;
+  transition: opacity 250ms;
+}
 
 
 
 
+@media screen and (max-width:700px) {
+
+  .nav-sidebar.active {
+      width: 100%;
+      height: 40%;
+      background-color: var(--component--color);
+      transition: height 250ms;
+  }
+}
+.nav-sidebar > .nav-ul {
+  list-style: none;
+  display: flex;
+ justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
 
 
+  
+ 
+}
 
+.nav-li {
+    width: 100%;
+    text-align: center;
+   
+    padding: 10px;
+    transition: 150ms;
+}
+.nav-li > .nav-item {
+  text-decoration: none;
+  font-size: clamp(1.8rem, 2.5vw, 2rem);
+  opacity: 0;
+  width: 100%;
+  color: black;}
 
+.nav-li:hover {
+    background-color: var(--secondary--color);
+    transition: 150ms;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+
+}
+
+.fa-home{
+    padding:10px;
+}
 
 
 
