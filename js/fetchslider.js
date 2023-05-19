@@ -15,8 +15,7 @@ fetch(url)
 
  destructureData(storeData);
 
-   
-largeColumns(storeData)
+
 
 })
 }
@@ -42,30 +41,6 @@ slide.innerHTML += `
 `
 
 }
-
-/* id 86:, id:84 */ 
-function largeColumns(data){
-  const centerTopColumn = document.querySelector(".center-m-column--top");
-  const centerBottomColumn = document.querySelector(".center-m-column--bottom");
-const filteredData = data.filter(({id, title, _embedded})=>{
-  const media = _embedded["wp:featuredmedia"][0].source_url; 
-  const altText = _embedded["wp:featuredmedia"][0].alt_text;
-if(id === 86){
-  centerTopColumn.innerHTML = `
-  <img src="${media}">
-  
-  `;}
-if(id === 84){
-centerBottomColumn.innerHTML = `
-
-<img src="${media}">
-
-`
-
-}
-});
-
-};
 
 
 

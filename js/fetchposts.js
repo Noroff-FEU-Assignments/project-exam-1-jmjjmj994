@@ -1,5 +1,4 @@
 const cardContainer = document.querySelector(".posts-page");
-const leftColumn = document.querySelector(".left-l-column");
 const loader = document.querySelector(".loader")
 const postCount = document.getElementById("post-count")
 const postTotal = document.getElementById("post-total")
