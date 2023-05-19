@@ -42,6 +42,7 @@ margin: 1rem;
 
 .slider-header {
   margin-right:auto ;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
 .slider-btn {

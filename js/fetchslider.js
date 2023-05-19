@@ -3,6 +3,7 @@ import { slide } from "./slider.js";
 const url = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia";
 
 
+
 getData()
 function getData(){
 fetch(url)

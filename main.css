@@ -60,7 +60,7 @@ body {
 .header {
     position: sticky;
     top: 0;
- 
+ z-index: 1;
 }
 .nav {
     display: flex;
@@ -84,7 +84,7 @@ height: auto;}
 
 .nav-item {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
-    color: inherit;
+    color: black;
     text-decoration: none;
     
 }
@@ -181,9 +181,7 @@ height: auto;}
             transform: translateY(-5px);
         }
 
-        .bar-mid{
-
-        }
+       
 
         .bar-bottom{
             transform: translateY(5px);
