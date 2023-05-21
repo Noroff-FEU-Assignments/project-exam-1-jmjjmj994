@@ -17,7 +17,6 @@
 
 html {
     font-size: 62.5%;
-   
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
 
@@ -48,12 +47,12 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 10rem  1fr auto;
-    background-image: url(/img/wesley-tingey--Irs24DzLxM-unsplash.jpg);
+
 
 }
 
 .header,.nav, .footer {
-  background-color: var(--primary--color);
+background-color: var(--secondary--color);
 }
 
 
@@ -61,12 +60,15 @@ body {
     position: sticky;
     top: 0;
  z-index: 1;
+
 }
 .nav {
     display: flex;
-  align-items: flex-end;
+  align-items: center;
+  
   height: 100%;
   z-index: 1;
+
 }
 
 
@@ -134,7 +136,7 @@ height: auto;}
         align-items: center;
      opacity: 0;
      transition: all .3s;
-     outline: 1px dashed red;
+    
      height: 60%;
     }
 
@@ -226,100 +228,107 @@ height: auto;}
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: max-content 45rem;
+    grid-template-rows:max-content max-content 45rem;
     gap: 5rem;
     background-color: var(--secondary--color);
-  
+
   
   }
   
+
+  .main-hero {
+
+    background-color: rgba(64, 135, 41, 0.479);
+   
+    text-align: end;
+  }
+
+  .main-hero > img {
+    height: 100%;
+    max-width: 100%;
+  }
   
   
-  .main-top--container{
+  .main-container{
     display: grid;
-    grid-template-columns: repeat(2, minmax(15rem, 65rem));
-    grid-template-rows: 60rem;
+    grid-template-columns: repeat(2, minmax(30rem, 65rem));
+    grid-template-rows:60rem;
   justify-content: center;
   align-content: center;
-  margin: 5rem 5rem;
+  padding: 10px;
 
   gap: 1rem;
+ }
+  @media screen and (max-width:800px) {
+    .main-container {
+        grid-template-columns: minmax(30rem, 1fr);
+        grid-template-rows: 30rem 25rem;
+        padding: 10px;
+    }
+  }
 
-   }
-  
-   .main-top--left, .main-top--right {
-
+  .main-container-left--column{
     box-shadow: 0 0 5px;
-   }
-  
-   .main-top--left{
-background-color:var(--secondary--color);
- background-repeat: no-repeat;
- background-size: cover;
-    display: flex;
-    justify-content:flex-start;
-    flex-direction: column;
-
   }
-
-  .main-top-left--header {
-    margin-top: 6rem;
-  }
-
-  .main-top-left--header, .main-top-left--sub {
-
+  .main-container-left--column > img{
+height: 100%;
+width: 100%;
     
   }
-  
-  .main-top-left--header {
-    padding: 10px;
-    text-align: center;
-    font-size: clamp(3rem, 2.5vw, 3.5rem);}
-  .main-top-left--sub{
-    font-size: clamp(2rem, 2.5vw, 2.5rem);;
-    padding: 10px 15px;
-    text-align: center;
+  .main-container-right--column{
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto;
+background-color: #e8e8d9;
+box-shadow: 0 0 5px;
   }
+
+
+
+
+.main-right-content{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+   
+
+    
+}
+
+
+
+.main-right-content  > p{
+   
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+
+    
+}
+
+
+
+.main-right-content > h1{
   
-  
-  
-  
-  
-  .main-top-left--footer {
-  
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+
+    
+}
+
+.main-right-footer {
+    background-color: green;
+    width: 100%;
+    height: 5rem;
     display: flex;
     justify-content: center;
-
-  }
-  
-  .top-left-icon{
-  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
-  padding: 10px;
-  
-  }
-  .main-top--right{
-
-  }
-
-
-  .main-top--right > img {
-    height: 100%;
-  width: 100%;
-  }
-
-  
-  
-  @media screen and (max-width:1000px) {
-    .main-top--container {
-        grid-template-columns: repeat(1, minmax(15rem, 1fr));
-        grid-template-rows: auto min-content;
-    }
-    .main-top--right {
-    
-    }
-  }
+    align-items: center;
+}
 
 
 
-
-
+.main-right-footer > a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: black;
+}
