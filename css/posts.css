@@ -15,7 +15,7 @@
       background-color: #efefef6a;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 35rem));
-        grid-auto-rows: 50rem;
+        grid-auto-rows: 53rem;
        gap: 5rem;
         justify-content: center;
         align-content: center;
@@ -29,7 +29,7 @@
 
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 22rem 15rem auto auto ;
+      grid-template-rows: 28rem 15rem auto auto ;
       transition: 100ms;
    color: white;
    box-shadow: 0 0 5px rgba(3, 2, 4, 5);

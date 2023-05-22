@@ -9,6 +9,7 @@ const specificTextContainer = document.querySelector(".specific-container-text")
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
+
 /* Url*/
 
 const url = `https://exam1.braatenmjos.no/wp-json/wp/v2/posts/${id}?_embed=wp:featuredmedia` 
