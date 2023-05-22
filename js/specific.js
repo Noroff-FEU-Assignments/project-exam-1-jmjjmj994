@@ -1,9 +1,8 @@
 const specificContainer = document.querySelector(".specific-content");
-const specificContentContainer = document.querySelector(".specific-content")
-const modal = document.querySelector(".modal");
+
 const modalContent = document.querySelector(".modal--content")
-const specificImage = document.querySelector(".specific-content--img");
-const specificText = document.querySelector(".specific-content--text")
+const specificImageContainer = document.querySelector(".specific-container-image");
+const specificTextContainer = document.querySelector(".specific-container-text")
 /* QuerySelector */
 
 /* Url */
@@ -17,7 +16,7 @@ fetch(url)
 .then(res => res.json())
 .then((data) => {
    renderSpecific(data)
-    renderModal(data)  
+  /*   renderModal(data)   */
  
 
 })
@@ -31,20 +30,19 @@ function renderSpecific(data){
 
 const title = data.title.rendered
 document.title = `My blog | ${title}`
-const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
+const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
 const excerpt = data.content.rendered
-const altText = data._embedded["wp:featuredmedia"][0].alt_text
+const altText = data._embedded["wp:featuredmedia"][0].alt_text;
 
+specificImageContainer.innerHTML += `
 
-specificImage.innerHTML += `
-<div class="specific-content--img">
 <img src="${media}" alt="${altText}"class="open-modal">
-</div>
+
 `
-specificText.innerHTML += `
-<div class="specific-content--text">
+specificTextContainer.innerHTML += `
+
 <p>${excerpt}</p>
-</div>
+
 
 `
 
@@ -53,9 +51,16 @@ specificText.innerHTML += `
 /*Specific Data */
 
 
-/* Modal */
 
-function renderModal(data){
+
+
+
+
+
+
+
+
+/* function renderModal(data){
    const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
    const altText = data._embedded["wp:featuredmedia"][0].alt_text
    modalContent.innerHTML =`
@@ -78,9 +83,6 @@ closeModal.onclick = (e) =>{
    };
 }
 
-/* Modal */
-
-/* Onclick */
 
 
 specificImage.onclick = (e) => {
@@ -109,4 +111,4 @@ window.onclick = (e) => {
    }
 }
 
-/* Onclick */
+ */

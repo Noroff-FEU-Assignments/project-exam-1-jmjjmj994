@@ -78,10 +78,14 @@ mainLeftContainer.innerHTML = `
 
 mainRightContainer.innerHTML = `
 <div class="main-right-content">
-<p>${norwegianDate} </p>
-
+<div class="main-right-header">
+<i class="fa-regular fa-calendar"></i>
+<p> ${norwegianDate} </p>
+</div>
+<div class="main-right-text">
 <h1> ${title.rendered}</h1>
-
+<span> "From Compton to Cultural Icon: Kendrick Lamar's Journey as a Musical Maverick and Social Activist" </span>
+</div>
 <div class="main-right-footer">
 <a href="/specific.html?id=${id}">Read Post </a>
 </div>

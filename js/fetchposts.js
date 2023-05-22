@@ -64,7 +64,7 @@ cardContainer.innerHTML += `
       <h1>${title.rendered} </h1>
     </div>
     <div class="posts-card--content" data-content>
-      <p>${norwegianDate}</p>
+    <i class="fa-regular fa-calendar"></i>  <p>${norwegianDate}</p>
     </div>
     <div class="posts-card--link" data-link>
       <a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>
@@ -91,7 +91,7 @@ function secondDeckCards(){ /* Wrapped in a function because the loadmore button
         <h1>${title.rendered} </h1>
       </div>
       <div class="posts-card--content" data-content>
-        <p>${norwegianDate}</p>
+      <i class="fa-regular fa-calendar"></i> <p>${norwegianDate}</p>
       </div>
       <div class="posts-card--link" data-link>
         <a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>
