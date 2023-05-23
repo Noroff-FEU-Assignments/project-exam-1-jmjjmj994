@@ -18,6 +18,7 @@ fetch(url)
 .then((data) => {
    renderSpecific(data)
   /*   renderModal(data)   */
+  toggleModal(data)
  
 
 })
@@ -36,18 +37,59 @@ const excerpt = data.content.rendered
 const altText = data._embedded["wp:featuredmedia"][0].alt_text;
 
 specificImageContainer.innerHTML += `
-
-<img src="${media}" alt="${altText}"class="open-modal">
-
-`
-specificTextContainer.innerHTML += `
-
-<p>${excerpt}</p>
-
-
-`
+<img src="${media}" alt="${altText}"class="open-modal">`
+specificTextContainer.innerHTML += `<p>${excerpt}</p>`
 
 };
+
+
+
+
+
+
+
+
+
+
+/** Modal */
+
+
+const toggleModal = (data) => {
+   let modalOpen = false;
+   const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
+   const alt = data._embedded["wp:featuredmedia"][0].alt_text
+   const modalContainer = document.querySelector(".modal-container")
+   const modalImage = document.querySelector(".modal-container-image");
+   const openModal = document.querySelector(".open-modal");
+ const closeModalX = document.querySelector("#close-modal");
+openModal.onclick = () => {
+if(!modalOpen){
+  modalContainer.style.cssText = "visibility:visible"}
+  modalImage.innerHTML = `
+  <img src="${media}" alt="${alt}">`
+modalOpen = true;
+
+};
+
+closeModalX.onclick = () => {
+modalContainer.style.cssText ="visibility:hidden";
+modalOpen = false
+
+};
+
+window.onclick = (e) => {
+   if(e.target === modalContainer){
+      modalContainer.style.cssText = "visibility:hidden";
+       modalOpen = false
+      
+   }
+}
+
+};
+
+
+
+/** Modal */
 
 /*Specific Data */
 
