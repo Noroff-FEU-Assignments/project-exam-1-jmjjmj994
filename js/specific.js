@@ -28,14 +28,11 @@ fetch(url)
 
 
 function renderSpecific(data){
-
-
 const title = data.title.rendered
 document.title = `My blog | ${title}`
 const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
 const excerpt = data.content.rendered
 const altText = data._embedded["wp:featuredmedia"][0].alt_text;
-
 specificImageContainer.innerHTML += `
 <img src="${media}" alt="${altText}"class="open-modal">`
 specificTextContainer.innerHTML += `<p>${excerpt}</p>`
