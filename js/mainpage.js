@@ -1,8 +1,12 @@
 import { slide } from "./slider.js";
 const mainLeftContainer = document.querySelector(".main-container-left--column");
 const mainRightContainer = document.querySelector(".main-container-right--column");
+
 /* const url = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia"; */
 const url = "https://exam1.braatenmjos.no/wp-json/wp/v2/posts/?_embed=wp:featuredmedia&per_page=20";
+
+
+
 
 getData()
 function getData(){
