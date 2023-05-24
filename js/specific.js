@@ -3,6 +3,7 @@ const specificContainer = document.querySelector(".specific-content");
 const modalContent = document.querySelector(".modal--content")
 const specificImageContainer = document.querySelector(".specific-container-image");
 const specificTextContainer = document.querySelector(".specific-container-text")
+
 /* QuerySelector */
 
 /* Url */
@@ -28,6 +29,7 @@ fetch(url)
 
 
 function renderSpecific(data){
+   console.log(data)
 const title = data.title.rendered
 document.title = `My blog | ${title}`
 const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;

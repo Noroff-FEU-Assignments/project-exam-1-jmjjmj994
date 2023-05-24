@@ -8,10 +8,7 @@
      grid-template-columns: auto;
      grid-template-rows: auto;
      background-color: var(--secondary--color);
-    justify-content: center;
-   
-   
-   }
+    justify-content: center;}
    .thank-you-container {
    display: grid;
    grid-template-columns: auto;
@@ -22,7 +19,7 @@
    
    visibility: hidden;}
    .thank-you {
-     color: rgb(0, 0, 0);
+    color: var(--text--color);
      font-size: clamp(1.3rem, 2.5vw, 2.5rem);
      letter-spacing: 1px;
      animation: fadeInThankYouNext 1s;}
@@ -30,7 +27,7 @@
      from {opacity: 0; transform: translateX(-500px);}
      to {transform: translateX(0); opacity: 1;}
    }
-      /* Style the form container */
+     
       .form-container {
    margin: 7rem 0;
        width: 100%;
@@ -40,16 +37,16 @@
     border-radius: 5px;
      }
    
-     /* Style the form header */
+
      .form-header {
        text-align: center;
        margin-bottom: 20px;
        font-size: 1rem;
        font-weight: bold;
-       color: #333;
+  
      }
    
-     /* Style the form fields */
+
      #form {
        margin-bottom: 20px;
        display: flex;
@@ -65,6 +62,7 @@
        margin-bottom: 5px;
        font-weight: bold;
        font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+       color: var(--text--color);
      }
    
    
@@ -91,13 +89,14 @@
        outline: none;
        background: none;
        cursor: pointer;
-      background-color: var(--component--color);
+       background-color: var(--component--color);
        padding: 10px;
        width: auto;
        font-size: clamp(1.3rem, 2.5vw, 1.6rem);
-     border-radius: 5px;
+       border-radius: 5px;
        font-family: inherit;
        align-self: center;
+       color: var(--text--color);
    }
    
     
@@ -109,17 +108,3 @@
    
    
    
-   .name-error.active {
-   display: block;
-   animation: fadeIn 1s;
-   background-color: #333;
-   color: white;
-   text-align: center;
-   padding: 5px;
-   transform: scale(1.3);
-   }
-   
-   @keyframes fadeIn {
-       from {transform: scale(1); opacity: 0;}
-       to {transform: scale(1.3); opacity: 1;}
-   }
