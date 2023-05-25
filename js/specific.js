@@ -1,9 +1,8 @@
-const specificMain = document.querySelector(".specific-main")
+const specificMain = document.querySelector(".specific-main");
 const specificContainer = document.querySelector(".specific-content");
-
-const modalContent = document.querySelector(".modal--content")
+const modalContent = document.querySelector(".modal--content");
 const specificImageContainer = document.querySelector(".specific-container-image");
-const specificTextContainer = document.querySelector(".specific-container-text")
+const specificTextContainer = document.querySelector(".specific-container-text");
 
 /* QuerySelector */
 
@@ -14,96 +13,64 @@ const id = params.get("id");
 
 /* Url*/
 
-const url = `https://exam1.braatenmjos.no/wp-json/wp/v2/posts/${id}?_embed=wp:featuredmedia` 
+const url = `https://exam1.braatenmjos.no/wp-json/wp/v2/posts/${id}?_embed=wp:featuredmedia`;
 fetch(url)
-.then(res => res.json())
-.then((data) => {
-   renderSpecific(data)
-  /*   renderModal(data)   */
-  toggleModal(data)
- 
+  .then((res) => res.json())
+  .then((data) => {
+    renderSpecific(data);
+    /*   renderModal(data)   */
+    toggleModal(data);
+  });
 
-})
-
-
-
-
-
-function renderSpecific(data){
-   console.log(data)
-const title = data.title.rendered
-document.title = `My blog | ${title}`
-const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
-const excerpt = data.content.rendered
-const altText = data._embedded["wp:featuredmedia"][0].alt_text;
-specificImageContainer.innerHTML += `
-<img src="${media}" alt="${altText}"class="open-modal">`
-specificTextContainer.innerHTML += `<p>${excerpt}</p>`
-
-};
-
-
-
-
-
-
-
-
-
+function renderSpecific(data) {
+  console.log(data);
+  const title = data.title.rendered;
+  document.title = `My blog | ${title}`;
+  const media =
+    data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
+  const excerpt = data.content.rendered;
+  const altText = data._embedded["wp:featuredmedia"][0].alt_text;
+  specificImageContainer.innerHTML += `
+<img src="${media}" alt="${altText}"class="open-modal">`;
+  specificTextContainer.innerHTML += `<p>${excerpt}</p>`;
+}
 
 /** Modal */
 
-
 const toggleModal = (data) => {
-   let modalOpen = false;
-   const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
-   const alt = data._embedded["wp:featuredmedia"][0].alt_text
-   const modalContainer = document.querySelector(".modal-container")
-   const modalImage = document.querySelector(".modal-container-image");
-   const openModal = document.querySelector(".open-modal");
- const closeModalX = document.querySelector("#close-modal");
-openModal.onclick = () => {
-if(!modalOpen){
-  modalContainer.style.cssText = "visibility:visible;"
+  let modalOpen = false;
+  const media =
+    data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
+  const alt = data._embedded["wp:featuredmedia"][0].alt_text;
+  const modalContainer = document.querySelector(".modal-container");
+  const modalImage = document.querySelector(".modal-container-image");
+  const openModal = document.querySelector(".open-modal");
+  const closeModalX = document.querySelector("#close-modal");
+  openModal.onclick = () => {
+    if (!modalOpen) {
+      modalContainer.style.cssText = "visibility:visible;";
+    }
+    modalImage.innerHTML = `
+  <img src="${media}" alt="${alt}">`;
+    modalOpen = true;
+  };
 
-}
-  modalImage.innerHTML = `
-  <img src="${media}" alt="${alt}">`
-modalOpen = true;
+  closeModalX.onclick = () => {
+    modalContainer.style.cssText = "visibility:hidden";
+    modalOpen = false;
+  };
 
-};
-
-closeModalX.onclick = () => {
-modalContainer.style.cssText ="visibility:hidden";
-modalOpen = false
-
-};
-
-window.onclick = (e) => {
-   if(e.target === modalContainer){
+  window.onclick = (e) => {
+    if (e.target === modalContainer) {
       modalContainer.style.cssText = "visibility:hidden";
-       modalOpen = false
-      
-   }
-}
-
+      modalOpen = false;
+    }
+  };
 };
-
-
 
 /** Modal */
 
 /*Specific Data */
-
-
-
-
-
-
-
-
-
-
 
 /* function renderModal(data){
    const media = data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url

@@ -1,0 +1,59 @@
+
+
+
+
+.profile-header{
+    text-align: center;
+ padding: 20px 20px;
+  }
+  .profile-header > img{
+  border-radius: 50%;
+   outline: 2px solid white;
+   height: 100%;
+  max-width: 100%;;
+  }
+  .profile-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  gap: 0.5rem;
+    color: var(--text--color);
+    margin: 1rem 1rem;
+  
+    text-align: center;
+  }
+  .profile-body > h1 {
+  
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  padding: 10px 10px 10px;
+  
+  }
+  
+  .profile-body:nth-child > span {
+ }
+
+  .profile-body--primary, .profile-body--sub{
+    padding: 5px 5px;
+max-width: 50ch;
+   font-size: clamp(1.8rem, 2.5vw, 2rem);
+  }
+
+ 
+  
+  .contact-btn {
+  color: inherit;
+  }
+  .about-spotify {
+    color: #1ccc5b;
+    padding: 0 7px;
+    animation: blurShadow 5s alternate-reverse infinite;
+    transition: 250ms;
+  }
+  
+  
+  @keyframes blurShadow {
+    from {filter: drop-shadow(0 0 0px ); }
+    to {filter: drop-shadow(0 0 50px); }
+  }
+  
+  
