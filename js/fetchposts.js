@@ -1,5 +1,5 @@
 const cardContainer = document.querySelector(".posts-page");
-const loader = document.querySelector(".loader")
+
 const postCount = document.getElementById("post-count")
 const postTotal = document.getElementById("post-total")
 
@@ -15,6 +15,8 @@ const dateOldestBtn = document.querySelector("[data-date-oldest]");
 
 
 /*Buttons*/
+
+
 
 
 
