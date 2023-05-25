@@ -12,7 +12,7 @@
  
     
     .posts-page {
-      background-color: #efefef6a;
+        background-color: var(--secondary--color);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 35rem));
         grid-auto-rows: 53rem;
@@ -34,6 +34,8 @@
    color: white;
    box-shadow: 0 0 5px rgba(3, 2, 4, 5);
 position: relative;
+background-color: #ffffffe3;
+filter: drop-shadow(0 0 50px white);
 
     }
  
@@ -74,27 +76,27 @@ justify-content: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--component--color);
+        
     }
     
 .posts-card-link {
     text-decoration: none;
   color: black;
     font-size: 1.5rem;
-    letter-spacing: 1px;
-}
+    letter-spacing: 1px;}
 
 .posts-card:hover {
-  outline: 2px solid white;
+
   transform: scale(1.01);
    transition: 100ms;
-  
+
+
 }
 
    
 
     .load-more-container {
-     
+    
         display: flex;
         justify-content: space-between;
        height: 100%;
@@ -115,7 +117,7 @@ justify-content: center;
         width: auto;
         font-size: clamp(1rem,2.5vw, 2rem);
         padding: 5px;
-        color: rgb(0, 0, 0);
+        color: var(--text--color);
         border-radius: 5px;
         letter-spacing: 1.5px;
         cursor: pointer;

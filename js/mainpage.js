@@ -67,10 +67,10 @@ mainRightContainer.innerHTML = `
 </div>
 <div class="main-right-text">
 <h1> ${title.rendered}</h1>
-<span> "From Compton to Cultural Icon: Kendrick Lamar's Journey as a Musical Maverick and Social Activist" </span>
+
 </div>
 <div class="main-right-footer">
-<a href="/specific.html?id=${id}">Read Post </a>
+<a href="/specific.html?id=${id}" class="main-post-link"> Read Post </a>
 </div>
 
 

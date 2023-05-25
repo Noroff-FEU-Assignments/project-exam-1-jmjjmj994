@@ -59,7 +59,7 @@ body {
 }
 
 .header,.nav, .footer {
-background-color: var(--primary--color);
+background-color: #ffff;
 }
 
 
@@ -78,10 +78,9 @@ background-color: var(--primary--color);
 
 
 .about-main {
-  
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 30rem 100%;
+  grid-template-rows: 30rem ;
 
 }
 
@@ -198,8 +197,8 @@ color: inherit;
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:max-content max-content max-content 50rem;
-    gap: 5rem;
+    grid-template-rows:max-content max-content max-content 60rem;
+
     background-color: var(--secondary--color);
 
   
@@ -208,23 +207,26 @@ color: inherit;
 
   .main-hero {
 
-background-color: #c6ab75;
+ 
     text-align: end;
   }
 
   .main-hero > img {
     height: 100%;
     max-width: 100%;
+
   }
   
   
   .main-container{
     display: grid;
     grid-template-columns: repeat(2, minmax(30rem, 65rem));
-    grid-template-rows:50rem;
-  justify-content: center;
+    grid-template-rows:45rem;
+  justify-content: space-around;
   align-content: center;
   padding: 10px;
+ background-color: #ffffffe3;
+ overflow: hidden;
 
  }
   @media screen and (max-width:800px) {
@@ -242,8 +244,11 @@ background-color: #c6ab75;
   .main-container-left--column > img{
 height: 100%;
 width: 100%;
-    
-  }
+animation: funnyImg 10s infinite ease-in-out;
+}
+@keyframes funnyImg {
+
+}
   .main-container-right--column{
 display: grid;
 grid-template-columns: auto;
@@ -263,7 +268,6 @@ grid-template-rows: auto;
     color: var(--text--color);}
 
 .main-right-text {
- 
     text-align: center;
   
 }
@@ -293,7 +297,7 @@ grid-template-rows: auto;
 }
 
 .main-right-header> i {
-color: var(--component--color);
+color: var(--text--color);
 font-size: clamp(1rem, 2.5vw, 1.5rem);
   
 
@@ -308,35 +312,49 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 .main-right-footer {
     
-    width: 100%;
-    height: 5rem;
+ 
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 
 
-.main-right-footer > a{
+.main-post-link {
+  padding: 7px 7px;
     text-decoration: none;
     letter-spacing: 1px;
     font-size: clamp(1.5rem, 2.5vw, 2rem);
-    color: black;
+   color: white;
+    position: relative;
+background-color: var(--text--color);
+border-radius: 2px;
+   
 }
+
+
+  
+  .main-post-link:hover:after {
+    width: 50%;
+  }
+  
+
+
 
 
 .main-top-songs {
   display: flex;
 justify-content: space-around;
   align-items: center;
-  background-color: #c6ab75;
+  background-color: #ffffffe3;
   flex-wrap: wrap;
   padding: 50px 50px 50px;
 
 }
 
 .xxl-spotify {
-font-size: clamp(10rem, 2.5vw, 20rem);
+font-size: 7rem;
 
 margin-top: 1rem;
 display: inline-block;
@@ -413,32 +431,32 @@ border-radius: 50%;}
 
 
 .specific-container-text {
- 
+
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--text--color);
-}
+  color: var(--text--color);}
 
 
 
 
 .specific-container-text h1 {
-
- 
 text-align: center;
 font-size: var(--headers--font--size);
-padding: 15px 15px 20px;
+padding: 15px 15px;
+margin-right: 5rem;
 
 }
 
 
 
 .specific-container-text p {
+  margin-right: 5rem;
 font-size: clamp(1.5rem, 2.5vw, 1.9rem);
 
 text-align: center;
-padding: 10px 10px 10px;
+padding: 10px 10px;
 
 
 
@@ -466,6 +484,22 @@ width: 35rem;
 margin: 1rem 0;
   }
 
+  .specific-container-text h1 {
+   
+    margin-right: 0rem;
+    
+    }
+    
+    
+    
+    .specific-container-text p {
+     margin-right: 0;
+    
+    
+    
+    
+    }
+    
 
   
  }
@@ -494,17 +528,21 @@ height: 25rem;
 
 /* modal */
 .modal-container {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(35, 35, 35, 0.97);
+
   width: 100%;
   height: 100%;
- position: fixed;
-top: 0;
-z-index: 4;
- display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
  justify-content: center;
-align-items: center;
-visibility: hidden; 
+ align-items: center;
+ visibility: hidden; 
+
 }
+
+
 #close-modal {
   font-size: 3rem;
   justify-self: flex-end;
@@ -521,8 +559,6 @@ visibility: hidden;
   max-width: 45rem;
   height: 45rem;
  border-radius: 50%;
-
- outline: 1px dashed red;
  z-index: 1;
 position: sticky;
 top: 0;
@@ -534,6 +570,7 @@ top: 0;
 height: 45rem;
 width: 45rem;
 border-radius: 50%;
+
 }
 
 

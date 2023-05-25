@@ -16,7 +16,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-border-top: 1px solid var(--text--color);}
+
+}
 
 .slider-components {
     width: 100%;
@@ -36,16 +37,13 @@ border-top: 1px solid var(--text--color);}
 }
 
 .slider-btn {
-
     cursor: pointer;
-   background: none;
-   border: none;
-   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.543);
-transition: 150ms;
-color: white;
-
-}
+    background: none;
+    border: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.543);
+    transition: 150ms;
+    color: white;}
 
 .slider-btn:hover {
     background-color: #efefef;

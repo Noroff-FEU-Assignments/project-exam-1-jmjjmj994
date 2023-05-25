@@ -3,13 +3,15 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const subjectRegex = /^.{16,}$/;
 const messageRegex = /^.{26,}$/;
 const formContainer = document.querySelector(".form-container");
-const appreciationContainer = document.querySelector(".thank-you-container");
+
 const form = document.getElementById("form");
 const emailInput = document.getElementById("email");
 const nameInput = document.getElementById("name")
 const subjectInput = document.getElementById("subject");
 const messageInput = document.getElementById("message")
 
+
+const appreciationContainer = document.querySelector(".appreciation-container");
 
 
 
@@ -83,10 +85,8 @@ const validateEmail = () => {
 form.onsubmit = (e) => {
 e.preventDefault()
 
-
-
   const name = nameInput.value.trim()
-  if(!nameRegex.test(name)){
+   if(!nameRegex.test(name)){
     nameInput.placeholder="Please enter a name with 5 or more characters"
     nameInput.style.cssText ="outline:3px solid red"
  
@@ -131,7 +131,7 @@ e.preventDefault()
    
       const message= messageInput.value.trim()
       if (!messageRegex.test(message)) {
-        messageInput.placeholder="Subject should be at least 16 characters long"
+        messageInput.placeholder="Message should be at least 25 characters long"
         messageInput.style.cssText ="outline:3px solid red"
       
         return;
@@ -143,9 +143,10 @@ e.preventDefault()
 
 
       form.submit()
+     form.remove()
       confetti()
-      appreciationContainer.style.cssText ="visibility:visible";
-      formContainer.remove()
+appreciationContainer.style.cssText =" display:block"
+   
 
     };
 

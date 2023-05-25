@@ -1,3 +1,4 @@
+const specificMain = document.querySelector(".specific-main")
 const specificContainer = document.querySelector(".specific-content");
 
 const modalContent = document.querySelector(".modal--content")
@@ -63,7 +64,9 @@ const toggleModal = (data) => {
  const closeModalX = document.querySelector("#close-modal");
 openModal.onclick = () => {
 if(!modalOpen){
-  modalContainer.style.cssText = "visibility:visible"}
+  modalContainer.style.cssText = "visibility:visible;"
+
+}
   modalImage.innerHTML = `
   <img src="${media}" alt="${alt}">`
 modalOpen = true;

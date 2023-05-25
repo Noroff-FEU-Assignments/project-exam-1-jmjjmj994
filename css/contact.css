@@ -3,30 +3,18 @@
 
      
 .contact-main {
-    height: 100%;
-     display: grid;
-     grid-template-columns: auto;
-     grid-template-rows: auto;
-     background-color: var(--secondary--color);
-    justify-content: center;}
-   .thank-you-container {
-   display: grid;
-   grid-template-columns: auto;
-   grid-template-rows: 100%;
+   height: auto;
+   display: flex;
    justify-content: center;
-   align-items: center;
-   
-   
-   visibility: hidden;}
-   .thank-you {
-    color: var(--text--color);
-     font-size: clamp(1.3rem, 2.5vw, 2.5rem);
-     letter-spacing: 1px;
-     animation: fadeInThankYouNext 1s;}
-   @keyframes fadeInThankYouNext {
-     from {opacity: 0; transform: translateX(-500px);}
-     to {transform: translateX(0); opacity: 1;}
-   }
+     background-color: var(--secondary--color);
+  align-items: center;
+     flex-direction: column;
+  position: relative;
+  
+  
+  }
+
+
      
       .form-container {
    margin: 7rem 0;
@@ -108,3 +96,30 @@
    
    
    
+
+.appreciation-container {
+
+display: none;
+height: 100%;
+ width: 100%;
+
+}
+
+.appreciation-container.active {
+display: block;
+
+ }
+.appreciation-content {
+ 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appreciation-content > h1{
+text-align: center;
+margin: 1rem 1rem;
+font-size: clamp(1.5rem, 2.5vw, 7rem);
+color: var(--text--color);}
+
+
