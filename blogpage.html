@@ -1,140 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <!-- Hotjar Tracking Code for Exam -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3485820,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+  <head>
+    <!-- Hotjar Tracking Code for Exam -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3485820, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
         a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/868d223859.js" crossorigin="anonymous"></script>
-   <script src="/js/posts.js" defer type="module"></script>
-   <script src="/js/nav.js" defer></script>
-    <link rel="stylesheet" href="/main.css">
-    <title>Home</title>
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/868d223859.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/posts.js" defer type="module"></script>
+    <script src="/js/nav.js" defer></script>
+    <link rel="stylesheet" href="/main.css" />
+    <title>Posts</title>
+  </head>
+  <body>
     <header class="header">
-        <div class="header-logo">
-         <img src="/img/logojbm.png" alt="">
+      <div class="header-logo">
+        <img src="/img/logojbm.png" alt="" />
+      </div>
+      <div class="hamburger">
+        <span class="bar bar-top"></span>
+        <span class="bar bar-mid"></span>
+        <span class="bar bar-bottom"></span>
+      </div>
+      <nav class="nav">
+        <div class="logo">
+          <img src="/img/logojbm.png" alt="" />
         </div>
-     <div class="hamburger"> 
-         <span class="bar bar-top"></span>
-         <span class="bar bar-mid"></span>
-         <span class="bar bar-bottom"></span>
-     </div>
-             <nav class="nav"> 
-                 <div class="logo">
-                     <img src="/img/logojbm.png" alt="">
-                 </div>
-     <ul class="nav-ul">
-         <li class="nav-li">
-             <a href="/index.html" class="nav-item">Home</a>
-         </li>
-         <li class="nav-li">
-             <a href="/blogpage.html" class="nav-item">Posts</a>
-         </li>
-         <li class="nav-li">
-             <a href="/about.html" class="nav-item">About</a>
-         </li>
-         <li class="nav-li">
-             <a href="/contact.html" class="nav-item">Contact</a>
-         </li>
-     </ul>
-     
-     
-      
-         
-             </nav>
-     
-         </header>
-     
+        <ul class="nav-ul">
+          <li class="nav-li">
+            <a href="/index.html" class="nav-item">Home</a>
+          </li>
+          <li class="nav-li">
+            <a href="/blogpage.html" class="nav-item">Posts</a>
+          </li>
+          <li class="nav-li">
+            <a href="/about.html" class="nav-item">About</a>
+          </li>
+          <li class="nav-li">
+            <a href="/contact.html" class="nav-item">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
+    <main>
+      <section class="posts-main">
+        <div class="large-loader">
+          <img src="/img/logoinuse.png" alt="" />
+        </div>
 
-<main >
+        <article class="posts-page"></article>
 
-<section class="posts-main">
+        <article class="load-more-container">
+          <div class="load-more-left"></div>
+          <button class="load-more">Load More</button>
+          <span>
+            <span id="post-count"></span> of <span id="post-total"></span> posts
+          </span>
+        </article>
+      </section>
+    </main>
 
-
-
-<article class="posts-page">
- <!-- <template data-post-template> -->
-<!-- <div class="posts-card">
-    <div class="posts-card--image" data-image>
-   
-    </div>
-   <div class="posts-card--title" data-title>
-    
-   </div>
-
- 
-
-   <div class="posts-card--content" data-content>
-    
-   </div>
-   <div class="posts-card--link" data-link>
-    
-   </div>
-</div>
-</template> 
- -->
-
-
-
-<span class="loader"></span>
-
-
-
-</article>
-
-<article class="load-more-container">
-    <div class="load-more-left"></div>
-    <button class="load-more">Load More </button>
-    <span>
-    <span id="post-count"></span> of
-<span id="post-total"></span> posts
-    </span>
-</article>
-
-
-
-
-</section>
-
-</main>
-
-
-
-
-<footer class="footer">
-
-      
-
-            
-    <i class="fa-brands fa-facebook footer-icon"></i>
-     <i class="fa fa-brands fa-linkedin footer-icon"></i>
-     <i class="fa fa-brands fa-instagram footer-icon"></i>
-     <i class="fa fa-brands fa-spotify footer-icon"></i>
- 
-
-
-
-
-
-
-
-</footer>
-</body>
+    <footer class="footer">
+      <i class="fa-brands fa-facebook footer-icon"></i>
+      <i class="fa fa-brands fa-linkedin footer-icon"></i>
+      <i class="fa fa-brands fa-instagram footer-icon"></i>
+      <i class="fa fa-brands fa-spotify footer-icon"></i>
+    </footer>
+  </body>
 </html>

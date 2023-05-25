@@ -1,5 +1,5 @@
+const largeLoader = document.querySelector(".large-loader");
 const cardContainer = document.querySelector(".posts-page");
-const loader = document.querySelector(".loader")
 const postCount = document.getElementById("post-count")
 const postTotal = document.getElementById("post-total")
 
@@ -8,8 +8,7 @@ const url ="https://exam1.braatenmjos.no/wp-json/wp/v2/posts/?_embed=wp:featured
 
 /*Buttons*/
 const loadMoreButton = document.querySelector(".load-more");
-const dateHighBtn = document.querySelector(".date-btn");
-console.log(dateHighBtn)
+
 /*Buttons*/
 
 
@@ -25,7 +24,8 @@ fetch(url)
   
   return response.json()
 })
-.then((data) =>{
+  .then((data) => {
+  largeLoader.classList.toggle("hide-loader")
  myData = data; 
  
 myPosts(data)
@@ -38,7 +38,7 @@ myPosts(data)
 });};
 
 function myPosts(data){
-  loader.remove()
+ 
 
 data.map((obj, index)=>{
  const {title, id, _embedded, date} = obj;
@@ -64,7 +64,7 @@ data.map((obj, index)=>{
     </div>
   </div>`
   postCount.textContent = 10;
-  postTotal.textContent = 20
+  postTotal.textContent = 17
   return;
  }
 
@@ -85,8 +85,8 @@ if(index > 10){
       <a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>
     </div>
   </div>`
-  postCount.textContent = 20;
-  postTotal.textContent = 20
+  postCount.textContent = 17;
+  postTotal.textContent = 17;
 
 loadMoreButton.remove()
 }};

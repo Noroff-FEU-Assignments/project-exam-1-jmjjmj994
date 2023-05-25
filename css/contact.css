@@ -1,22 +1,5 @@
 
-
-
-     
-.contact-main {
-   height: auto;
-   display: flex;
-   justify-content: center;
-     background-color: var(--secondary--color);
-  align-items: center;
-     flex-direction: column;
-  position: relative;
-  
-  
-  }
-
-
-     
-      .form-container {
+  .form-container {
    margin: 7rem 0;
        width: 100%;
        max-width: 80rem;
