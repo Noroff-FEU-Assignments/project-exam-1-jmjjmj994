@@ -1,4 +1,7 @@
-export { slide, mainLeftContainer, mainRightContainer,largeLoader }
+export { slide, mainLeftContainer, mainRightContainer,largeLoader,largeError }
+
+const largeError = document.querySelector(".large-error");
+
 const largeLoader = document.querySelector(".large-loader");
 const mainLeftContainer = document.querySelector(".large-post--left");
 const mainRightContainer = document.querySelector(".large-post--right");

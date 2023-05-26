@@ -37,9 +37,14 @@
     <title>Posts</title>
   </head>
   <body>
-    <header class="header">
+  <header class="header">
       <div class="header-logo">
-        <img src="/img/logojbm.png" alt="" />
+        <img
+          src="/img/logoinuse.png"
+          alt=""
+          onclick="window.location.href='index.html'"
+        />
+        <style></style>
       </div>
       <div class="hamburger">
         <span class="bar bar-top"></span>
@@ -48,7 +53,11 @@
       </div>
       <nav class="nav">
         <div class="logo">
-          <img src="/img/logojbm.png" alt="" />
+          <img
+            src="/img/logoinuse.png"
+            alt=""
+            onclick="window.location.href='index.html'"
+          />
         </div>
         <ul class="nav-ul">
           <li class="nav-li">
@@ -71,6 +80,9 @@
       <section class="posts-main">
         <div class="large-loader">
           <img src="/img/logoinuse.png" alt="" />
+        </div>
+          <div class="large-error">
+          <h1>There seems to be a problem fetching the data. Please try again later.</h1>
         </div>
 
         <article class="posts-page"></article>

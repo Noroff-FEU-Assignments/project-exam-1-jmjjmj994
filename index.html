@@ -35,16 +35,15 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 
-   
     <script src="/js/nav.js" defer></script>
     <script src="/js/mainpage.js" defer type="module"></script>
-   
+
     <link rel="stylesheet" href="/main.css" />
     <title>Home</title>
   </head>
@@ -55,7 +54,12 @@
 
     <header class="header">
       <div class="header-logo">
-        <img src="/img/logojbm.png" alt="site logo" />
+        <img
+          src="/img/logoinuse.png"
+          alt=""
+          onclick="window.location.href='index.html'"
+        />
+        <style></style>
       </div>
       <div class="hamburger">
         <span class="bar bar-top"></span>
@@ -64,7 +68,11 @@
       </div>
       <nav class="nav">
         <div class="logo">
-          <img src="/img/logojbm.png" alt="" />
+          <img
+            src="/img/logoinuse.png"
+            alt=""
+            onclick="window.location.href='index.html'"
+          />
         </div>
         <ul class="nav-ul">
           <li class="nav-li">
@@ -86,11 +94,13 @@
     <main>
       <section class="index-main">
         <!--Might change-->
-<div class="large-loader">
-  <img src="/img/logoinuse.png" alt="">
-</div>
-<!--Might change-->
-
+        <div class="large-error">
+          <h1>There seems to be a problem fetching the data. Please try again later.</h1>
+        </div>
+        <div class="large-loader">
+          <img src="/img/logoinuse.png" alt="" />
+        </div>
+        <!--Might change-->
 
         <article class="index-hero">
           <img src="/img/jonathanheroimgresize.png" alt="" />

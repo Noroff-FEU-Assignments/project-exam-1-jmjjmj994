@@ -26,8 +26,16 @@ ul {
 
 h1 {
   font-size: var(--headers--font--size);
+
 }
 
+p, span {
+ font-size: var(--paragraph--font--size);
+  
+}
+a {
+  font-size: var(--paragraph--font--size);
+}
 
 :root {
   /*   --primary--color:	#dfdbd9; 
@@ -43,7 +51,7 @@ h1 {
   --nav--font--size: 1.5rem;
 
   --headers--font--size: clamp(2rem, 2.5vw, 2.5rem);
-  --paragraph--font--size: clamp(2rem, 2.5vw, 2.7rem);
+  --paragraph--font--size: clamp(1.8rem, 2.5vw, 2rem);
 }
 
 body {
@@ -128,7 +136,6 @@ body {
 }
 
 .large-body > h1 {
-  font-size: var(--headers--font--size);
   letter-spacing: 1px;
 }
 
@@ -141,19 +148,16 @@ body {
 }
 
 .main-post-link {
-  padding: 7px 7px;
+  padding: 5px 5px;
   text-decoration: none;
   letter-spacing: 1px;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+
   color: white;
   position: relative;
   background-color: var(--text--color);
   border-radius: 2px;
 }
 
-.main-post-link:hover:after {
-  width: 50%;
-}
 
 .spotify-container {
   display: flex;
@@ -206,14 +210,13 @@ body {
 
 .specific-container-text h1 {
   text-align: center;
-  font-size: var(--headers--font--size);
   padding: 15px 15px;
   margin-right: 5rem;
 }
 
 .specific-container-text p {
   margin-right: 5rem;
-  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+ /*  font-size: clamp(1.5rem, 2.5vw, 1.9rem); */
 
   text-align: center;
   padding: 10px 10px;
@@ -332,10 +335,7 @@ body {
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  
-
-}
+  align-items: center;}
 
 .hide-loader {
   display: none;
@@ -354,4 +354,28 @@ body {
   100%{opacity: 0;}
   50.2%{opacity: 1;}
   100%{opacity: 0;}
+}
+
+
+
+.large-error{
+  position: fixed;
+  background-color: rgb(189, 189, 189);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.large-error > h1 {
+  font-size: var(--headers--font--size);
+  letter-spacing: 1px;
+  
+}
+
+
+.show-large-error {
+visibility: visible;
 }

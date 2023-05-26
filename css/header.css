@@ -19,6 +19,7 @@
   .logo > img {
     height: 100%;
     width: 100%;
+    cursor: pointer;
   }
   .nav-ul {
   display: flex;
@@ -34,7 +35,7 @@
   
   
   .nav-item {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: clamp(1.7rem, 2.5vw, 2rem);
     color: var(--text--color);
     text-decoration: none;
     
@@ -71,6 +72,7 @@
     .header-logo > img {
         height: 100%;
         width: 100%;
+        cursor: pointer;
     }
     .nav {
         position: fixed;
