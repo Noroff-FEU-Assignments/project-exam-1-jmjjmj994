@@ -76,12 +76,7 @@
     margin-right: 0;
   }
   .slider-btn {
-color: black;
-background: none;
-gap: 0;}
-.slider-btn:hover {
-  background: none;
-  color: white;
+display: none;
 }
 }
 

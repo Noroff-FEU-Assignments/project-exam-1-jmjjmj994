@@ -86,10 +86,13 @@ display: none;
 height: 100%;
  width: 100%;
 
+
 }
 
 .appreciation-container.active {
-display: block;
+display: flex;
+justify-content: center;
+align-items: center;
 
  }
 .appreciation-content {

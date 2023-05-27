@@ -43,9 +43,7 @@
     <title>Home</title>
   </head>
   <body>
-    <script>
-      AOS.init();
-    </script>
+
 
     <header class="header">
       <div class="header-logo">
@@ -106,15 +104,15 @@
 
 
         <article class="large-post-container">
-          <div class="large-post--left"></div>
+          <div class="large-post--left" data-aos="fade-right" data-aos-delay="200"></div>
 
-          <div class="large-post--right"></div>
+          <div class="large-post--right" data-aos="fade-left" data-aos-delay="200"></div>
         </article>
 
 
 
 <article class="music-list-container">
-  <div class="music-list--left">
+  <div class="music-list--left" data-aos="fade-right" data-aos-delay="200">
     <div class="large-list-header">
 <i class="fa-regular fa-calendar"></i>  <p>27.may 2023</p>
 </div>
@@ -128,7 +126,7 @@
 </div>
 
   </div>
-  <div class="music-list--right">
+  <div class="music-list--right" data-aos="fade-left" data-aos-delay="200">
 <img src="/img/isaac-ibbott-Hlo8ucqYL14-unsplash.webp" alt="musical notes">
 
   </div>
@@ -170,5 +168,9 @@
       <i class="fa fa-brands fa-instagram footer-icon"></i>
       <i class="fa fa-brands fa-spotify footer-icon"></i>
     </footer>
+         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true});
+  </script>
   </body>
 </html>

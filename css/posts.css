@@ -12,6 +12,7 @@
   align-content: center;
   position: relative;
   padding: 20px;
+  overflow: hidden;
 }
 
 .posts-card {

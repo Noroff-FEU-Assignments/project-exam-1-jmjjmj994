@@ -16,11 +16,11 @@ const appreciationContainer = document.querySelector(".appreciation-container");
 
 
 
-
 const validateName = () => {
 
   const name = nameInput.value.trim()
-  if(!nameRegex.test(name)){
+  if (!nameRegex.test(name)) {
+    console.log("passed")
     nameInput.placeholder="Please enter a name with 5 or more characters"
     nameInput.style.cssText ="outline:3px solid red"
   
@@ -34,12 +34,13 @@ const validateName = () => {
 
 const validateEmail = () => {
   const email = emailInput.value.trim()
-  if(!emailRegex.test(email)) {
+  if(!emailRegex.test(email) ) {
     emailInput.placeholder="Please enter a valid email"
     emailInput.style.cssText ="outline:3px solid red"
     
     return;
-  }else {
+  } else {
+   
       emailInput.style.cssText="outline:3px solid green;"
       emailInput.placeholder =""
       
@@ -142,11 +143,11 @@ e.preventDefault()
       }   
 
 
-      form.submit()
-     form.remove()
-      confetti()
-appreciationContainer.style.cssText =" display:block"
-   
+      formContainer.remove()
+
+     confetti()
+appreciationContainer.style.cssText =" display:block" 
+   console.log("thank you")
 
     };
 

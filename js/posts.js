@@ -45,7 +45,7 @@ data.map((obj, index) => {
    const norwegianDate = cardDate.toLocaleDateString("nb-NO", dateOptions);
    if (index < 10) {
      cardContainer.innerHTML += `
-  <div class="posts-card">
+  <div class="posts-card" >
     <div class="posts-card--image">
       <img src="${image}" alt="${alt}">
     </div>

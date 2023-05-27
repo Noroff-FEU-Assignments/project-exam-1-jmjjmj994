@@ -37,7 +37,8 @@ fetch(url)
 
 function renderSpecific(obj) {
   const { title, content: textContent, _embedded: media } = obj;
-  document.title = `My blog | ${title}`;
+  document.title = ` JBM | ${title.rendered}`;
+
   const image =
     media["wp:featuredmedia"][0].media_details.sizes.large.source_url;
   const altText = media["wp:featuredmedia"][0].alt_text;
@@ -79,8 +80,17 @@ const toggleModal = (obj) => {
 
   window.onclick = (e) => {
     if (e.target === modalContainer) {
-      modalContainer.style.cssText = "visibility:hidden";
+      
+      modalContainer.style.cssText = "visibility:hidden;"; ;
       modalOpen = false;
     }
   };
+  modalContainer.onmouseover = () => {
+    modalContainer.style.cursor = "pointer";
+  };
+  modalImage.onmouseover = () => { 
+    modalImage.style.cursor = "auto";
+  }
 };
+
+
