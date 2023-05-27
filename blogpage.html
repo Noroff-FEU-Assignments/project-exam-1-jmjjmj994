@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://kit.fontawesome.com/868d223859.js"
       crossorigin="anonymous"
@@ -37,10 +37,9 @@
     <link rel="stylesheet" href="/main.css" />
     <title>Posts</title>
   </head>
-   
+
   <body>
- 
-  <header class="header">
+    <header class="header">
       <div class="header-logo">
         <img
           src="/img/logoinuse.png"
@@ -80,15 +79,24 @@
     </header>
 
     <main>
-      <section class="posts-main" >
+      <section class="posts-main">
         <div class="large-loader">
           <img src="/img/logoinuse.png" alt="" />
         </div>
-          <div class="large-error">
-          <h1>There seems to be a problem fetching the data. Please try again later.</h1>
+        <div class="large-error">
+          <h1>
+            There seems to be a problem fetching the data. Please try again
+            later.
+          </h1>
         </div>
 
-        <article class="posts-page"  data-aos="fade-down" data-aos-once='true' data-aos-delay="100" data-aos-duration="1000"></article>
+        <article
+          class="posts-page"
+          data-aos="fade-in"
+          data-aos-once="true"
+          data-aos-delay="200"
+          data-aos-duration="1500"
+        ></article>
 
         <article class="load-more-container">
           <div class="load-more-left"></div>
@@ -107,9 +115,9 @@
       <i class="fa fa-brands fa-spotify footer-icon"></i>
     </footer>
 
-     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
