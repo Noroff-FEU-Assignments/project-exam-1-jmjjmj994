@@ -32,7 +32,7 @@
   cursor: pointer;
   background: none;
   border: none;
-  z-index: 1;
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.543);
   transition: 150ms;
   color: white;
@@ -69,13 +69,20 @@
 @media screen and (max-width: 1000px) {
   .slider-components {
     justify-content: center;
+    
   }
-  .slider-btn {
-    display: none;
-  }
+
   .slider-header {
     margin-right: 0;
   }
+  .slider-btn {
+color: black;
+background: none;
+gap: 0;}
+.slider-btn:hover {
+  background: none;
+  color: white;
+}
 }
 
 .slide-container {

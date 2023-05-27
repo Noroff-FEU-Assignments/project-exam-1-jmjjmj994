@@ -34,6 +34,7 @@ function getData() {
 }
 
 function largePost(obj) {
+  console.log(obj)
   const largePostData = obj;
   largePostData.filter(({ title: header, id, _embedded: media, date }) => {
     const image =
@@ -43,7 +44,7 @@ function largePost(obj) {
     const dateOptions = { year: "numeric", month: "long", day: "numeric" };
     const norwegianDate = cardDate.toLocaleDateString("nb-NO", dateOptions);
 
-    if (id === 47) {
+    if (id === 84) {
       mainLeftContainer.innerHTML = `
      <img src="${image}" alt="${alt}">`;
 

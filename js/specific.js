@@ -36,7 +36,7 @@ fetch(url)
   });
 
 function renderSpecific(obj) {
-  const { title, excerpt: textContent, _embedded: media } = obj;
+  const { title, content: textContent, _embedded: media } = obj;
   document.title = `My blog | ${title}`;
   const image =
     media["wp:featuredmedia"][0].media_details.sizes.large.source_url;
@@ -45,7 +45,7 @@ function renderSpecific(obj) {
   specificImageContainer.innerHTML += `
 <img src="${image}" alt="${altText}"class="open-modal">`;
   specificTextContainer.innerHTML += `
-  <h1>${title.rendered}</h1>
+ 
   <p>${textContent.rendered}</p>`;
 }
 

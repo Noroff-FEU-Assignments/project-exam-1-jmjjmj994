@@ -60,7 +60,7 @@ data.map((obj, index) => {
     </div>
   </div>`;
      postCount.textContent = 10;
-     postTotal.textContent = 17;
+     postTotal.textContent = 13;
      return;
    }
 
@@ -81,8 +81,8 @@ data.map((obj, index) => {
       <a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>
     </div>
   </div>`;
-       postCount.textContent = 17;
-       postTotal.textContent = 17;
+       postCount.textContent = 13;
+       postTotal.textContent = 13;
 
        loadMoreButton.remove();
      }
