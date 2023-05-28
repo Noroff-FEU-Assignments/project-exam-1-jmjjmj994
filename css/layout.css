@@ -8,7 +8,11 @@
     gap: 1rem;
  
   }
-
+@media screen and (max-width: 800px) {
+  .index-main {
+    grid-template-rows: 35rem max-content max-content 45rem;
+  }
+}
     
 .specific-main {
     display: flex;
