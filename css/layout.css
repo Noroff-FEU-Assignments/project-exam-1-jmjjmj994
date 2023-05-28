@@ -3,7 +3,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows:max-content max-content 60rem;
+    grid-template-rows:max-content max-content 60rem 55rem;
     background-color: var(--secondary--color);
     gap: 1rem;
  

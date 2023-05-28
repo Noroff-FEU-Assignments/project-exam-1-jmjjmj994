@@ -11,6 +11,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  padding: 0 0 20px;
 }
 
 .slider-components {
@@ -112,7 +114,9 @@ display: none;
 @media screen and (max-width: 750px) {
   .slide {
     gap: 0;
+ 
   }
+
   .slide-card {
     transform: scale(0.9);
   }

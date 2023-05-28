@@ -43,8 +43,6 @@
     <title>Home</title>
   </head>
   <body>
-
-
     <header class="header">
       <div class="header-logo">
         <img
@@ -102,38 +100,54 @@
           <img src="/img/jonathanheroimgresize.png" alt="" />
         </article>
 
-
         <article class="large-post-container">
-          <div class="large-post--left" data-aos="fade-right" data-aos-delay="200"></div>
+          <div
+            class="large-post--left"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          ></div>
 
-          <div class="large-post--right" data-aos="fade-left" data-aos-delay="200"></div>
+          <div
+            class="large-post--right"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          ></div>
         </article>
 
+        <article class="music-list-container">
+          <div
+            class="music-list--left"
+            data-aos="fade-right"
+            data-aos-delay="250"
+          >
+            <div class="large-list-header">
+              <i class="fa-regular fa-calendar"></i>
+              <p>27.may 2023</p>
+            </div>
+            <div class="large-list-body">
+              <h1 class="top-songs-primary">
+                Lists of songs by the artists and
+              </h1>
+              <h1 class="top-songs-secondary">
+                composers written about in this blog
+              </h1>
+            </div>
 
-
-<article class="music-list-container">
-  <div class="music-list--left" data-aos="fade-right" data-aos-delay="250">
-    <div class="large-list-header">
-<i class="fa-regular fa-calendar"></i>  <p>27.may 2023</p>
-</div>
-<div class="large-list-body">
-<h1 class="top-songs-primary">Lists of songs by the artists and</h1>
-<h1 class="top-songs-secondary">composers written about in this blog</h1>
-</div>
-
-<div class="large-list-footer">
-<a href="/topsongs.html">Read post</a>
-</div>
-
-  </div>
-  <div class="music-list--right" data-aos="fade-left" data-aos-delay="250">
-<img src="/img/isaac-ibbott-Hlo8ucqYL14-unsplash.webp" alt="musical notes">
-
-  </div>
-</article>
-
-
-
+            <div class="large-list-footer">
+              <a href="/topsongs.html">Read post</a>
+            </div>
+          </div>
+          <div
+            class="music-list--right"
+            data-aos="fade-left"
+            data-aos-delay="250"
+          >
+            <img
+              src="/img/isaac-ibbott-Hlo8ucqYL14-unsplash.webp"
+              alt="musical notes"
+            />
+          </div>
+        </article>
 
         <article class="slider-wrapper">
           <div class="slider-components">
@@ -163,14 +177,57 @@
       </section>
     </main>
     <footer class="footer">
-      <i class="fa-brands fa-facebook footer-icon"></i>
-      <i class="fa fa-brands fa-linkedin footer-icon"></i>
-      <i class="fa fa-brands fa-instagram footer-icon"></i>
-      <i class="fa fa-brands fa-spotify footer-icon"></i>
+      <div class="footer-list-container">
+        <div class="footer-left">
+          <ul class="footer-links-ul">
+            <li class="footer-li">
+              <span class="footer-li--item">Home</span>
+            </li>
+            <li class="footer-li">
+              <span class="footer-li--item">Posts</span>
+            </li>
+            <li class="footer-li">
+              <span class="footer-li--item">About</span>
+            </li>
+            <li class="footer-li">
+              <span class="footer-li--item">Contact</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <div class="footer-logo">
+            <img src="/img/logoinuse.png" alt="" />
+          </div>
+          <ul class="footer-social-ul">
+            <li class="footer-li">
+              <i class="fas fa-brands fa-facebook"></i>
+            </li>
+            <li class="footer-li">
+              <i class="fas fa-brands fa-instagram"></i>
+            </li>
+            <li class="footer-li">
+              <i class="fas fa-brands fa-linkedin"></i>
+            </li>
+            <li class="footer-li">
+              <i class="fas fa-brands fa-spotify"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-author-container">
+        <span>Created by Jonathan Braaten Mjøs</span>
+      </div>
     </footer>
-         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({once:true});
-  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        disable: function () {
+          let maxWidth = 1000;
+          return window.innerWidth < maxWidth;
+        },
+      });
+    </script>
   </body>
 </html>

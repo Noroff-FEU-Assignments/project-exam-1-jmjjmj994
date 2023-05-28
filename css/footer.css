@@ -1,37 +1,4 @@
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    
-
-
-.footer-icon {
-    display: block;
-   padding: 20px;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: 100ms;
-  
-}
-
-.footer-icon:after{
-content: "";
-transition: all 250ms;
-position: absolute;
-inset: 0.6rem;}
-
-.footer-icon:hover:after {
-    transition: all 250ms;
-    box-shadow: 0 0 0 1px #6f6b6f;
-    border-radius: 100%;
-}
-
-
-
 
 
 
