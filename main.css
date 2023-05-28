@@ -52,7 +52,7 @@ a {
   --nav--font--size: 1.5rem;
 
   --headers--font--size: clamp(2rem, 2.5vw, 2.5rem);
-  --paragraph--font--size: clamp(1.5rem, 2.5vw, 1.7rem);
+  --paragraph--font--size: clamp(1.4rem, 2.5vw, 1.6rem);
 }
 
 body {
@@ -150,7 +150,7 @@ body {
 }
 
 .main-post-link {
-  padding: 5px 5px;
+  padding: 10px 10px;
   text-decoration: none;
   letter-spacing: 1px;
   color: white;
@@ -206,7 +206,7 @@ body {
   display: block;
 }
 .music-list--left a {
-  padding: 5px 5px;
+  padding: 10px 10px;
   text-decoration: none;
   letter-spacing: 1px;
   color: white;
@@ -591,8 +591,6 @@ display: flex;
 justify-content: center;
 line-height: 1.5;
 padding: 20px 20px;
+outline: 1px solid black
 }
 
-.footer-author-container > h2 {
-font-size: clamp(1.3rem, 2.5vw, 2rem);
-}
