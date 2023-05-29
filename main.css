@@ -16,11 +16,10 @@
 
 html {
   font-size: 62.5%;
-  text-transform: uppercase;
   line-height: 1.5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 0;
+   font-weight: 0;
 }
 ul {
   list-style: none;
@@ -28,6 +27,8 @@ ul {
 
 h1 {
   font-size: var(--headers--font--size);
+   text-transform: uppercase;
+   
 }
 
 p,
@@ -52,7 +53,7 @@ a {
   --nav--font--size: 1.5rem;
 
   --headers--font--size: clamp(2rem, 2.5vw, 2.5rem);
-  --paragraph--font--size: clamp(1.5rem, 2.5vw, 1.7rem);
+  --paragraph--font--size: clamp(1.5rem, 2.5vw, 1.8rem);
   --nav--footer--font--size:  clamp(1.3rem, 2.5vw, 1.8rem);
 }
 
@@ -62,6 +63,7 @@ body {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 11rem 1fr auto;
+
 }
 
 .header,
@@ -443,11 +445,35 @@ body {
   justify-content: center;
   align-items: center;
   visibility: hidden;
+  
 }
-.large-error > h1 {
+.error-msg-container {
+  flex: 1 1 100%;
+height: auto;
+outline: 3px solid red;
+border-radius: 5px;
+padding: 20px 20px;
+margin: 0 1rem;
+display: flex;
+justify-content: center;
+align-items: center;
 
-  letter-spacing: 1px;
+
 }
+.error-msg-container > span {
+  font-size:clamp(2rem, 2.5vw, 2.5rem);
+  margin: 0 1rem;
+
+
+}
+.error-msg-primary > a {
+ color: var(--text--color);
+ font-size:clamp(2rem, 2.5vw, 2.5rem);
+
+ 
+}
+
+
 
 .show-large-error {
   visibility: visible;
@@ -508,78 +534,9 @@ body {
 
 
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    }
-    
-
-
-
-.footer-list-container{
-flex: 1 1 100%;
-width: 100%;
-display: flex;
-justify-content: space-evenly;
-}
-@media screen and (max-width:500px) {
-  .footer-list-container {
-    justify-content: space-around;
- 
-  }
-}
-.footer-left{}
-
-.footer-center{
-  padding: 5px 5px;
-display: flex;
-flex-direction: column;
-align-items: center;
-
-
-}
-
-.footer-logo {
-height: 9rem;
-width: 9rem;
-
-
-}
-
-.footer-logo > img {
-  height: auto;
-  max-width: 100%;
-}
-
-
-.footer-social-ul{
-  display: flex;
-  padding: 10px;
-  gap: 1.5rem;
-}
-
-
-.footer-li > a {
-  text-decoration: none;
-  color: inherit;
- 
-}
-.footer-icon{  font-size: clamp(2rem, 2.5vw, 2.5rem);
-
-}
 
 
 
 
-.footer-author-container{
-flex: 1 1 100%;
-width: 100%;
-display: flex;
-justify-content: center;
-line-height: 1.5;
-padding: 20px 20px;
-outline: 1px solid black
-}
+
 

@@ -34,7 +34,6 @@ function getData() {
 }
 
 function largePost(obj) {
-  console.log(obj)
   const largePostData = obj;
   largePostData.filter(({ title: header, id, _embedded: media, date }) => {
     const image =
@@ -56,20 +55,11 @@ function largePost(obj) {
 </div>
 <div class="large-body">
 <h1> ${header.rendered}</h1>
-
 </div>
 <div class="main-right-footer">
 <a href="/specific.html?id=${id}" class="main-post-link"> Read Post </a>
 </div>
-
-
-
-
 </div>
-
-
-
-
 `;
     }
   });
@@ -88,4 +78,4 @@ function sliderContent({ title: header, id, _embedded: media }) {
   </div>
   
   `;
-}
+};
