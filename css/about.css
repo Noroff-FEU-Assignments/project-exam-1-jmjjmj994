@@ -1,46 +1,38 @@
-
-
-
-
-.profile-header{
-    text-align: center;
- padding: 20px 20px;
-  }
-  .profile-header > img{
+.profile-header {
+  text-align: center;
+  padding: 20px 20px;
+}
+.profile-header > img {
   border-radius: 50%;
-   outline: 2px solid white;
-   height: 100%;
-  max-width: 100%;;
-  }
-  .profile-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  outline: 5px solid white;
+  height: 100%;
+  max-width: 100%;
+}
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
-    color: var(--text--color);
-    margin: 1rem 1rem;
-  
-    text-align: center;
-  }
-  .profile-body > h1 {
+  color: var(--text--color);
+  margin: 1rem 1rem;
+
+  text-align: center;
+}
+.profile-body > h1 {
   padding: 10px 10px 10px;
-  
-  }
-  
+}
 
-  .profile-body--primary, .profile-body--sub{
-    padding: 5px 5px;
-max-width: 50ch;
- font-size: var(--paragraph--font--size);
-  }
+.profile-body--primary,
+.profile-body--sub {
+  padding: 5px 5px 20px;
+  max-width: 65ch;
+  font-size: var(--paragraph--font--size);
+}
 
- 
-  
-  .contact-btn {
-  color: inherit;}
-  .about-spotify {
-    color: #1ccc5b;
-    padding: 0 7px;
-
-  }
-  
+.contact-btn {
+  color: inherit;
+}
+.about-spotify {
+  color: #1ccc5b;
+  padding: 0 7px;
+}

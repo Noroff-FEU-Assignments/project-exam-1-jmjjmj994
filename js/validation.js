@@ -117,7 +117,7 @@ e.preventDefault()
 
     const subject = subjectInput.value.trim()
     if (!subjectRegex.test(subject)) {
-      subjectInput.placeholder="Subject should be at least 16 characters long"
+      subjectInput.placeholder="Subject should be at least 15 characters long"
       subjectInput.style.cssText ="outline:3px solid red"
     
       return;
@@ -132,7 +132,7 @@ e.preventDefault()
    
       const message= messageInput.value.trim()
       if (!messageRegex.test(message)) {
-        messageInput.placeholder="Message should be at least 25 characters long"
+        messageInput.placeholder="Message content should be at least 25 characters long"
         messageInput.style.cssText ="outline:3px solid red"
       
         return;

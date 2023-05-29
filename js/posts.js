@@ -46,9 +46,9 @@ function myPosts(data) {
       <h1>${header.rendered} </h1>
     </div>
     <div class="posts-card--content">
-    <i class="fa-regular fa-calendar"></i>  <p>${norwegianDate}</p>
+   <p>${norwegianDate}</p>
     </div>
-    <div class="posts-card--link">
+    <div class="posts-card-footer">
       <a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>
     </div>
   </div>`;
@@ -61,16 +61,16 @@ function myPosts(data) {
       if (index > 10) {
         cardContainer.innerHTML += `
   <div class="posts-card">
-    <div class="posts-card--image" data-image>
+    <div class="posts-card--image">
       <img src="${image}" alt="${alt}">
     </div>
-    <div class="posts-card--title" data-title>    
+    <div class="posts-card--title" >    
       <h1>${header.rendered} </h1>
     </div>
-    <div class="posts-card--content" data-content>
-    <i class="fa-regular fa-calendar"></i>  <p>${norwegianDate}</p>
+    <div class="posts-card--content" >
+    <p>${norwegianDate}</p>
     </div>
-    <div class="posts-card--link" data-link>
+    <div class="posts-card-footer" >
       <a href="/specific.html?id=${id}" class="posts-card-link">Read Post</a>
     </div>
   </div>`;

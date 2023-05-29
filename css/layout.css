@@ -10,7 +10,7 @@
   }
 @media screen and (max-width: 800px) {
   .index-main {
-    grid-template-rows: 45rem max-content max-content 45rem;
+    grid-template-rows: 40rem max-content max-content 45rem;
   }
 }
     

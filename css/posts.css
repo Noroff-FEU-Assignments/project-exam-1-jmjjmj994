@@ -59,7 +59,7 @@
   font-size: 1.3rem;
 }
 
-.posts-card--link {
+.posts-card-footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,9 +68,10 @@
 .posts-card-link {
   text-decoration: none;
   color: black;
-  font-size: 1.5rem;
+font-size: 1.85rem;
   letter-spacing: 1px;
 }
+
 
 .posts-card:hover {
   transform: scale(1.01);
@@ -89,19 +90,19 @@
 }
 .load-more {
   display: block;
-  background-color: var(--tertiary--color);
+  background-color: var(--secondary--color);
   text-align: center;
   border: none;
   width: auto;
   font-size: clamp(1rem, 2.5vw, 2rem);
-  padding: 5px;
+  padding: 7px 7px;
   color: var(--text--color);
-  border-radius: 5px;
+  background-color: #ffffffe3;
   letter-spacing: 1.5px;
   cursor: pointer;
 }
 .load-more-left {
-  width: 10rem;
+  width: 7.5rem;
 }
 
 .loader {

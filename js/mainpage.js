@@ -50,7 +50,7 @@ function largePost(obj) {
       mainRightContainer.innerHTML = `
 <div class="large-post-right--content">
 <div class="large-header">
-<i class="fa-regular fa-calendar"></i>
+
 <p> ${norwegianDate} </p>
 </div>
 <div class="large-body">

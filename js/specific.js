@@ -31,9 +31,7 @@ fetch(url)
   .then((data) => {
     largeLoader.classList.toggle("hide-loader");
     renderSpecific(data);
-    toggleModal(data);
-    console.log(data);
-  });
+    toggleModal(data);});
 
 function renderSpecific(obj) {
   const { title, content: textContent, _embedded: media } = obj;
@@ -65,7 +63,10 @@ const toggleModal = (obj) => {
   let modalOpen = false;
   openModal.onclick = () => {
     if (!modalOpen) {
-      modalContainer.style.cssText = "visibility:visible;";
+      /*  modalContainer.style.cssText = "visibility:visible;" */
+      modalContainer.classList.toggle("active")
+        document.body.style.overflow = "hidden";
+        ;
       modalOpen = true;
     }
     modalImage.innerHTML = `
@@ -74,14 +75,18 @@ const toggleModal = (obj) => {
   };
 
   closeModalX.onclick = () => {
-    modalContainer.style.cssText = "visibility:hidden";
+    /* modalContainer.style.cssText = "visibility:hidden"; */
+    modalContainer.classList.toggle("active");
+    document.body.style.overflow = "auto";
     modalOpen = false;
   };
 
   window.onclick = (e) => {
     if (e.target === modalContainer) {
       
-      modalContainer.style.cssText = "visibility:hidden;"; ;
+      /*   modalContainer.style.cssText = "visibility:hidden;";  */
+      modalContainer.classList.toggle("active");
+      document.body.style.overflow = "auto";
       modalOpen = false;
     }
   };
@@ -92,5 +97,6 @@ const toggleModal = (obj) => {
     modalImage.style.cursor = "auto";
   }
 };
+
 
 

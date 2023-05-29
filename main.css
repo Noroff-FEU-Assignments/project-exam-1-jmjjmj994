@@ -19,7 +19,7 @@ html {
   line-height: 1.5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-   font-weight: 0;
+  font-weight: 0;
 }
 ul {
   list-style: none;
@@ -27,8 +27,7 @@ ul {
 
 h1 {
   font-size: var(--headers--font--size);
-   text-transform: uppercase;
-   
+  text-transform: uppercase;
 }
 
 p,
@@ -53,8 +52,8 @@ a {
   --nav--font--size: 1.5rem;
 
   --headers--font--size: clamp(2rem, 2.5vw, 2.5rem);
-  --paragraph--font--size: clamp(1.5rem, 2.5vw, 1.8rem);
-  --nav--footer--font--size:  clamp(1.3rem, 2.5vw, 1.8rem);
+  --paragraph--font--size: clamp(1.9rem, 2.5vw, 2.1rem);
+  --nav--footer--font--size: clamp(1.7rem, 2.5vw, 2rem);
 }
 
 body {
@@ -63,7 +62,6 @@ body {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 11rem 1fr auto;
-
 }
 
 .header,
@@ -93,7 +91,6 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  
   .large-post-container {
     grid-template-columns: minmax(30rem, 50rem);
     grid-template-rows: 25rem 20rem;
@@ -151,7 +148,7 @@ body {
 }
 
 .main-post-link {
-  padding: 10px 10px;
+  padding: 5px 10px;
   text-decoration: none;
   letter-spacing: 1px;
   color: white;
@@ -207,26 +204,13 @@ body {
   display: block;
 }
 .music-list--left a {
-  padding: 10px 10px;
+  padding: 5px 10px;
   text-decoration: none;
   letter-spacing: 1px;
   color: white;
   position: relative;
   background-color: var(--text--color);
   border-radius: 2px;
-}
-
-.top-songs-primary::first-letter,
-.top-songs-secondary::first-letter {
-  line-height: 1.8;
-  text-transform: uppercase;
-  font-family: fantasy;
-}
-.top-songs-primary::first-letter {
-  color: rgb(0, 0, 0);
-}
-.top-songs-secondary::first-letter {
-  color: rgb(0, 0, 0);
 }
 
 .music-list--right {
@@ -246,6 +230,7 @@ body {
 .specific-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  position: relative;
 }
 
 .specific-container-image {
@@ -330,18 +315,24 @@ body {
 /* modal */
 .modal-container {
   background-color: rgba(35, 35, 35, 0.97);
-
   width: 100%;
   height: 100%;
   position: fixed;
+  clip-path: circle(0% at 50%);
   top: 0;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
+  transition: all 250ms ease-in-out;
 }
 
+.modal-container.active {
+  visibility: visible;
+  clip-path: circle(100% at 50%);
+  transition: all 250ms ease-in-out;
+}
 #close-modal {
   font-size: 2.5rem;
   justify-self: flex-end;
@@ -445,35 +436,26 @@ body {
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  
 }
 .error-msg-container {
   flex: 1 1 100%;
-height: auto;
-outline: 3px solid red;
-border-radius: 5px;
-padding: 20px 20px;
-margin: 0 1rem;
-display: flex;
-justify-content: center;
-align-items: center;
-
-
+  height: auto;
+  outline: 3px solid red;
+  border-radius: 5px;
+  padding: 20px 20px;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .error-msg-container > span {
-  font-size:clamp(2rem, 2.5vw, 2.5rem);
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
   margin: 0 1rem;
-
-
 }
 .error-msg-primary > a {
- color: var(--text--color);
- font-size:clamp(2rem, 2.5vw, 2.5rem);
-
- 
+  color: var(--text--color);
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
 }
-
-
 
 .show-large-error {
   visibility: visible;
@@ -528,15 +510,3 @@ align-items: center;
   padding: 10px 10px;
   letter-spacing: 1px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
