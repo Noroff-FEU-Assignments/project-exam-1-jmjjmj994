@@ -1,4 +1,4 @@
-# Jonathan's Music Blig
+# Jonathan's Music Blog
 
 ![screencapture-sweet-lamington-6d7260-netlify-app-index-html-2023-06-06-21_57_10](https://github.com/Noroff-FEU-Assignments/project-exam-1-jmjjmj994/assets/111571683/b8ccc1be-bc1f-4f0c-93b1-46f8596def04)
 
